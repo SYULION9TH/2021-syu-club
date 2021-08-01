@@ -39,12 +39,13 @@ class Clubs(models.Model):
     established = models.DateTimeField()
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
-    deadline = models.DateTimeField()
+    end_day = models.DateTimeField()
+    deadline = models.IntegerField()
     sns_link = models.CharField(max_length=500, blank=True, null=True)
     form_link = models.CharField(max_length=500, blank=True, null=True)
     
     def D_day(self,now):
-        return int((self.deadline - now).days)
+        return int((self.end_day - now).days)
 
     class Meta:
         managed = False
