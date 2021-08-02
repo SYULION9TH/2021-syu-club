@@ -11,7 +11,6 @@ git clone https://github.com/SYULION9TH/2021-syu-club.git
 ```
 ## github branch 설계 규칙
 ### Branch 확인 하기
-### backend와 frontend로 banch를 나눠놨으니 본인이 해당하는 브랜치에 들어가 본인의 브랜치 생성하기 
 
 1. 현재 내가 위치한 Branch 확인
    - `$git branch`
