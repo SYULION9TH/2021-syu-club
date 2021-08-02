@@ -67,8 +67,9 @@ password : 1234
 
 QnA 예시)
 
-설명 Method 경로  
-한 동아리의 QnA목록을 나타낸다. `GET /clubs/:id/qna`  
-한 동아리의 QnA상세를 나타낸다. `GET /clubs/:id/qna/:id`  
-한 동아리의 QnA를 수정한다. `PUT /clubs/:id/qna/:id`  
-한 동아리의 QnA를 삭제한다. `DELETE /clubs/:id/qna/:id`  
+|설명|Method|경로|
+|----|-------|----|
+|한 동아리의 QnA목록을 나타낸다.|GET|/clubs/:id/qna|
+|한 동아리의 QnA상세를 나타낸다.|GET|/clubs/:id/qna/:id|
+|한 동아리의 QnA를 수정한다.|PUT|/clubs/:id/qna/:id|
+|한 동아리의 QnA를 삭제한다.|DELETE|/clubs/:id/qna/:id|
