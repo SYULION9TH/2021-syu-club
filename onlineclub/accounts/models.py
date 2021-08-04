@@ -1,8 +1,8 @@
 from django.db import models
-from django.db.models.fields import EmailField
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
-class AuthUser(models.Model):
+class AuthUser(AbstractUser):
     password        = models.CharField(max_length=128) # 비밀번호
     last_login      = models.DateTimeField(blank=True, null=True) # 마지막 로그인 일자
     is_superuser    = models.IntegerField() # 슈퍼 유저

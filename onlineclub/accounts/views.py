@@ -1,19 +1,27 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
+# from django.contrib import auth
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import AuthenticationForm
+
 
 # Create your views here.
 def login(request):
-    return render(request, 'login.html')
+    if (request.method == 'POST'):
+        form = AuthenticationForm(request=request, data = request.POST)
 
-def logining(request, user):
-    Username = request.POST['username']
-    Password = request.POST['password']
-    
-    # When input 'username' in html, to compare 'username' and Username.
-    account = AuthUser.objects.all(user = Username)
-    # To start checking
-    if (account.username == Username):
-        if (account.password == Password):
-            return render(request, '')
-    else:
-        return render(request, '')
+        if (form.is_valid()):
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password")
+
+            user = authenticate(request=request, username = username, password = password)
+            if (user is not None):
+                login(request, user)
+                return redirect('#') # TODO - to redirect HOME.html
+            else :
+                # TODO - if user is None
+                print("Login Fail!")
+
+def logout(request):
+    logout(request)
+    # TODO - to redirect HOME.html
