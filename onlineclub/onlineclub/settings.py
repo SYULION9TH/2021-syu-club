@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'club',
     'post',
     'base',
+    'update',
 ]
 
 MIDDLEWARE = [

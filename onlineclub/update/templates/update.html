@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <!-- <link rel="stylesheet" href="update.css"> -->
+    <style>
+        body{
+            background-color:#f4f0ee;
+            width: 100%;
+        }
+
+        /* nav바 (menu, 온라인 동아리전, 업로드) */
+        /* #menu>a{
+            text-decoration-line: none;
+            color:#494949;
+        }
+        #title>a{
+            text-decoration-line: none;
+            color:#494949;
+            text-align: center;
+            font-weight: bold;
+            font-size: 120%;
+        }
+        #upload>a{
+            text-decoration-line: none;
+            color:#494949;
+        } */
+        #nav>a{
+            text-decoration-line: none;
+            color:#494949;
+            font-weight: bold;
+            /* text-align: center; */
+        }
+        
+        /* 사진, 동아리 */
+        div#club1{
+            background-color: #9f9c9b;
+            /* text-align: center; */
+            display: flex;
+            /* justify-content: center; */
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        div#club2{
+            /* display: inline-block; */
+            /* margin: 0 auto; */
+            margin-left: 25px;
+        }
+        
+        #circle_pic{
+            background-color: #727373;
+            color: white;
+            width: 150px;
+            height: 100px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            margin-left: 15px;
+        }
+        
+        textarea#name{
+            background-color: #9f9c9b;
+            color: white;
+            border-color: #727373;
+            font-weight: bold;
+            font-size: 120%;
+        }
+        textarea#introduce{
+            background-color: #9f9c9b;
+            color: white;
+            border-color: #727373;
+            font-weight: normal;
+            font-size: 90%;
+        }
+        
+        #sign{
+            color: white;
+            background-color: #727373;
+        }
+        
+        /* content (모집요강, 동아리 게시물)*/
+        #content{
+            /* margin-top: 20px; */
+            width: 350px;
+            height: 150px;
+            background-color: white;
+            /* border-style: solid; */
+            border-radius: 20px;  
+        }
+        
+        #text1{
+            color:#5523a0;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        
+        #te{
+            color: #9f9c9b;
+            font-weight: bold;
+            border-style: hidden;
+            border-radius: 10px;
+            margin-left: 20px;
+            width: 300px;
+            height: 90px;
+        }
+    </style>
+</head>
+<body>
+    <!-- nav바 (menu, 온라인 동아리전, 업로드) -->
+    <nav>
+        <!-- <p id="menu"><a href="#">menu</a></p>
+        <p id="title"><a href="#">온라인 동아리전</a></p>
+        <p id="upload"><a href="#">업로드</a></p> -->
+        <p id="nav">
+                <a href="#">menu</a>
+                <a href="#">온라인 동아리전</a>
+                <a href="#">업로드</a>
+        </p>
+    </nav>
+    <!-- 내용 -->
+    <div>
+        <!--  사진, 동아리  -->
+        <div id="club1">
+            <!-- <p>사진</p> -->
+            <p id="circle_pic">사진</p>
+            <div id="club2">
+                <textarea name="" id="name" cols="15" rows="2">동아리 이름</textarea>
+                <textarea name="" id="introduce" cols="27" rows="4">동아리 소개를 입력하세요.</textarea>
+                <br>
+                <button id="sign">활동사진 등록</button>
+                <button id="sign">SNS 등록</button>
+            </div>
+        </div>
+        <!-- content (모집요강, 동아리 게시물) -->
+        <div id="content">
+            <p id="text1">모집요강</p>
+            <hr width="90%">
+            <textarea name="" id="te" cols="30" rows="10">내용을 입력하세요.</textarea>
+        </div>
+        <div id="content">
+            <p id="text1">동아리 게시물</p>
+            <hr width="90%">
+            <textarea name="" id="te" cols="30" rows="10">내용을 입력하세요.</textarea>
+        </div>
+</body>
+</html>
