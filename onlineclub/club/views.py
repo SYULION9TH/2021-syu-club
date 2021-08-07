@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import *
+from base.models import *
 import operator
 from datetime import datetime
 
