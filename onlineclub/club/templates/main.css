@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    padding: 5% 4%;
+    width: 100%;
+    height: 100%;
+    color:white;
+    background: linear-gradient(#240E51, #4D29A8);
+}
+
+.menu_Btn {
+  position: absolute;
+  font-size: 25px;
+  color: white;
+}
+
+.menu_Btn:hover {
+  color:#FED700;
+}
+
+section>h1 {
+    padding-top: 2%;
+    font-family: 'twaysky';
+    font-size: 22px;
+    text-align: center;
+}
+
+
+/* search */
+.search-bar {
+  position: relative;
+  width: 90%; 
+  margin: 15px auto 0 auto;
+} 
+
+.search-bar>input {
+  width: 100%;
+  height: 40px;
+  border: 0px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 15px;
+  color: black;
+}
+
+.fa-search{
+  position: absolute;
+  right: 20px;
+  top: 25%;
+  font-size: 20px;
+  color: #240E51;;
+    }   
+
+    
+
+/* card */
+
+.dday{
+    padding-right: 3%;
+    font-size: 20px;
+    color:#240E51; 
+    font-weight:bold;
+}
+.card{
+	transition: 0.3s;
+	position: relative;
+	width:100%;
+	max-width: 100%;
+    height: 100%;
+    overflow: hidden; 
+	display: inline-block;
+	margin-bottom:20px;
+	background-color: white;
+}
+
+.card:hover{
+	transform: scale(0.97);
+} 
+
+.c_img{
+	width: 100px;
+	height: 80px;
+} 
+.card_img{
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+
+
+.text-wrap{
+	position: absolute;
+	bottom: 15px;
+    left: 80px;
+	z-index: 10;
+	padding-left:25px;
+}
+
+
+.text-wrap h1{
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: black;
+    font-family: 'Pretendard-Regular';
+}
+.text-wrap span{
+	color:black;
+    font-size: 12px;
+    font-family: 'Pretendard-Regular';
+}
+
+
+
+/* footer */
+footer { 
+   padding-left: 1%;
+  }
+  
+.wrapper {
+    display: flex;
+  }
+
+.wrapper>a {
+     text-decoration: none
+}
+.icon{
+   margin: 10px;
+   background-color: black;
+   height: 30px;
+   width: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.icon i {
+    font-size: 15px;
+    color: white;
+  }
+  
+.icon:hover {
+    background-color:#FED700;
+  }
+  
+.icon:hover i {
+    color:antiquewhite;
+  }
+
