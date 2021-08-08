@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동아리 상세페이지</title>
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            
+        }
+
+        body {
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav_club {
+            height: 50px;
+            background-color: ivory;
+        }
+
+        main_club {
+            position: relative;
+            background-color: #00ff0000;
+            height: 20%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border-radius: 15px;
+            border: 10px solid #00ff0000;
+        }
+
+        section_club {
+            margin: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+            flex: 1;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px silver;
+            border: 15px solid white;
+            overflow: auto;
+        }
+
+        footer_club {
+            margin: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+            flex-direction: column;
+            flex: 1;
+            flex-grow: 1;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px silver;
+            border: 15px solid white;
+            overflow: auto;
+            flex-basis: 0;
+        }
+
+        .nav-title {
+            margin: 0;
+            margin-top: 12px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .main-title {
+            position: absolute;
+            bottom: 70px;
+            left: 130px;
+            right: 0px;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-grow: 0;
+            text-align: left;
+            font-size: 1px;
+            flex-direction: row;
+            flex-basis: 0;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item {
+            background-color: plum;
+            width: 30%;
+            line-height: 100px;
+        }
+        
+        .article_main_club {
+            width: 50%;
+        }
+
+        .club-title {
+            margin: 0;
+            color: blueviolet;
+            font-weight: bold;
+        }
+
+        .static {
+            position: absolute;
+            left: 10px;
+            bottom: 0;
+            float: left;
+            width: 100px;
+            border-radius: 70%;
+        }
+
+        .button {
+            position: absolute;
+            bottom: 0;
+            left: 130px;
+            font-size: 1px;
+            background-color: blueviolet;
+            border: 0px #00ff0000;
+            font-weight: bold;
+            color: white;
+
+            border-radius: 15px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .intro {
+            position: absolute;
+            left: 130px;
+            right:0;
+            bottom: 30px;
+        }
+
+        .instagram {
+            background-image: url( "2021-syu-club\onlineclub\detail\instagram.png" );
+            border: none;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            position: absolute;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav_club>
+        <h1 class="nav-title" style="font-weight: bold;">동아리 홍보전</h1>
+    </nav_club>
+
+    <main_club>
+        <input type="submit" class="instagram" id="instagram-id">
+        <img src="instagram.png" id="instagram-id" style="width: 30px;">
+        <article_main_club>
+            <img src="LIKELION_LOGO.jpg" class="static">
+            <h1 class="main-title">멋쟁이 사자처럼</h1>
+            <p class="intro" style="text-align: justify; font-size: 3px">피가 든 현저하게 모래뿐일 곳으로 그들의 바이며, 있으랴 놀이 노래하며 구하지</p>
+            <input type="submit" name="submit" class="button" value="지원하기">
+        </article_main_club>
+        
+    </main_club>
+
+    <section_club>
+        <article_section_club>
+            <p class="club-title">모집요강<hr></p>
+        </article_section_club>
+    </section_club>
+
+    <footer_club>
+        <p class="club-title">동아리 게시물<hr></p>
+        <div class="container">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+        </div>
+    </footer_club>
+
+</body>
+
+</html>
