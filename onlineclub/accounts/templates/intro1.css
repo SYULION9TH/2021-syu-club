@@ -1,0 +1,63 @@
+@font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('sky1.jpg');
+}
+
+.box{
+    width: 350px;
+    padding: 150px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #000b6900;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+.box h5{
+    font-family: 'EliceDigitalBaeum_Bold';
+    color: rgb(255, 255, 0);
+}
+
+.box h1{
+    font-family: '국립박물관문화재단클래식B';
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 4px 2px rgb(0, 0, 0);
+}
+
+.box h3{
+    font-family: '국립박물관문화재단클래식B';
+    color: rgba(255, 255, 255, 0.658);
+}
+
+.box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    padding: 14px 40px;
+    width: 150px;
+    outline: none;
+    color: rgb(255, 230, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    background: #000000;
+    font-family: '국립박물관문화재단클래식B';
+}

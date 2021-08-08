@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login2</title>
+    <link rel="stylesheet" href="login2.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <form action="animatedLogin.html" class="login-form">
+      
+        <h1>온라인 동아리전</h1>
+        <h4>동아리 연합회 벼리 X 멋쟁이 사자처럼 at SYU</h4>
+        
+        <div class="txti">
+            <input type="text">
+            <span data-placeholder="Username"></span>
+        </div>
+
+        <div class="txti">
+            <input type="password">
+            <span data-placeholder="Password"></span>
+        </div>
+
+        <input type="submit" class="sub" value="SIGN UP">
+
+        
+    </form>
+
+    <script type="text/javascript">
+        $(".txti input").on("focus",function(){
+            $(this).addClass("focus");
+        });
+
+        $(".txti input").on("blur",function(){
+            if($(this).val() == "")
+            $(this).removeClass("focus");
+        })
+    </script>
+
+</body>
+</html>
