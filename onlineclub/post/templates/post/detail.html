@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>{{post.post_title}}</h1>
+        생성날짜: {{post.created_at}}<br>
+        수정날짜: {{post.updated_at}}<br>
+        내용: {{post.post_content}}<br>
+
+        <!-- CharField 일 경우 -->
+        <img src="{{ post.post_img_url }}" /> <br>
+        
+        <!-- ImageField 일 경우 -->
+        {% if post.post_img_url %}
+            사진: <img src="{{post.post_img_url.url}}" alt="">
+        {% endif %}
+    </div>
+
+    <!-- <a href="{% url 'edit' post.post_id %}">Edit</a> -->
+    <a href="{% url 'delete' post.post_id %}">Delete</a>
+    <br>
+    <a href="{% url 'home' %}">Main Page</a>
+</body>
+
+</html>
