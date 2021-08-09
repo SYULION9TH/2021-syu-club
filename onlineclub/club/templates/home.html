@@ -1,0 +1,40 @@
+<!-- 검색 전 정렬은 D-DAY로 들어가야해서 따로 정렬하지 않았습니다.
+    검색 후에는 가나다 순으로 정렬했습니다. -->
+    <h1>검색창</h1>
+    <form action="{% url 'home'  %}" method="GET">
+        <input type="search" placeholder="검색 내용" id="keyword" name="keyword">
+        <input type="submit" value="검색">
+    </form>
+    {% for club in club_list %}
+        <br>
+        {{club.club_name}}
+        {{club.club_desc}}
+        {{club.club_type}}
+        <br>
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <br> 
+    <h1>사이드 메뉴</h1>
+    <!-- 분과 1 -->
+    <a href = "{% url 'haksool' 1 %}">분과1</a>
+    {% for side_1 in side_menu1 %}
+        <br>
+        {{side_1.club_name}} 
+    {% endfor %}
+    <hr>
+    <!-- 분과 2 -->
+    <a href = "{% url 'haksool' 2 %}">분과2</a>
+    {% for side_2 in side_menu2 %}
+        <br>
+        {{side_2.club_name}} 
+    {% endfor %}
+    <hr>
+    <!-- 분과3 -->
+    <a href = "{% url 'haksool' 3 %}">분과3</a>
+    {% for side_3 in side_menu3 %}
+        <br>
+        {{side_3.club_name}} 
+    {% endfor %}
+    
