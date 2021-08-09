@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  section{
+    padding: 5% 4%;
+    width: 100%;
+    height: 100%;
+    color:white;
+    background: linear-gradient(#240E51, #4D29A8);
+  }
+  
+  #sidebar {
+    display: none;
+    position: fixed;
+    background: linear-gradient(#240E51, #4D29A8);
+    color: white;
+    width: 300px;
+    height: 100vh;
+    z-index: 9999;
+  }
+  
+  #sidebar>h1 {
+    width: 200px;
+    padding-top: 30px;
+    padding-left: 20px;
+    margin-right: 40px;
+    font-family: 'twaysky';
+    font-size: 22px;
+    float: left;
+  }
+  
+  #sidebar>h3 {
+    margin-left: 65px;
+    margin-top: 63px;
+  }
+  
+  #sidebar>h3>a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #sidebar>h3>a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #sidebar>h3>a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  .emphasized {
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+  }
+  
+  .admin_icon {
+    font-size: 35px;
+    color: white;
+    padding-left: 20px;
+    float: left;
+  }
+  
+  .hide_Btn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    padding-top: 17px;
+    padding-right: 20px;
+  }
+  
+  .menu_Btn {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+  }
+  
+  .menu_Btn:hover {
+    color:#FED700;
+  }
+  
+  section>h1 {
+    padding-top: 2%;
+    font-family: 'twaysky';
+    font-size: 22px;
+    text-align: center;
+  }
+  
+  .sidenav {
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    background-color:transparent;
+    overflow-x: hidden;
+    margin-top: 20px;
+  }
+  
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .sidenav a {
+    color: black;
+  }
+  
+  .dropdown-btn {
+    color: #818181;
+  }
+  
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }
+  
+  .active {
+    background-color: transparent;
+    color: white;
+  }
+  
+  .dropdown-container {
+    display: none;
+    background-color: #c4c4c4;
+    padding-left: 8px;
+  }
+  
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
