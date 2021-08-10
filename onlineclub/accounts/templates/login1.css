@@ -12,6 +12,9 @@
     font-style: normal;
 }
 
+html {font-size: 1px;}
+body {font-size: 1rem;}
+
 body{
     margin: 0;
     padding: 0;
@@ -20,8 +23,8 @@ body{
 }
 
 .box{
-    width: 350px;
-    padding: 150px 40px;
+    width: 350rem;
+    padding: 150rem 40rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,31 +34,42 @@ body{
     border-radius: 10px;
 }
 
-.box h1{
+.on1{
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 10rem; 
     font-family: '국립박물관문화재단클래식B';
     color: rgb(0, 0, 0);
-    font-weight: 500;
+    font-size: 35rem;
 }
 
-.box h4{
+.on2{
     text-align: center;
+    margin-bottom: 30rem; 
     font-family: 'EliceDigitalBaeum_Bold'; 
+    font-size: 16rem;
 }
 
 .box input[type = "text"],.box input[type = "password"] {
     border: 0;
     background: none;
     display: block;
-    margin: 20px auto;
+    margin: 10rem auto;
     border: 2px solid #7e7e7e;
-    padding: 14px 10px;
-    width: 280px;
+    padding: 14rem 10rem;
+    width: 280rem;
     outline: none;
     color: rgb(0, 0, 0);
     border-radius: 10px;
     transition: 0.25s;
+    font-size: 16rem;
+}
+
+.box input[type = "text"]{
+    margin-bottom: 10rem; 
+}
+
+.box input[type = "password"] {
+    margin-bottom: 20rem; 
 }
 
 .box input[type = "text"]:focus, .box input[type = "password"]:focus {
@@ -66,15 +80,16 @@ body{
     border: 0;
     background: none;
     display: block;
-    margin: 20px auto;
-    padding: 14px 40px;
-    width: 300px;
+    margin: 10rem auto;
+    padding: 14rem 40rem;
+    width: 300rem;
     outline: none;
     color: rgb(255, 255, 255);
     border-radius: 10px;
     transition: 0.25s;
     cursor: pointer;
     background: #342372;
+    font-size: 16rem;
 }
 
 .box input[type = "submit"]:hover{
@@ -86,3 +101,7 @@ body{
     background:rgb(39, 11, 83);
     transition: .5s;
 } 
+
+@media (min-width:0) and (max-width: 500px) { 
+    html {font-size: 0.7px;}
+}

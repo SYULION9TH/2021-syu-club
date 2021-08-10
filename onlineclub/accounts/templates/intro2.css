@@ -5,6 +5,9 @@
     font-style: normal;
 }
 
+html {font-size: 1px;}
+body {font-size: 1rem;}
+
 body{
     margin: 0;
     padding: 0;
@@ -12,8 +15,6 @@ body{
     background-image: linear-gradient(120deg, #486291, #214e88, #253a7e, #1c274d, #001455, #0d0f29);
 }
 .box{
-    width: 300px;
-    padding: 150px 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,5 +24,9 @@ body{
     border-radius: 10px;
     color: rgb(255, 255, 255);
     font-family: 'EliceDigitalBaeum_Bold';
-    font-size: large;
+    font-size: 20rem;
+}
+
+@media (min-width:0) and (max-width: 500px) { 
+    html {font-size: 0.7px;}
 }

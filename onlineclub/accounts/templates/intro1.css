@@ -12,6 +12,9 @@
     font-style: normal;
 }
 
+html {font-size: 1px;}
+body {font-size: 1rem;}
+
 body{
     margin: 0;
     padding: 0;
@@ -19,45 +22,48 @@ body{
 }
 
 .box{
-    width: 350px;
-    padding: 150px 40px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: #000b6900;
     text-align: center;
-    border-radius: 10px;
-    
 }
 
 .box h5{
     font-family: 'EliceDigitalBaeum_Bold';
     color: rgb(255, 255, 0);
+    font-size: 16rem;
 }
 
 .box h1{
     font-family: '국립박물관문화재단클래식B';
     color: rgb(255, 255, 255);
     text-shadow: 2px 4px 2px rgb(0, 0, 0);
+    font-size: 28rem;
 }
 
 .box h3{
     font-family: '국립박물관문화재단클래식B';
     color: rgba(255, 255, 255, 0.658);
+    font-size: 20rem;
 }
 
 .box input[type = "submit"]{
     border: 0;
-    background: none;
     display: block;
-    margin: 20px auto;
-    padding: 14px 40px;
-    width: 150px;
+    margin: auto;  
+    padding: 15rem 10rem;
+    width: 130rem;
     outline: none;
     color: rgb(255, 230, 0);
     border-radius: 10px;
     cursor: pointer;
     background: #000000;
     font-family: '국립박물관문화재단클래식B';
+    font-size: 16rem;
+}
+
+
+@media (min-width:0) and (max-width: 500px) { 
+    html {font-size: 0.7px;}
 }
