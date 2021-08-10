@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>syu-club</title>
+  <title>문화체육분과</title>
 
-  <!-- <link rel="stylesheet" href="main.css"> -->
+  <!-- <link rel="stylesheet" href="club_list.css"> -->
   <script src="https://kit.fontawesome.com/d1c6c79e37.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -22,34 +22,10 @@
       font-style: normal;
     }
 
-    @font-face {
-      font-family: 'Pretendard-Regular';
-      src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Pretendard-Light';
-      src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
-      font-weight: 300;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Pretendard-Thin';
-      src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
-      font-weight: 100;
-      font-style: normal;
-    }
-
     body {
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
       box-sizing: border-box;
-      /* background: linear-gradient(#6b6873, #4D29A8); */
     }
 
     nav>span {
@@ -72,41 +48,31 @@
 
 
     header {
-      color: white;
       position: sticky;
-      background-color: #240E51;
-      /* background-position: top; */
-      padding: 20px 5% 20px 4%;
+      /* padding: 5% 4%; */
+      padding: 20px 5% 5% 4%;
+      color: white;
+      background: #502DC6;
       top: 0;
       left: 0;
       right: 0;
       z-index: 1;
     }
 
-    .club_text {
-      margin: 30px 0 50px 0;
+
+    header>p {
+      padding-top: 7%;
+      font-family: 'twaysky';
+      font-size: 40px;
       text-align: center;
-    }
-
-    #club_txt1 {
-      font-family: 'Pretendard-Regular';
-      font-size: 18px;
-      letter-spacing: -0.3px;
-    }
-
-    #club_txt2 {
-      font-family: 'Pretendard-Thin';
-      font-size: 15px;
-      letter-spacing: -0.4px;
-      color: #D5D0FD;
     }
 
 
     /* search */
     .search-bar {
       position: relative;
-      width: 100%;
-      margin: 10px 0 10px 0;
+      width: 96%;
+      margin: 10px 0 0 2%;
     }
 
     .search-bar>input {
@@ -124,44 +90,16 @@
       right: 15px;
       top: 25%;
       font-size: 20px;
-      color: #240E51;
+      color: #502DC6;
     }
 
 
-    /* sort button */
-    .club_sort_btn {
-      font-family: 'Pretendard-Light';
-      font-size: 13px;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
-    #sort_btn1,
-    #sort_btn2,
-    #sort_btn3 {
-      border: none;
-      border-radius: 10px;
-      padding: 10px 5px 10px 0;
-      width: 31%;
-      margin: auto;
-      background-color: #1C1246;
-    }
-
-    #sort_btn1:hover,
-    #sort_btn2:hover,
-    #sort_btn3:hover {
-      /* transform: scale(0.98); */
-      background-color: #3D2799;
-    }
-
-
-    main {
+    section {
       padding: 3% 4% 5% 4%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(#240E51, #4D29A8);
+      background: #EAE5E3;
     }
 
     /* card */
@@ -178,7 +116,6 @@
       z-index: 0;
       transition: 0.3s;
       position: relative;
-      border: none;
       width: 100%;
       max-width: 100%;
       height: 105px;
@@ -212,6 +149,7 @@
       padding-left: 25px;
     }
 
+
     .text-wrap h1 {
       font-size: 16px;
       font-weight: bold;
@@ -227,9 +165,9 @@
     }
 
 
+
     /* footer */
     footer {
-      background-color: white;
       padding-left: 1%;
     }
 
@@ -267,7 +205,6 @@
     }
   </style>
 
-
 </head>
 
 <body>
@@ -277,27 +214,17 @@
       <span>동아리 홍보전</span><br>
     </nav>
 
-
-    <div class="club_text">
-      <p id="club_txt1">동아리 등록 신청 기간: 9월 6일~28일</p>
-      <p id="club_txt2">2021 2학기에 신설된 신규 동아리는 포함되어 있지 않습니다.</p>
-    </div>
-
+    <p> 문화 체육 분과</p>
     <div class="search-bar">
       <input type="text" placeholder="동아리 이름을 입력하세요">
       <i class="fas fa-search"></i>
-    </div><br>
+    </div><br><br>
 
-
-    <!-- 정렬 버튼 -->
-    <div class="club_sort_btn">
-      <input id="sort_btn1" type="button" value="▾ 모집 디데이 순">
-      <input id="sort_btn2" type="button" value="▾ 동아리 순위 순">
-      <input id="sort_btn3" type="button" value="▾ 랜덤 순">
-    </div>
   </header>
 
-  <main>
+
+  <section>
+
     <!-- card -->
     <div class="card" style="border-radius: 10px;">
       <div class="day">
@@ -306,7 +233,7 @@
 
       <div class="c_img">
         <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
+              border-radius: 50%"></div>
       </div>
 
       <div class="text-wrap">
@@ -315,43 +242,7 @@
         <hr style="color: black;" width="60px">
         <span>동아리 소개</span>
       </div>
-    </div>
 
-
-    <div class="card" style="border-radius: 10px;">
-      <div class="day">
-        <span class="dday" style="float: right;">D-day</span>
-      </div>
-
-      <div class="c_img">
-        <div class="card_img"><img src="ll.jpg" width="80px" height="80px" style="
-            border-radius: 50%"></div>
-      </div>
-
-      <div class="text-wrap">
-        <h1>멋쟁이 사자처럼</h1>
-        <span>학술분과</span>
-        <hr style="color: black;" width="60px">
-        <span>동아리 소개</span>
-      </div>
-    </div>
-
-    <div class="card" style="border-radius: 10px;">
-      <div class="day">
-        <span class="dday" style="float: right;">D-day</span>
-      </div>
-
-      <div class="c_img">
-        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
-      </div>
-
-      <div class="text-wrap">
-        <h1>화소</h1>
-        <span>문화 체육 분과</span>
-        <hr style="color: black;" width="60px">
-        <span>동아리 소개</span>
-      </div>
     </div>
 
 
@@ -362,26 +253,7 @@
 
       <div class="c_img">
         <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
-      </div>
-
-      <div class="text-wrap">
-        <h1>동행길</h1>
-        <span>종교 봉사 분과</span>
-        <hr style="color: black;" width="60px">
-        <span>동아리 소개</span>
-      </div>
-    </div>
-
-
-    <div class="card" style="border-radius: 10px;">
-      <div class="day">
-        <span class="dday" style="float: right;">D-day</span>
-      </div>
-
-      <div class="c_img">
-        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
+              border-radius: 50%"></div>
       </div>
 
       <div class="text-wrap">
@@ -390,9 +262,8 @@
         <hr style="color: black;" width="60px">
         <span>동아리 소개</span>
       </div>
+
     </div>
-
-
 
     <div class="card" style="border-radius: 10px;">
       <div class="day">
@@ -401,7 +272,7 @@
 
       <div class="c_img">
         <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
+              border-radius: 50%"></div>
       </div>
 
       <div class="text-wrap">
@@ -410,34 +281,67 @@
         <hr style="color: black;" width="60px">
         <span>동아리 소개</span>
       </div>
+
     </div>
 
+    <div class="card" style="border-radius: 10px;">
+      <div class="day">
+        <span class="dday" style="float: right;">D-day</span>
+      </div>
 
-  </main>
+      <div class="c_img">
+        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
+              border-radius: 50%"></div>
+      </div>
 
+      <div class="text-wrap">
+        <h1>동아리이름</h1>
+        <span>분과</span>
+        <hr style="color: black;" width="60px">
+        <span>동아리 소개</span>
+      </div>
 
-
-  <!-- footer -->
-  <footer><br>
-    <p>© 삼육대학교 38대 벼리 동아리연합회 | 멋쟁이 사자처럼 at 삼육대학교 9기 </p>
-    <p>서울특별시 노원구 화랑로 815 삼육대학교 학생회관</p>
-    <p>개발진 | 이름나열</p>
-
-    <div class="wrapper">
-      <a href="#" class="icon">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="#" class="icon">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#" class="icon">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="#" class="icon">
-        <i class="fab fa-kaggle"></i>
-      </a>
     </div>
-  </footer>
+    <div class="card" style="border-radius: 10px;">
+      <div class="day">
+        <span class="dday" style="float: right;">D-day</span>
+      </div>
+
+      <div class="c_img">
+        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
+              border-radius: 50%"></div>
+      </div>
+
+      <div class="text-wrap">
+        <h1>동아리이름</h1>
+        <span>분과</span>
+        <hr style="color: black;" width="60px">
+        <span>동아리 소개</span>
+      </div>
+
+    </div>
+    <div class="card" style="border-radius: 10px;">
+      <div class="day">
+        <span class="dday" style="float: right;">D-day</span>
+      </div>
+
+      <div class="c_img">
+        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
+              border-radius: 50%"></div>
+      </div>
+
+      <div class="text-wrap">
+        <h1>동아리이름</h1>
+        <span>분과</span>
+        <hr style="color: black;" width="60px">
+        <span>동아리 소개</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
 </body>
 
 </html>
