@@ -5,6 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            
+    <script>
+      $(document).ready(function(){
+        $('.gallery').slick({
+          centerMode: true,
+          centerPadding: '60px',
+          slidesToShow: 3,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            }
+          ]
+
+        });
+      });
+    </script>
+
     <title>동아리 상세페이지</title>
     <style type="text/css">
         html,
@@ -49,7 +85,7 @@
             overflow: auto;
         }
 
-        footer_club {
+        div_club {
             margin: 10px;
             margin-left: 20px;
             margin-right: 20px;
@@ -160,10 +196,49 @@
             right: 0px;
         }
     </style>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            
+    <script>
+      $(document).ready(function(){
+        $('.gallery').slick({
+          centerMode: true,
+          centerPadding: '60px',
+          slidesToShow: 3,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            }
+          ]
+
+        });
+      });
+    </script>
+
 </head>
 
 <body>
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <nav_club>
         <h1 class="nav-title" style="font-weight: bold;">동아리 홍보전</h1>
     </nav_club>
@@ -187,17 +262,24 @@
         </article_section_club>
     </section_club>
 
-    <footer_club>
+    <div_club>
         <p class="club-title">동아리 게시물<hr></p>
-        <div class="container">
+        <div class="gallery">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+         </div>
+
+        <!--<div class="container">
             <div class="item">item1</div>
             <div class="item">item2</div>
             <div class="item">item3</div>
             <div class="item">item4</div>
             <div class="item">item5</div>
             <div class="item">item6</div>
-        </div>
-    </footer_club>
+        </div>-->
+
+    </div_club>
 
 </body>
 
