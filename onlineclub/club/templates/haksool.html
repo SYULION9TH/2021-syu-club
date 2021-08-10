@@ -1,8 +1,9 @@
 <a href = "{% url 'home' %}">메인화면</a>
+
 <!-- 검색 전 정렬은 D-DAY로 들어가야해서 따로 정렬하지 않았습니다.
     검색 후에는 가나다 순으로 정렬했습니다. -->
-<h1>메인 검색창</h1>
-<form action="{% url 'home'  %}" method="GET">
+<h1>분과 내 검색창</h1>
+<form action="{% url 'haksool' club_type %}" method="GET">
     <input type="search" placeholder="검색 내용" id="keyword" name="keyword">
     <input type="submit" value="검색">
 </form>
