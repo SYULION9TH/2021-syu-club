@@ -53,7 +53,7 @@
         nav_club {
             top: fixed;
             height: 50px;
-            background-color: ivory;
+            background-color: #F4F0EE;
         }
 
         main_club {
@@ -69,7 +69,8 @@
         }
 
         section_club {
-            margin: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             margin-left: 20px;
             margin-right: 20px;
             flex: 1;
@@ -81,7 +82,8 @@
         }
 
         div_club {
-            margin: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             margin-left: 20px;
             margin-right: 20px;
             flex-direction: column;
@@ -124,8 +126,12 @@
         }
 
         .club-title {
-            margin: 0;
-            color: blueviolet;
+            margin-left: 2px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: #451997;
+            font-size: 1.1em;
             font-weight: bold;
         }
 
@@ -141,7 +147,7 @@
 
         .main-title {
             position: absolute;
-            bottom: 65px;
+            bottom: 70px;
             left: 130px;
             right: 0px;
             font-size: 1.2em;
@@ -149,21 +155,32 @@
             margin: 0;
         }
 
+        .s-title {
+            position: absolute;
+            bottom: 45px;
+            left: 130px;
+            font-size: 0.7em;
+            font-weight: bold;
+        }
+
         .intro {
             margin-right: 30px;
             position: absolute;
             left: 130px;
             right:0;
-            bottom: 30px;
+            bottom: 20px;
+            text-align: justify;
+            font-size: 0.5em;
         }
 
-        .button {
+        .button_a {
             position: absolute;
             bottom: 0;
             left: 130px;
             line-height: 100%;
             font-size: 1.5px;
-            background-color: blueviolet;
+            background-color: #451997;
+            /*버튼그림자(#451997)추가하기*/
             border: 0px #00ff0000;
             font-weight: bold;
             color: white;
@@ -246,31 +263,27 @@
         <a class="top_instagram" target="_blank" href="https://instagram.com/">
             <img src="instagram.png" alt="ig로고" class="top_instagram">
         </a>
-
-        <!--<button type="button" id="" class="top_facebook" target="_blank" href="https://www.facebook.com/">
-            <img src="facebook.png" alt="Images" class="top_facebook">
-            </button>
-        <a class="top_facebook" img src="facebook.png" target="_blank" href="https://facebook.com"><span class="facebook"></span></a>
-        <input type="image" src="instagram.png" class="instagram" href="www.instagram.com">
-        <input type="image" src="facebook.png" class="facebook" href="www.facebok.com">-->
-
+        
         <article_main_club>
             <img src="LIKELION_LOGO.jpg" class="static">
             <h1 class="main-title">멋쟁이 사자처럼</h1>
-            <p class="intro" style="text-align: justify; font-size: 3px">피가 든 현저하게 모래뿐일 곳으로 그들의 바이며, 있으랴 놀이 노래하며 구하지</p>
-            <input type="submit" name="submit" class="button" value="지원하기">
+            <p class="s-title">학술분과</p>
+            <p class="intro">피가 든 현저하게 모래뿐일 곳으로 그들의 바이며, 있으랴 놀이 노래하며 구하지</p>
+            <input type="button" name="submit" class="button_a" value="지원하기">
         </article_main_club>
         
     </main_club>
 
     <section_club>
         <article_section_club>
-            <p class="club-title">모집요강<hr></p>
+            <p class="club-title">모집요강<hr style="width: 30%; height: 0.2%; background-color:silver;
+                border: none; position:absolute; left: 30px; margin: 5px;"></p>
         </article_section_club>
     </section_club>
 
     <div_club>
-        <p class="club-title">동아리 게시물<hr></p>
+        <p class="club-title">동아리 게시물<hr style="width: 30%; height: 0.2%; background-color:silver;
+            border: none; position:absolute; left: 30px; margin: 5px;"></p>
 
         <div class="gallery">
             <div><img src="facebook.png" style="width: 100px"></div>
