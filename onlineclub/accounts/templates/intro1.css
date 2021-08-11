@@ -18,7 +18,8 @@ body {font-size: 1rem;}
 body{
     margin: 0;
     padding: 0;
-    background-image: url('sky1.jpg');
+    background-image: url('star.jpg');
+    background-size : auto;
 }
 
 .box{
@@ -38,8 +39,8 @@ body{
 .box h1{
     font-family: '국립박물관문화재단클래식B';
     color: rgb(255, 255, 255);
-    text-shadow: 2px 4px 2px rgb(0, 0, 0);
-    font-size: 28rem;
+    text-shadow: 2rem 4rem 2rem rgb(0, 0, 0);
+    font-size: 32rem;
 }
 
 .box h3{
@@ -65,5 +66,21 @@ body{
 
 
 @media (min-width:0) and (max-width: 500px) { 
-    html {font-size: 0.7px;}
+    .box h5{
+        font-size: 12rem;
+    }
+    
+    .box h1{
+        font-size: 25rem;
+    }
+    
+    .box h3{
+        font-size: 14rem;
+    }
+    
+    .box input[type = "submit"]{
+        padding: 12rem 10rem;
+        width: 100px;
+        font-size: 13rem;
+    }
 }

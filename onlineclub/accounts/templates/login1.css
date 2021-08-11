@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 html {font-size: 1px;}
 body {font-size: 1rem;}
 
@@ -24,6 +31,7 @@ body{
 
 .box{
     width: 350rem;
+    height: 40%;
     padding: 150rem 40rem;
     position: absolute;
     top: 50%;
@@ -62,6 +70,8 @@ body{
     border-radius: 10px;
     transition: 0.25s;
     font-size: 16rem;
+    font-family: 'Pretendard-Regular';
+
 }
 
 .box input[type = "text"]{
@@ -90,6 +100,8 @@ body{
     cursor: pointer;
     background: #342372;
     font-size: 16rem;
+    font-family: 'Pretendard-Regular';
+
 }
 
 .box input[type = "submit"]:hover{
@@ -102,6 +114,39 @@ body{
     transition: .5s;
 } 
 
-@media (min-width:0) and (max-width: 500px) { 
-    html {font-size: 0.7px;}
+@media (min-width:0) and (max-width: 440px) { 
+    body{
+        background: #f1f1f1;
+    }
+
+    .box{
+        width: 80%;
+        height: 80%;
+    }
+    
+    .on1{
+        font-size: 27rem;
+        color: #2c003d;
+    }
+    
+    .on2{
+        margin-bottom: 20rem; 
+        font-size: 13rem;
+        color: #3a0052;
+    }
+    
+    .box input[type = "text"],.box input[type = "password"] {
+        padding: 12rem 10rem;
+        width: 90%;
+        font-size: 13rem;
+        margin-bottom: 0rem; 
+    }
+    
+    .box input[type = "submit"]{
+        margin: 10rem auto;
+        padding: 12rem 10rem;
+        width: 100%;
+        font-size: 13rem;
+    }
+
 }
