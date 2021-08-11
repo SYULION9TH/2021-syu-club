@@ -3,99 +3,159 @@
 body{
     background-color:#f4f0ee;
     width: 100%;
+    margin: 0;
+    text-align: center;
 }
 
-/* nav바 (menu, 온라인 동아리전, 업로드) */
-/* #menu>a{
-    text-decoration-line: none;
-    color:#494949;
+
+/* nav바 (menu, 동아리 홍보전) */
+.club_nav{
+    background-color:#f4f0ee;
+    height: 35px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    /* padding: 0; */
+    padding-top: 5%;
 }
-#title>a{
+.club_nav>a{
     text-decoration-line: none;
     color:#494949;
-    text-align: center;
     font-weight: bold;
     font-size: 120%;
-}
-#upload>a{
-    text-decoration-line: none;
-    color:#494949;
-} */
-#nav>a{
-    text-decoration-line: none;
-    color:#494949;
-    font-weight: bold;
     /* text-align: center; */
 }
 
-/* 사진, 동아리 */
-div#club1{
+
+/* pic,name */
+
+/* .big_pic{
     background-color: #9f9c9b;
-    /* text-align: center; */
-    display: flex;
-    /* justify-content: center; */
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-div#club2{
-    /* display: inline-block; */
-    /* margin: 0 auto; */
-    margin-left: 25px;
+    width: 200%;
+    height: 180px;
+    margin-top: 30%;
+} */
+.big_pic{
+    width: 100%;
 }
 
-#circle_pic{
-    background-color: #727373;
-    color: white;
-    width: 150px;
-    height: 100px;
-    text-align: center;
+.image{
+    max-width: 100%;
+    height: auto;
+    margin-top: 20%;
+}
+/* 
+.club_intro{
+    display: inline-block;
+    float: left;
+    margin: 0 auto;
+    margin-left: 25px;
+} */
+.circle_pic{
+    float: left;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.circle_pic>img{
+    /* background-color: #727373; */
+    /* color: white; */
+    /* text-align: center; */
+    width: 110px;
+    height: 110px;
     line-height: 50px;
     border-radius: 50%;
-    margin-left: 15px;
+    /* float: left; */
+}
+.club{
+    display: inline-block;
+    /* float: left; */
+    margin-right: 15%;
+}
+.name{
+    color: #4a4a4a;
+    font-weight: bold;
+    font-size: 130%;
+    margin-bottom: 0;
 }
 
-textarea#name{
-    background-color: #9f9c9b;
-    color: white;
-    border-color: #727373;
-    font-weight: bold;
-    font-size: 120%;
-}
-textarea#introduce{
-    background-color: #9f9c9b;
-    color: white;
+.introduce{
+    background-color: #f4f0ee;
+    color: #817f7e;
     border-color: #727373;
     font-weight: normal;
-    font-size: 90%;
+    font-size: 80%;
+    border-style: solid;
+    border-color: #b9b9b9;
+    width: 130%;
+    height: 70px;
+    /* text-align: left; */
 }
 
-#sign{
-    color: white;
-    background-color: #727373;
-}
 
-/* content (모집요강, 동아리 게시물)*/
-#content{
-    /* margin-top: 20px; */
-    width: 350px;
-    height: 150px;
+/* box*/
+.box1{
+    width: 90%;
+    height: 110px;
     background-color: white;
-    /* border-style: solid; */
     border-radius: 20px;  
+    margin: auto;
+}
+.box2{
+    width: 90%;
+    height: 230px;
+    background-color: white;
+    border-radius: 20px;  
+    margin: auto;
+}
+.box3{
+    width: 90%;
+    height: 100px;
+    background-color: white;
+    border-radius: 20px;  
+    margin: auto;
 }
 
-#text1{
-    color:#5523a0;
+.text{
+    color: #000;
     margin-left: 20px;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
-#te{
+.content1{
     color: #9f9c9b;
     font-weight: bold;
     border-style: hidden;
     border-radius: 10px;
+    width: 85%;
+    height: 170px;
+}
+.content2{
+    color: #9f9c9b;
+    font-weight: bold;
+    border-style: hidden;
+    border-radius: 10px;
+    width: 85%;
+    height: 40px;
+}
+
+.date{
     margin-left: 20px;
-    width: 300px;
-    height: 90px;
+}
+.sign{
+    background-color: #e3e3e3;
+    border-color: #fff;
+    border-style: hidden;
+}
+.upload{
+    background-color:#4d4d4d;
+    color: #f4f0ee;
+    border-radius: 5px;  
+    width: 90%;
+    height: 40px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 100%;
+    margin-bottom: 5%;
 }

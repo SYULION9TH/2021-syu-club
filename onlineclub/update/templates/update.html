@@ -10,140 +10,218 @@
         body{
             background-color:#f4f0ee;
             width: 100%;
-        }
-
-        /* nav바 (menu, 온라인 동아리전, 업로드) */
-        /* #menu>a{
-            text-decoration-line: none;
-            color:#494949;
-        }
-        #title>a{
-            text-decoration-line: none;
-            color:#494949;
+            margin: 0;
             text-align: center;
+        }
+        
+        
+        /* nav바 (menu, 동아리 홍보전) */
+        .club_nav{
+            background-color:#f4f0ee;
+            height: 35px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            margin: 0;
+            /* padding: 0; */
+            padding-top: 5%;
+        }
+        .club_nav>a{
+            text-decoration-line: none;
+            color:#494949;
             font-weight: bold;
             font-size: 120%;
-        }
-        #upload>a{
-            text-decoration-line: none;
-            color:#494949;
-        } */
-        #nav>a{
-            text-decoration-line: none;
-            color:#494949;
-            font-weight: bold;
             /* text-align: center; */
         }
         
-        /* 사진, 동아리 */
-        div#club1{
+        
+        /* pic,name */
+        
+        /* .big_pic{
             background-color: #9f9c9b;
-            /* text-align: center; */
-            display: flex;
-            /* justify-content: center; */
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-        div#club2{
-            /* display: inline-block; */
-            /* margin: 0 auto; */
-            margin-left: 25px;
+            width: 200%;
+            height: 180px;
+            margin-top: 30%;
+        } */
+        .big_pic{
+            width: 100%;
         }
         
-        #circle_pic{
-            background-color: #727373;
-            color: white;
-            width: 150px;
-            height: 100px;
-            text-align: center;
+        .image{
+            max-width: 100%;
+            height: auto;
+            margin-top: 20%;
+        }
+        /* 
+        .club_intro{
+            display: inline-block;
+            float: left;
+            margin: 0 auto;
+            margin-left: 25px;
+        } */
+        .circle_pic{
+            float: left;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+        .circle_pic>img{
+            /* background-color: #727373; */
+            /* color: white; */
+            /* text-align: center; */
+            width: 110px;
+            height: 110px;
             line-height: 50px;
             border-radius: 50%;
-            margin-left: 15px;
+            /* float: left; */
+        }
+        .club{
+            display: inline-block;
+            /* float: left; */
+            margin-right: 15%;
+        }
+        .name{
+            color: #4a4a4a;
+            font-weight: bold;
+            font-size: 130%;
+            margin-bottom: 0;
         }
         
-        textarea#name{
-            background-color: #9f9c9b;
-            color: white;
-            border-color: #727373;
-            font-weight: bold;
-            font-size: 120%;
-        }
-        textarea#introduce{
-            background-color: #9f9c9b;
-            color: white;
+        .introduce{
+            background-color: #f4f0ee;
+            color: #817f7e;
             border-color: #727373;
             font-weight: normal;
-            font-size: 90%;
+            font-size: 80%;
+            border-style: solid;
+            border-color: #b9b9b9;
+            width: 130%;
+            height: 70px;
+            /* text-align: left; */
         }
         
-        #sign{
-            color: white;
-            background-color: #727373;
-        }
         
-        /* content (모집요강, 동아리 게시물)*/
-        #content{
-            /* margin-top: 20px; */
-            width: 350px;
-            height: 150px;
+        /* box*/
+        .box1{
+            width: 90%;
+            height: 110px;
             background-color: white;
-            /* border-style: solid; */
             border-radius: 20px;  
+            margin: auto;
+        }
+        .box2{
+            width: 90%;
+            height: 230px;
+            background-color: white;
+            border-radius: 20px;  
+            margin: auto;
+        }
+        .box3{
+            width: 90%;
+            height: 100px;
+            background-color: white;
+            border-radius: 20px;  
+            margin: auto;
         }
         
-        #text1{
-            color:#5523a0;
+        .text{
+            color: #000;
             margin-left: 20px;
             font-weight: bold;
+            margin-bottom: 0;
         }
         
-        #te{
+        .content1{
             color: #9f9c9b;
             font-weight: bold;
             border-style: hidden;
             border-radius: 10px;
+            width: 85%;
+            height: 170px;
+        }
+        .content2{
+            color: #9f9c9b;
+            font-weight: bold;
+            border-style: hidden;
+            border-radius: 10px;
+            width: 85%;
+            height: 40px;
+        }
+        
+        .date{
             margin-left: 20px;
-            width: 300px;
-            height: 90px;
+        }
+        .sign{
+            background-color: #e3e3e3;
+            border-color: #fff;
+            border-style: hidden;
+        }
+        .upload{
+            background-color:#4d4d4d;
+            color: #f4f0ee;
+            border-radius: 5px;  
+            width: 90%;
+            height: 40px;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 100%;
+            margin-bottom: 5%;
         }
     </style>
 </head>
+
 <body>
-    <!-- nav바 (menu, 온라인 동아리전, 업로드) -->
+<!-- nav바 (menu, 동아리 홍보전) -->
     <nav>
-        <!-- <p id="menu"><a href="#">menu</a></p>
-        <p id="title"><a href="#">온라인 동아리전</a></p>
-        <p id="upload"><a href="#">업로드</a></p> -->
-        <p id="nav">
-                <a href="#">menu</a>
-                <a href="#">온라인 동아리전</a>
-                <a href="#">업로드</a>
+        <p class="club_nav">
+            <a href="#">menu</a>
+            <a href="#">동아리 홍보전</a>
         </p>
     </nav>
-    <!-- 내용 -->
-    <div>
-        <!--  사진, 동아리  -->
-        <div id="club1">
-            <!-- <p>사진</p> -->
-            <p id="circle_pic">사진</p>
-            <div id="club2">
-                <textarea name="" id="name" cols="15" rows="2">동아리 이름</textarea>
-                <textarea name="" id="introduce" cols="27" rows="4">동아리 소개를 입력하세요.</textarea>
-                <br>
-                <button id="sign">활동사진 등록</button>
-                <button id="sign">SNS 등록</button>
-            </div>
-        </div>
-        <!-- content (모집요강, 동아리 게시물) -->
-        <div id="content">
-            <p id="text1">모집요강</p>
-            <hr width="90%">
-            <textarea name="" id="te" cols="30" rows="10">내용을 입력하세요.</textarea>
-        </div>
-        <div id="content">
-            <p id="text1">동아리 게시물</p>
-            <hr width="90%">
-            <textarea name="" id="te" cols="30" rows="10">내용을 입력하세요.</textarea>
-        </div>
+
+
+<!-- 내용 -->
+
+<!--  pic,name  -->
+<div class="big_pic">
+    <img src="sea.jpg" alt="" class="image">
+</div>
+
+<section class="no1">
+    <!-- circle -->
+    <div class="circle_pic">
+        <img src="lion.jpg" alt="">
+    </div>
+    <!-- club -->
+    <div class="club">
+        <p class="name">멋쟁이 사자처럼</p>
+        <p class="introduce">동아리 소개를 입력하세요.</p>
+    </div>
+</section>
+
+<!-- box -->
+<section class="no2">
+    <!-- 1 -->
+    <div class="box1">
+        <p class="text">모집 신청 기간</p>
+        <hr width="90%">
+        <p class="date">
+            <input type="date" class="sign">~<input type="date" class="sign">
+        </p>
+    </div>
+    <!-- 2 -->
+    <div class="box2">
+        <p class="text">모집 요강</p>
+        <hr width="90%">
+        <textarea name="" class="content1" cols="30" rows="10">내용을 입력하세요.</textarea>
+    </div>
+    <!-- 3 -->
+    <div class="box3">
+        <p class="text">모집 신청 링크</p>
+        <hr width="90%">
+        <textarea name="" class="content2" cols="30" rows="10">URL을 입력해주세요.</textarea>
+    </div>
+    <!-- 업로드 -->
+    <button class="upload">업로드</button>
+</section>  
 </body>
 </html>
