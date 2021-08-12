@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,10 +12,8 @@
         }
     </style>
 
-    <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
@@ -30,12 +28,13 @@
 
     <div class="container">
         {% for post in posts %}
-        <!-- post_img_url이 CharField 일 경우 -->
-        <img src="{{post.post_img_url}}" class="card-img-top" alt="...">
-
-        <!-- post_img_url이 ImageField 일 경우 -->
+        
         {% if post.post_img_url %}
-        <img src="{{post.post_img_url.url}}" style="width: 100px; height: 100px;" class="card-img-top" alt="url">
+        사진: <img src="{{ post.post_img_url }}" /> <br>
+        {% endif %}
+
+        {% if post.post_img %}
+        사진: <img src="{{post.post_img.url}}" alt="">
         {% endif %}
 
         <br>
@@ -46,4 +45,4 @@
     </div>
 </body>
 
-</html>
+</html> -->

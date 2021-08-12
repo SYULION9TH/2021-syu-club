@@ -19,7 +19,7 @@ def create(request):
     new_post.post_title = request.POST['post_title']
     new_post.post_content = request.POST['post_content']
     new_post.post_img_url = request.POST['post_img_url'] # CharField 일 경우
-    # new_post.post_img_url = request.FILES['post_img_url'] # ImageField 일 경우
+    new_post.post_img_url = request.FILES['post_img'] # ImageField 일 경우
     new_post.created_at = timezone.now()
     new_post.updated_at = timezone.now()
     new_post.is_deleted = 0

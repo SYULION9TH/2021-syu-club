@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,19 +20,18 @@
         수정날짜: {{post.updated_at}}<br>
         내용: {{post.post_content}}<br>
 
-        <!-- CharField 일 경우 -->
-        <img src="{{ post.post_img_url }}" /> <br>
-        
-        <!-- ImageField 일 경우 -->
         {% if post.post_img_url %}
-            사진: <img src="{{post.post_img_url.url}}" alt="">
+        <img src="{{ post.post_img_url }}" /> <br>
+        {% endif %}
+
+        {% if post.post_img %}
+            사진: <img src="{{post.post_img.url}}" alt="">
         {% endif %}
     </div>
 
-    <!-- <a href="{% url 'edit' post.post_id %}">Edit</a> -->
     <a href="{% url 'delete' post.post_id %}">Delete</a>
     <br>
     <a href="{% url 'home' %}">Main Page</a>
 </body>
 
-</html>
+</html> -->
