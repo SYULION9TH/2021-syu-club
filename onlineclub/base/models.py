@@ -10,9 +10,9 @@ class AuthUser(models.Model):
     is_staff = models.IntegerField()
     is_active = models.IntegerField()
 
-    class Meta:
-        managed = False
-        db_table = 'auth_user'
+    # class Meta:
+    #     managed = False
+    #     db_table = 'auth_user'
 
 
 class ClubTypes(models.Model):
@@ -21,9 +21,9 @@ class ClubTypes(models.Model):
     club_type_desc = models.CharField(max_length=200, blank=True, null=True)
     club_type = models.IntegerField(blank=True, null=True)
 
-    class Meta:
-        managed = False
-        db_table = 'club_types'
+    # class Meta:
+    #     managed = False
+    #     db_table = 'club_types'
 
 
 
@@ -33,7 +33,7 @@ class Clubs(models.Model):
     club_name = models.CharField(max_length=200, blank=True, null=True)
     club_desc = models.CharField(max_length=200, blank=True, null=True)
     user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
-    club_type = models.ForeignKey(ClubTypes, models.DO_NOTHING)
+    club_type = models.OneToOneField(ClubTypes, models.DO_NOTHING)
     club_img_url = models.CharField(max_length=500, blank=True, null=True) #활동사진
     club_logo_url = models.CharField(max_length=500, blank=True, null=True)
     established = models.DateTimeField()
@@ -41,15 +41,16 @@ class Clubs(models.Model):
     updated_at = models.DateTimeField()
     end_day = models.DateTimeField()
     deadline = models.IntegerField()
+    rank = models.IntegerField()
     sns_link = models.CharField(max_length=500, blank=True, null=True)
     form_link = models.CharField(max_length=500, blank=True, null=True)
     
     def D_day(self,now):
         return int((self.end_day - now).days)
 
-    class Meta:
-        managed = False
-        db_table = 'clubs'
+    # class Meta:
+    #     managed = False
+    #     db_table = 'clubs'
 
 #계시글 모델
 class Posts(models.Model):
@@ -64,9 +65,9 @@ class Posts(models.Model):
     is_deleted = models.IntegerField()
     club = models.ForeignKey(Clubs, models.DO_NOTHING, blank=True, null=True)
 
-    class Meta:
-        managed = False
-        db_table = 'posts'
+    # class Meta:
+    #     managed = False
+    #     db_table = 'posts'
 
 
 # 모집요강 테이블
@@ -78,7 +79,7 @@ class Recruitment(models.Model):
     end_date = models.DateTimeField()
     is_staff = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
 
-    class Meta:
-        managed = False
-        db_table = 'recruitment'
+    # class Meta:
+    #     managed = False
+    #     db_table = 'recruitment'
 

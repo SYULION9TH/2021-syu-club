@@ -15,3 +15,5 @@ def home(request):
         dday = sorted(club, key=operator.attrgetter('deadline')) #디데이 정렬
         context = {'clubs':dday}
     return render(request,'home.html',context)
+
+# Create your views here.
