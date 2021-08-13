@@ -10,7 +10,7 @@
 {% for club in club_list %}
     <br>
     {{club.club_name}}
-    <a href = "{% url 'home' %}">{{club.club_name}}</a>
+    <a href = "{% url 'home' club.club_id %}">{{club.club_name}}</a>
     {{club.club_type}}
     rank: {{ club.rank }}
     dday:{{ club.deadline }}

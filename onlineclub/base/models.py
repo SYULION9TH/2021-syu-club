@@ -71,11 +71,14 @@ class Posts(models.Model):
     post_introduce = models.CharField(max_length=200, blank=True, null=True)
     post_img_url = models.CharField(max_length=1500, blank=True, null=True)
     post_img = models.ImageField(upload_to="post/", blank=True, null=True)
-    user = models.ForeignKey(AuthUser, models.DO_NOTHING, null=True)
-    created_at = models.DateTimeField()
-    updated_at = models.DateTimeField()
-    is_deleted = models.IntegerField()
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
+    created_at = models.DateTimeField(blank=True, null=True)
+    updated_at = models.DateTimeField(blank=True, null=True)
+    is_deleted = models.IntegerField(blank=True, null=True)
     club = models.ForeignKey(Clubs, models.DO_NOTHING, blank=True, null=True)
+
+    def __str__(self):
+        return str(self.club)
     
     # class Meta:
     #     managed = False
