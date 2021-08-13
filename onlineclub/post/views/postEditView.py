@@ -32,7 +32,7 @@ def detailpage_update(request, id):
 
     if request.method =="POST":
         
-        update_detailpage.club_img_url = request.POST['club_img_url']
+        update_detailpage.club_img_url = request.POST.get('img','club_img_url')
         update_detailpage.club_desc = request.POST.get('desc','club_desc')
         update_detailpage.recruitment_content = request.POST.get('recruitment','recruitment_content')
         update_detailpage.save()
