@@ -18,12 +18,10 @@ from django.urls import path, include
 from accounts import views
 from club import views
 from post import views
-from update import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('club/', include('club.urls')),
     path('post/', include('post.urls')),
-    path('update/', views.update, name='update'),
 ]
