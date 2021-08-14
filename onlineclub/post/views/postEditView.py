@@ -14,7 +14,7 @@ def post_update(request, id):
     update_post = Posts.objects.get(post_id=id)
     update_post.post_title = request.POST['post_title']
     update_post.post_content = request.POST['post_content']
-    update_post.post_img_url = request.POST['post_img_url']
+    update_post.post_img = request.FILES.get('img','post_img')
     update_post.updated_at = timezone.now()
     update_post.save()
     return redirect('detail', str(update_post.post_id))
@@ -32,7 +32,7 @@ def detailpage_update(request, id):
 
     if request.method =="POST":
         
-        update_detailpage.club_img_url = request.POST.get('img','club_img_url')
+        update_detailpage.club_img = request.FILES.get('img','club_img')
         update_detailpage.club_desc = request.POST.get('desc','club_desc')
         update_detailpage.recruitment_content = request.POST.get('recruitment','recruitment_content')
         update_detailpage.save()
