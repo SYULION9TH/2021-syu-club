@@ -129,6 +129,19 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+#각 app마다 static폴더들 명시
+
+#static 사용시 
+#{%load static %}
+#<img src="{% static 'app_name/img_name%}">
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'base', 'static'),
+    os.path.join(BASE_DIR, 'club', 'static'),
+    os.path.join(BASE_DIR, 'post', 'static'),
+]
+# root static파일에 한번에 모아둔다.
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'

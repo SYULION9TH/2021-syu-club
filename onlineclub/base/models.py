@@ -34,17 +34,18 @@ class ClubTypes(models.Model):
 class Clubs(models.Model):
     club_id = models.AutoField(primary_key=True)
     club_name = models.CharField(max_length=200, blank=True, null=True)
+    main_club = models.IntegerField(blank=True, null=True)
     club_desc = models.CharField(max_length=200, blank=True, null=True)
     user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
     club_type = models.ForeignKey(ClubTypes, models.DO_NOTHING)
-    club_img_url = models.CharField(max_length=500, blank=True, null=True) # 활동사진
+    club_img = models.ImageField(upload_to='images/', blank=True, null=True) # 활동사진
     club_logo_url = models.CharField(max_length=500, blank=True, null=True)
     # established = models.DateTimeField()
     # created_at = models.DateTimeField()
     # updated_at = models.DateTimeField()
     end_day = models.DateTimeField(blank=True, null=True)
     deadline = models.IntegerField(blank=True, null=True)
-    rank = models.IntegerField()
+    rank = models.IntegerField(blank=True, null=True)
     sns_link = models.CharField(max_length=500, blank=True, null=True) # 여분
     instagram_link = models.CharField(max_length=500, blank=True, null=True)
     facebook_link = models.CharField(max_length=500, blank=True, null=True)
