@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,6 +66,7 @@
       position: absolute;
       font-size: 25px;
       color: white;
+      margin-left: 8px;
     }
 
     .menu_Btn:hover {
@@ -84,20 +87,14 @@
     }
 
     .club_text {
-      margin: 30px 0 50px 0;
+      margin: 25px 0 20px 0;
       text-align: center;
     }
 
-    #club_txt1 {
-      font-family: 'Pretendard-Regular';
-      font-size: 18px;
-      letter-spacing: -0.3px;
-    }
-
-    #club_txt2 {
+    #club_txt {
       font-family: 'Pretendard-Thin';
       font-size: 15px;
-      letter-spacing: -0.4px;
+      letter-spacing: -0.5px;
       color: #D5D0FD;
     }
 
@@ -106,7 +103,7 @@
     .search-bar {
       position: relative;
       width: 100%;
-      margin: 10px 0 10px 0;
+      margin: 10px 0 30px 0;
     }
 
     .search-bar>input {
@@ -131,27 +128,23 @@
     /* sort button */
     .club_sort_btn {
       font-family: 'Pretendard-Light';
-      font-size: 13px;
+      font-size: 15px;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    #sort_btn1,
-    #sort_btn2,
-    #sort_btn3 {
+    .sort_btn {
       border: none;
       border-radius: 10px;
       padding: 10px 5px 10px 0;
-      width: 31%;
+      width: 40%;
       margin: auto;
       background-color: #1C1246;
     }
 
-    #sort_btn1:hover,
-    #sort_btn2:hover,
-    #sort_btn3:hover {
+    .sort_btn:hover {
       /* transform: scale(0.98); */
       background-color: #3D2799;
     }
@@ -165,7 +158,6 @@
     }
 
     /* card */
-
     .dday {
       padding-right: 3%;
       padding-top: 1%;
@@ -203,6 +195,12 @@
       top: 11px;
     }
 
+    .flag {
+      position: relative;
+      z-index: 1;
+      margin: 0 7px;
+    }
+
 
     .text-wrap {
       position: absolute;
@@ -225,49 +223,7 @@
       font-size: 12px;
       font-family: 'Pretendard-Regular';
     }
-
-
-    /* footer */
-    footer {
-      background-color: white;
-      padding-left: 1%;
-    }
-
-    .wrapper {
-      display: flex;
-    }
-
-    .wrapper>a {
-      text-decoration: none
-    }
-
-    .icon {
-      margin: 10px;
-      background-color: black;
-      height: 30px;
-      width: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.2);
-    }
-
-    .icon i {
-      font-size: 15px;
-      color: white;
-    }
-
-    .icon:hover {
-      background-color: #FED700;
-    }
-
-    .icon:hover i {
-      color: antiquewhite;
-    }
   </style>
-
-
 </head>
 
 <body>
@@ -279,8 +235,7 @@
 
 
     <div class="club_text">
-      <p id="club_txt1">동아리 등록 신청 기간: 9월 6일~28일</p>
-      <p id="club_txt2">2021 2학기에 신설된 신규 동아리는 포함되어 있지 않습니다.</p>
+      <p id="club_txt">2021 2학기에 신설된 신규 동아리는 포함되어 있지 않습니다.</p>
     </div>
 
     <div class="search-bar">
@@ -291,22 +246,21 @@
 
     <!-- 정렬 버튼 -->
     <div class="club_sort_btn">
-      <input id="sort_btn1" type="button" value="▾ 모집 디데이 순">
-      <input id="sort_btn2" type="button" value="▾ 동아리 순위 순">
-      <input id="sort_btn3" type="button" value="▾ 랜덤 순">
+      <input type="submit" name="rank" class="sort_btn" value="▾ 동아리 순위 순">
+      <input type="submit" name="random" class="sort_btn" value="▾ 랜덤 순">
     </div>
   </header>
 
   <main>
     <!-- card -->
     <div class="card" style="border-radius: 10px;">
-      <div class="day">
-        <span class="dday" style="float: right;">D-day</span>
-      </div>
-
       <div class="c_img">
-        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
+        <div class="card_img">
+          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+        </div>
+        <!-- <img class="flag" src="../static/중앙.svg" width="40px" height="45px"> -->
+        <img class="flag" src="{% static 'base/중앙.svg' %}" width="40px" height="45px">
       </div>
 
       <div class="text-wrap">
@@ -319,13 +273,13 @@
 
 
     <div class="card" style="border-radius: 10px;">
-      <div class="day">
-        <span class="dday" style="float: right;">D-day</span>
-      </div>
-
       <div class="c_img">
-        <div class="card_img"><img src="ll.jpg" width="80px" height="80px" style="
-            border-radius: 50%"></div>
+        <div class="card_img">
+          <!-- <img src="../static/ll.jpg" width="80px" height="80px" style="border-radius: 50%"> -->
+          <img src="{% static 'base/ll.jpg' %}" width="80px" height="80px" style="border-radius: 50%">
+        </div>
+        <!-- <img class="flag" src="../static/가등록.svg" width="40px" height="45px"> -->
+        <img class="flag" src="{% static 'base/가등록.svg' %}" width="40px" height="45px">
       </div>
 
       <div class="text-wrap">
@@ -336,14 +290,15 @@
       </div>
     </div>
 
-    <div class="card" style="border-radius: 10px;">
-      <div class="day">
-        <span class="dday" style="float: right;">D-day</span>
-      </div>
 
+    <div class="card" style="border-radius: 10px;">
       <div class="c_img">
-        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
+        <div class="card_img">
+          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+        </div>
+        <!-- <img class="flag" src="../static/가등록.svg" width="40px" height="45px"> -->
+        <img class="flag" src="{% static 'base/가등록.svg' %}" width="40px" height="45px">
       </div>
 
       <div class="text-wrap">
@@ -356,13 +311,13 @@
 
 
     <div class="card" style="border-radius: 10px;">
-      <div class="day">
-        <span class="dday" style="float: right;">D-day</span>
-      </div>
-
       <div class="c_img">
-        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
+        <div class="card_img">
+          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+        </div>
+        <!-- <img class="flag" src="../static/신규.svg" width="40px" height="45px"> -->
+        <img class="flag" src="{% static 'base/신규.svg' %}" width="40px" height="45px">
       </div>
 
       <div class="text-wrap">
@@ -375,13 +330,13 @@
 
 
     <div class="card" style="border-radius: 10px;">
-      <div class="day">
-        <span class="dday" style="float: right;">D-day</span>
-      </div>
-
       <div class="c_img">
-        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
+        <div class="card_img">
+          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+        </div>
+        <!-- <img class="flag" src="../static/신규.svg" width="40px" height="45px"> -->
+        <img class="flag" src="{% static 'base/신규.svg' %}" width="40px" height="45px">
       </div>
 
       <div class="text-wrap">
@@ -395,13 +350,13 @@
 
 
     <div class="card" style="border-radius: 10px;">
-      <div class="day">
-        <span class="dday" style="float: right;">D-day</span>
-      </div>
-
       <div class="c_img">
-        <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-            border-radius: 50%"></div>
+        <div class="card_img">
+          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+        </div>
+        <!-- <img class="flag" src="../static/신규.svg" width="40px" height="45px"> -->
+        <img class="flag" src="{% static 'base/신규.svg' %}" width="40px" height="45px">
       </div>
 
       <div class="text-wrap">
@@ -412,32 +367,8 @@
       </div>
     </div>
 
-
   </main>
 
-
-
-  <!-- footer -->
-  <footer><br>
-    <p>© 삼육대학교 38대 벼리 동아리연합회 | 멋쟁이 사자처럼 at 삼육대학교 9기 </p>
-    <p>서울특별시 노원구 화랑로 815 삼육대학교 학생회관</p>
-    <p>개발진 | 이름나열</p>
-
-    <div class="wrapper">
-      <a href="#" class="icon">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="#" class="icon">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#" class="icon">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="#" class="icon">
-        <i class="fab fa-kaggle"></i>
-      </a>
-    </div>
-  </footer>
 </body>
 
 </html>

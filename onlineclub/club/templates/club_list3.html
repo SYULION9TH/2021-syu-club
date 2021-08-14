@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +41,7 @@
             position: absolute;
             font-size: 25px;
             color: white;
+            margin-left: 8px;
         }
 
         .menu_Btn:hover {
@@ -146,6 +148,12 @@
             top: 11px;
         }
 
+        .flag {
+            position: relative;
+            z-index: 1;
+            margin: 0 7px;
+        }
+
 
         .text-wrap {
             position: absolute;
@@ -232,13 +240,13 @@
 
         <!-- card -->
         <div class="card" style="border-radius: 10px;">
-            <div class="day">
-                <span class="dday" style="float: right;">D-day</span>
-            </div>
-
             <div class="c_img">
-                <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-              border-radius: 50%"></div>
+                <div class="card_img">
+                    <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+                    <img src="{% static 'club/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+                </div>
+                <!-- <img class="flag" src="../static/중앙.svg" width="40px" height="45px"> -->
+                <img class="flag" src="{% static 'club/중앙.svg' %}" width="40px" height="45px">
             </div>
 
             <div class="text-wrap">
@@ -252,13 +260,13 @@
 
 
         <div class="card" style="border-radius: 10px;">
-            <div class="day">
-                <span class="dday" style="float: right;">D-day</span>
-            </div>
-
             <div class="c_img">
-                <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-              border-radius: 50%"></div>
+                <div class="card_img">
+                    <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+                    <img src="{% static 'club/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+                </div>
+                <!-- <img class="flag" src="../static/가등록.svg" width="40px" height="45px"> -->
+                <img class="flag" src="{% static 'club/가등록.svg' %}" width="40px" height="45px">
             </div>
 
             <div class="text-wrap">
@@ -271,13 +279,13 @@
         </div>
 
         <div class="card" style="border-radius: 10px;">
-            <div class="day">
-                <span class="dday" style="float: right;">D-day</span>
-            </div>
-
             <div class="c_img">
-                <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-              border-radius: 50%"></div>
+                <div class="card_img">
+                    <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+                    <img src="{% static 'club/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+                </div>
+                <!-- <img class="flag" src="../static/가등록.svg" width="40px" height="45px"> -->
+                <img class="flag" src="{% static 'club/가등록.svg' %}" width="40px" height="45px">
             </div>
 
             <div class="text-wrap">
@@ -290,13 +298,13 @@
         </div>
 
         <div class="card" style="border-radius: 10px;">
-            <div class="day">
-                <span class="dday" style="float: right;">D-day</span>
-            </div>
-
             <div class="c_img">
-                <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-              border-radius: 50%"></div>
+                <div class="card_img">
+                    <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+                    <img src="{% static 'club/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+                </div>
+                <!-- <img class="flag" src="../static/신규.svg" width="40px" height="45px"> -->
+                <img class="flag" src="{% static 'club/신규.svg' %}" width="40px" height="45px">
             </div>
 
             <div class="text-wrap">
@@ -308,13 +316,13 @@
 
         </div>
         <div class="card" style="border-radius: 10px;">
-            <div class="day">
-                <span class="dday" style="float: right;">D-day</span>
-            </div>
-
             <div class="c_img">
-                <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-              border-radius: 50%"></div>
+                <div class="card_img">
+                    <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+                    <img src="{% static 'club/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+                </div>
+                <!-- <img class="flag" src="../static/신규.svg" width="40px" height="45px"> -->
+                <img class="flag" src="{% static 'club/신규.svg' %}" width="40px" height="45px">
             </div>
 
             <div class="text-wrap">
@@ -326,13 +334,13 @@
 
         </div>
         <div class="card" style="border-radius: 10px;">
-            <div class="day">
-                <span class="dday" style="float: right;">D-day</span>
-            </div>
-
             <div class="c_img">
-                <div class="card_img"><img src="1.png" width="80px" height="80px" style="
-              border-radius: 50%"></div>
+                <div class="card_img">
+                    <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+                    <img src="{% static 'club/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+                </div>
+                <!-- <img class="flag" src="../static/신규.svg" width="40px" height="45px"> -->
+                <img class="flag" src="{% static 'club/신규.svg' %}" width="40px" height="45px">
             </div>
 
             <div class="text-wrap">
@@ -343,6 +351,7 @@
             </div>
 
         </div>
+
 
     </section>
 
