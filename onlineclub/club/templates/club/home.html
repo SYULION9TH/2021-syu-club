@@ -1,0 +1,51 @@
+<h1>검색창</h1>
+<form action="{% url 'home1'  %}" method="GET">
+    <input type="search" placeholder="검색 내용" id="keyword" name="keyword">
+    <input type="submit" value="검색">
+</form>
+<form method="get">
+    <button type="submit" name="rank" value="rank">순위순</button>
+    <button type="submit" name="dday" value="dday">디데이순</button>
+</form>
+{% for club in club_list %}
+    <br>
+    {{club.club_name}}
+    <a href = "{% url 'home' club.club_id %}">{{club.club_name}}</a>
+    {{club.club_type}}
+    rank: {{ club.rank }}
+    dday:{{ club.deadline }}
+    <br>
+{% endfor %}
+<br>
+<br>
+<br>
+<br> 
+{% if not user.is_authenticated %}
+<a href="{% url 'loginhtml' %}">로그인</a>
+{% endif %}
+{% if user.is_authenticated %}
+어서오세요 {{user.username}}님!
+<a href="{% url 'logout' %}">로그아웃</a>
+{% endif %}
+<h1>사이드 메뉴</h1>
+<!-- 분과 1 -->
+<a href = "{% url 'haksool' 1 %}">분과1</a>
+{% for side_1 in side_menu1 %}
+    <br>
+    {{side_1.club_name}} 
+{% endfor %}
+<hr>
+<!-- 분과 2 -->
+<a href = "{% url 'haksool' 2 %}">분과2</a>
+{% for side_2 in side_menu2 %}
+    <br>
+    {{side_2.club_name}} 
+{% endfor %}
+<hr>
+<!-- 분과3 -->
+<a href = "{% url 'haksool' 3 %}">분과3</a>
+{% for side_3 in side_menu3 %}
+    <br>
+    {{side_3.club_name}} 
+{% endfor %}
+    
