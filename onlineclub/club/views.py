@@ -7,7 +7,7 @@ from datetime import datetime
 def home(request):
     template_name='club/home.html'
     club_list = Clubs.objects.all().order_by('?')
-    #  사이드메뉴 (학술 봉사 문화)
+    #  사이드메뉴 (문화 학술 봉사)
     side_menu1 = Clubs.objects.all().filter(club_type = 1)
     side_menu2 = Clubs.objects.all().filter(club_type = 2)
     side_menu3 = Clubs.objects.all().filter(club_type = 3)
