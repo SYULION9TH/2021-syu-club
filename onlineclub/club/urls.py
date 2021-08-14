@@ -5,5 +5,5 @@ from club import views
 urlpatterns = [
     path('', views.home, name="home"),
     path('<int:club_type>', views.haksool, name="haksool"),
-     path('<int:club_id>/post/', include('post.urls')),
+    path('post/<int:club_id>/', include('post.urls')),
 ]

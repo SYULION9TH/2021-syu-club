@@ -23,9 +23,15 @@
 
 <body>
     {% load static %}
+    {{club.club_name}}
+    <br>
+    {{club.recruitment_content}}
+    {% if user.id == club_id|add:1 or user.is_superuser %}
+    <a href="{% url 'detailupdate' club_id %}">모집요강 수정</a>
     <div>
         <a href="{% url 'new' club_id %}">Write Post Page</a>
     </div>
+    {% endif %}
     <br> <br>
     
     <div class="container">

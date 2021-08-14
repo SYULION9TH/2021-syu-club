@@ -29,8 +29,10 @@
         {% endif %}
     </div>
 
-    <a href="{% url 'edit' post.post_id %}">Edit</a>
+    {% if user.id == club_id|add:1 or user.is_superuser %}
+    <a href="{% url 'edit' club_id post.post_id %}">Edit</a>
     <a href="{% url 'delete' club_id post.post_id %}">Delete</a>
+    {% endif %}
     <br>
     <a href="{% url 'home' club_id %}">Main Page</a>
 </body>
