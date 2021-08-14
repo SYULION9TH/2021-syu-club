@@ -22,7 +22,7 @@ body{
     background-size : auto;
 }
 
-.box{
+.boxint{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,26 +30,20 @@ body{
     text-align: center;
 }
 
-.box h5{
+.boxint h5{
     font-family: 'EliceDigitalBaeum_Bold';
     color: rgb(255, 255, 0);
-    font-size: 16rem;
+    font-size: 22rem;
 }
 
-.box h1{
+.boxint h1{
     font-family: '국립박물관문화재단클래식B';
     color: rgb(255, 255, 255);
     text-shadow: 2rem 4rem 2rem rgb(0, 0, 0);
-    font-size: 32rem;
+    font-size: 38rem;
 }
 
-.box h3{
-    font-family: '국립박물관문화재단클래식B';
-    color: rgba(255, 255, 255, 0.658);
-    font-size: 20rem;
-}
-
-.box input[type = "submit"]{
+.boxint input[type = "submit"]{
     border: 0;
     display: block;
     margin: auto;  
@@ -66,21 +60,21 @@ body{
 
 
 @media (min-width:0) and (max-width: 500px) { 
-    .box h5{
-        font-size: 12rem;
+    .boxint{
+        width: 85%;
+        
     }
-    
-    .box h1{
-        font-size: 25rem;
-    }
-    
-    .box h3{
+    .boxint h5{
         font-size: 14rem;
     }
     
-    .box input[type = "submit"]{
-        padding: 12rem 10rem;
-        width: 100px;
-        font-size: 13rem;
+    .boxint h1{
+        font-size: 29rem;
+    }
+    
+    .boxint input[type = "submit"]{
+        padding: 11rem 9rem;
+        width: 95px;
+        font-size: 14rem;
     }
 }

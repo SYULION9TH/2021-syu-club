@@ -123,36 +123,37 @@ body{
 
 @media (min-width:0) and (max-width: 440px) { 
     body{
+        margin: 0;
         background: #f1f1f1;
     }
 
     .login-form{
-        width: 75%;
-        height: 75%;
+        width: 80%;
+        height: 60%;
     }
 
     .on11{
         color: #2c003d;
-        font-size:27rem;
+        font-size:28.5rem;
     }
     
     .on22{
         color: #3a0052;
-        font-size: 13rem;
+        font-size: 13.5rem;
     }
     
     .txti{
         margin: 20rem 0;
-        font-size: 13rem;
+        font-size: 13.5rem;
     }
 
     .txti input{
-        font-size: 13rem;
+        font-size: 13.5rem;
         height: 35rem;
     }    
     
     .sub{
         height: 40rem;
-        font-size: 13rem;
+        font-size: 13.5rem;
     }
 }
