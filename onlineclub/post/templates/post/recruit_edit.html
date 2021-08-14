@@ -1,0 +1,8 @@
+<h1>Write recruitment Page</h1>
+
+<form action="{% url 'detailupdate' club_id %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p><input type="file" Required name="club_img"></p>
+    <p>내용: <textarea name="recruitment_content" value="{{club.recruitment_content}}">{{club.recruitment_content}}</textarea></p>
+    <button type="submit">Submit</button>
+</form>

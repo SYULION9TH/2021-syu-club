@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+    <title>login Html!</title>
+</head>
+<body>
+    <h1>LOGIN!</h1>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}    
+        {% for field in form %}
+        <label>{{field.label}}</label>
+        <input type="{{field.field.widget.input_type}}" id="{{field.id_for_label}}" placeholder="{{field.label}}" name="{{field.name}}">
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
