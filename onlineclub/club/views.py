@@ -4,7 +4,7 @@ from django.db.models import Q
 import operator
 from datetime import datetime
 
-def home(request):
+def home1(request):
     template_name='club/home.html'
     club_list = Clubs.objects.all().order_by('?')
     #  사이드메뉴 (문화 학술 봉사)
@@ -15,7 +15,7 @@ def home(request):
     # 검색어 유
     if request.GET.get("keyword"):
         keyword = request.GET.get("keyword")
-        club_list = Clubs.objects.filter(Q(club_name__icontains = keyword) | Q(club_desc__icontains = keyword)).distinct()
+        club_list = Clubs.objects.filter(Q(club_name__icontains = keyword)).distinct()
         # return render(request, 'club/home.html', {'club_list': club_list})
     # 검색어 무
     # else:
@@ -47,7 +47,7 @@ def haksool(request, club_type):
     # 검색어 유
     if request.GET.get("keyword"):
         keyword = request.GET.get("keyword")
-        club_list = Clubs.objects.all().filter(Q(club_type = club_type) & (Q(club_name__icontains = keyword) | Q(club_desc__icontains = keyword)))
+        club_list = Clubs.objects.all().filter(Q(club_type = club_type) & (Q(club_name__icontains = keyword)))
         return render(request, template_name, {'club_list': club_list, 'club_type': club_type, 'side_menu1':side_menu1, 'side_menu2':side_menu2, 'side_menu3':side_menu3})
     # 검색어 무
     else:

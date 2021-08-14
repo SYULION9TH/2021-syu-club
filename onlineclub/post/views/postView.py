@@ -27,7 +27,6 @@ def create(request, club_id):
     new_post.is_deleted = 0
     new_post.club = Clubs.objects.get(club_id=club_id)
     new_post.save()
-    # return redirect('detail', args=(club_id, new_post.post_id))
     return redirect('detail', str(club_id), str(new_post.post_id))
 
 def delete(request, club_id, id):
