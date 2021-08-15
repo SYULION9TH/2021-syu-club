@@ -18,7 +18,7 @@ body {font-size: 1rem;}
 body {
     margin: 0;
     padding: 0;
-    background-image: url("2021-syu-club/onlineclub/static/star.jpg");
+    background-image: url("../../../onlineclub/static/star.jpg");
     background-size : auto;
 }
 
@@ -84,7 +84,7 @@ body {
 
 @media (min-width:0) and (max-width: 772px) { 
     body {
-        background-image: url('/static/intro_back_img.jpg');
+        background-image: url('../../../onlineclub/static/intro_back_img.jpg');
         background-size : cover;
     }
 

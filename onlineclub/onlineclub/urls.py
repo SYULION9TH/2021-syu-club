@@ -20,11 +20,12 @@ from club import views
 from post import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from base import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('club/', include('club.urls')),
     path('post/', include('post.urls')),
+    path('base/', include('base.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

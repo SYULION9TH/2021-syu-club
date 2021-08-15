@@ -1,14 +1,12 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>intro</title>
-    <link rel="stylesheet" href="intro.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>intro</title>
+    <link rel="stylesheet" href="{% static 'intro.css' %}">
 
 </head>
 
@@ -19,7 +17,7 @@
     <a href="home.html" class="subb">입장하기</a>
 </form>
 
-<img src= "{% base/static 'syu_logo.png' %}" class="loggg">
+<img src= "{% static 'syu_logo.png' %}" class="loggg">
 
 </body>
 </html>
