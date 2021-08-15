@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +32,7 @@
         .club_nav>a{
             color:#494949;
             font-weight: bold;
-            font-size: 120%;
+            font-size: 100%;
             /* text-align: center; */
             text-decoration-line: none;
         }
@@ -66,9 +68,11 @@
         /* circle */
         
         .circle_pic{
-            width: 28%;
+            /* width: 28%; */
+            width: 30%;
             position: relative;
-            margin-left: 5%;
+            margin-top: 3%;
+            margin-left: 3%;
             /* display: inline-block; */
             display: flex;
             align-items: center;
@@ -85,14 +89,14 @@
         .club{
             width: 70%;
             text-align: left;
-            margin-left: 5%;
+            margin-left: 1%;
             padding-left: 10px;
             display: inline-block;
         }
         .name{
             color: #4a4a4a;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 17px;
             margin-bottom: 0;
             /* margin-top: 0; */
         }
@@ -107,20 +111,23 @@
             border-color: #b9b9b9;
             width: 95%;
             height: 60px;
+            /* height: 45%; */
+            margin-top: 4%;
             /* text-align: left; */
         }
         
         
         
         /* no2 */
-        
+
         /* box*/
         .box{
             background-color: white;
             width: 90%;
-            height: 180px;
+            height: 210px;
             margin: auto;
-            border-radius: 20px;  
+            border-radius: 12px;  
+            box-shadow: 0px 0px 2px 1px lightgrey;
         }
         .text{
             color: #000;
@@ -129,11 +136,16 @@
             margin-left: 20px;
             margin-bottom: 0;
         }
-        
+        .line{
+            /* padding-left: px; */
+            margin-left: 20px;
+        }
+
         .content{
             color: #9f9c9b;
             width: 85%;
-            height: 130px;
+            height: 140px;
+            font-size: smaller;
             font-weight: bold;
             border-style: hidden;
             border-radius: 10px;
@@ -149,7 +161,7 @@
             margin-bottom: 5%;
             font-weight: bold;
             font-size: 100%;
-            border-radius: 5px;
+            /* border-radius: 5px; */
         }
     </style>
       
@@ -163,37 +175,39 @@
             <a href="#">동아리 홍보전</a>
         </p>
     </nav>
-
-<!-- 내용 -->
-
-<!--  pic,name  -->
-<div class="big_pic">
-    <img src="sea.jpg" alt="" class="image">
-</div>
-
-<!-- no1 -->
-<section class="no1">
-    <!-- circle -->
-    <div class="circle_pic">
-        <img src="lion.jpg" alt="">
+    
+    <!-- 내용 -->
+    
+    <!--  pic,name  -->
+    <div class="big_pic">
+        <!-- <img src="../static/sea.jpg" alt="" class="image"> -->
+        <img src="{% static 'sea.jpg' %}" alt="활동사진">
     </div>
-    <!-- club -->
-    <div class="club">
-        <p class="name">멋쟁이 사자처럼</p>
-        <input type="text" class="introduce"></input>
-    </div>
-</section>
-
-<!-- no2 -->
-<section class="no2">
-    <!-- box -->
-    <div class="box">
-        <p class="text">모집 요강</p>
-        <hr width="90%">
-        <textarea name="" class="content" cols="30" rows="10">내용을 입력하세요.</textarea>
-    </div>
-    <!-- upload -->
-    <button class="upload">업로드</button>
-</section>  
+    
+    <!-- no1 -->
+    <section class="no1">
+        <!-- circle -->
+        <div class="circle_pic">
+            <!-- <img src="../static/lion.jpg" alt=""> -->
+            <img src="{% static 'lion.jpg' %}" alt="동아리 로고">
+        </div>
+        <!-- club -->
+        <div class="club">
+            <p class="name">멋쟁이 사자처럼</p>
+            <input type="text" class="introduce"></input>
+        </div>
+    </section>
+    
+    <!-- no2 -->
+    <section class="no2">
+        <!-- box -->
+        <div class="box">
+            <p class="text">모집 요강</p>
+            <hr class="line" width="45%">
+            <textarea name="" class="content" cols="30" rows="10">내용을 입력하세요.</textarea>
+        </div>
+        <!-- upload -->
+        <button class="upload">업로드</button>
+    </section>  
 </body>
 </html>

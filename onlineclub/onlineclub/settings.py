@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -109,13 +109,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -123,7 +123,37 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#각 app마다 static폴더들 명시
+
+#static 사용시 
+#{%load static %}
+#<img src="{% static 'app_name/img_name%}">
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'base', 'static'),
+    os.path.join(BASE_DIR, 'club', 'static'),
+    os.path.join(BASE_DIR, 'post', 'static'),
+]
+# root static파일에 한번에 모아둔다.
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#각 app마다 static폴더들 명시
+
+#static 사용시 
+#{%load static %}
+#<img src="{% static 'app_name/img_name%}">
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'base', 'static'),
+    os.path.join(BASE_DIR, 'club', 'static'),
+    os.path.join(BASE_DIR, 'post', 'static'),
+]
+# root static파일에 한번에 모아둔다.
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
