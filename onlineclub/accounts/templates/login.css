@@ -24,14 +24,19 @@
 html {font-size: 1px;}
 body {font-size: 1rem;}
 
-body{
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+body {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(120deg, #1e2358, #58007a);
 }
 
-.login-form{
-    width: 350px;
+.login-form {
+    width: 360px;
     background: #f1f1f1;
     height: 55%;
     padding: 80rem 40rem;
@@ -43,21 +48,21 @@ body{
 }
 
 
-.on11{
+.on11 {
     text-align: center;
     margin-bottom: 10rem; 
     font-family: '국립박물관문화재단클래식B';    
     font-size: 35rem;
 }
 
-.on22{
+.on22 {
     text-align: center;
     margin-bottom: 20rem; 
     font-family: 'EliceDigitalBaeum_Bold'; 
     font-size: 16rem;
 }
 
-.txti{
+.txti {
     border-bottom: 2px solid #adadad;
     position: relative;
     margin: 30rem 0;
@@ -65,7 +70,7 @@ body{
     font-family: 'Pretendard-Regular';
 }
 
-.txti input{
+.txti input {
     font-size: 15rem;
     color: #333;
     border: none;
@@ -77,7 +82,7 @@ body{
     font-family: 'Pretendard-Regular';
 }
 
-.txti span::before{
+.txti span::before {
     content: attr(data-placeholder);
     position: absolute;
     top: 50%;
@@ -87,7 +92,8 @@ body{
     z-index: -1;
     transition: .5s;
 }
-.txti span::after{
+
+.txti span::after {
     content: '';
     position: absolute;
     width: 0%;
@@ -96,13 +102,15 @@ body{
     transition: .5s;
 }
 
-.focus + span::before{
+.focus + span::before {
     top: -5rem;
 }
-.focus + span::after{
+
+.focus + span::after {
     width: 100%;
 }
-.sub{
+
+.sub {
     display: block;
     border-radius: 10px;
     width: 100%;
@@ -117,7 +125,8 @@ body{
     font-size: 16rem;
     font-family: 'Pretendard-Regular';
 }
-.sub:hover{
+
+.sub:hover {
     background-position: right;
 }
 

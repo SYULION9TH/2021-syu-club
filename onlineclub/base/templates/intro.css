@@ -15,14 +15,14 @@
 html {font-size: 1px;}
 body {font-size: 1rem;}
 
-body{
+body {
     margin: 0;
     padding: 0;
-    background-image: url('star.jpg');
+    background-image: url("2021-syu-club/onlineclub/static/star.jpg");
     background-size : auto;
 }
 
-.boxint{
+.boxint {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,35 +30,38 @@ body{
     text-align: center;
 }
 
-.boxint h5{
+.boxint h5 {
     font-family: 'EliceDigitalBaeum_Bold';
     color: rgb(255, 255, 0);
     font-size: 22rem;
+    margin-bottom: 45rem; 
 }
 
-.boxint h1{
+.boxint h1 {
     font-family: '국립박물관문화재단클래식B';
     color: rgb(255, 255, 255);
     text-shadow: 2rem 4rem 2rem rgb(0, 0, 0);
     font-size: 38rem;
+    margin-bottom: 45rem; 
 }
 
-.boxint input[type = "submit"]{
+.subb {
     border: 0;
     display: block;
     margin: auto;  
     padding: 15rem 10rem;
-    width: 130rem;
+    width: 325rem;
     outline: none;
     color: rgb(255, 230, 0);
     border-radius: 10px;
     cursor: pointer;
-    background: #000000;
+    background: #0000008e;
     font-family: '국립박물관문화재단클래식B';
     font-size: 16rem;
+    text-decoration:none;    
 }
 
-.boxint input[type = "submit"]:hover {
+.subb:hover {
     box-shadow:
      4px 4px 5px 0px #fff9,
      7px 7px 20px 0px #fff9,
@@ -68,23 +71,42 @@ body{
     color: #fff;
   }
 
+.loggg {
+    width: 125rem;
+    height: auto;
+    position: fixed;
+    bottom: 4%;
+    left:0;
+    right:0;
+    margin: 0 auto;
+}
   
-@media (min-width:0) and (max-width: 500px) { 
-    .boxint{
-        width: 85%;
-        
+
+@media (min-width:0) and (max-width: 772px) { 
+    body {
+        background-image: url('/static/intro_back_img.jpg');
+        background-size : cover;
     }
-    .boxint h5{
+
+    .boxint {
+        width: 85%;
+    }
+
+    .boxint h5 {
         font-size: 14rem;
     }
     
-    .boxint h1{
+    .boxint h1 {
         font-size: 29rem;
     }
     
-    .boxint input[type = "submit"]{
+    .subb {
         padding: 11rem 9rem;
-        width: 95px;
+        width: 250px;
         font-size: 14rem;
+    }
+
+    .loggg {
+        width: 100rem;
     }
 }
