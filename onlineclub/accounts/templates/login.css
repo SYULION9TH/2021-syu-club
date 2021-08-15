@@ -27,7 +27,7 @@ body {font-size: 1rem;}
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-    }
+}
 
 body {
     height: 100%;
@@ -35,7 +35,7 @@ body {
     background-image: linear-gradient(120deg, #1e2358, #58007a);
 }
 
-.login-form {
+.alll {
     width: 360px;
     background: #f1f1f1;
     height: 55%;
@@ -44,9 +44,20 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);  
+    transform: translate(-50%,-50%); 
 }
 
+.login-form {
+    width: 360px;
+    background: #f1f1f1;
+    height: 315px;
+    padding: 80rem 40rem;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);  
+}
 
 .on11 {
     text-align: center;
@@ -133,12 +144,19 @@ body {
 @media (min-width:0) and (max-width: 440px) { 
     body{
         margin: 0;
-        background: #f1f1f1;
+        background:#f1f1f1;;
+    }
+
+    .alll {
+        width: 80%;
+        height: 50%;
+        background: #f1f1f1;;
+
     }
 
     .login-form{
         width: 80%;
-        height: 60%;
+        height: 250px;
     }
 
     .on11{
