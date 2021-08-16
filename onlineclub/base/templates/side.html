@@ -17,11 +17,13 @@
 </head>
 
 <body>
-    <div id="sidebar">
-        <h1>온라인 동아리전</h1>
+    <div class="sidebar">
+      <div class="sidebar_header">
+        <h1>동아리 홍보전</h1>
         <div class="hide_Btn"><i class="fas fa-angle-double-left" id="CloseBtn"></i></div><br>
         <div class="admin_icon"><i class="fas fa-user-circle"></i></div>
-        <h3><a href="#">관리자로 로그인하기</a></h3>
+        <h4><a href="#">관리자로 로그인하기</a></h4>
+      </div>
         <div class="sidenav">
           <button class="dropdown-btn">문화분과
             <i class="fa fa-caret-down"></i>
@@ -58,7 +60,7 @@
 
   <script>
    $(document).ready(function(){
-        var target = $("#sidebar");
+        var target = $(".sidebar");
 
         $(document).on("click", "#OpenBtn", function (e){
             target.animate({width:'toggle'},200);

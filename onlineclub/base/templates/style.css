@@ -25,46 +25,53 @@
     background: linear-gradient(#240E51, #4D29A8);
   }
   
-  #sidebar {
+  .sidebar {
     display: none;
     position: fixed;
-    background: linear-gradient(#240E51, #4D29A8);
+    background: none;
     color: white;
     width: 300px;
+    max-width: 90%;
     height: 100vh;
     z-index: 9999;
   }
   
-  #sidebar>h1 {
+  .sidebar_header {
+    display: block;
+    background-color: #929292;
+    opacity: 0.9;
+    padding-bottom: 30px;
+  }
+
+  .sidebar_header>h1 {
     width: 200px;
     padding-top: 30px;
     padding-left: 20px;
     margin-right: 40px;
-    font-family: 'twaysky';
     font-size: 22px;
+    font-weight: bold;
     float: left;
   }
   
-  #sidebar>h3 {
+  .sidebar_header>h4 {
     margin-left: 65px;
     margin-top: 63px;
   }
   
-  #sidebar>h3>a:link {
+  .sidebar_header>h4>a:link {
     color: white;
     text-decoration: none;
   }
   
-  #sidebar>h3>a:hover {
+  .sidebar_header>h4>a:hover {
     color: white;
     text-decoration: none;
   }
   
-  #sidebar>h3>a:visited {
+  .sidebar_header>h4>a:visited {
     color: white;
     text-decoration: none;
   }
-  
   
   .emphasized {
     box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
@@ -72,7 +79,7 @@
   
   .admin_icon {
     font-size: 35px;
-    color: white;
+    color: #4b3577;
     padding-left: 20px;
     float: left;
   }
@@ -104,11 +111,10 @@
   
   .sidenav {
     width: 300px;
-    position: fixed;
     z-index: 1;
-    background-color:transparent;
+    background-color:#4b3577;
     overflow-x: hidden;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   
   .sidenav a, .dropdown-btn {
@@ -125,17 +131,22 @@
   }
   
   .sidenav a {
+    font-size: 17px;
     color: black;
   }
   
   .dropdown-btn {
-    color: #818181;
+    color: #e4e4e4;
   }
   
-  .sidenav a:hover, .dropdown-btn:hover {
-    color: #f1f1f1;
+  .sidenav a:hover {
+    color: black;
   }
   
+  .dropdown-btn:hover {
+    color: white;
+  }
+
   .active {
     background-color: transparent;
     color: white;
@@ -143,7 +154,7 @@
   
   .dropdown-container {
     display: none;
-    background-color: #c4c4c4;
+    background-color: #f7f7f7;
     padding-left: 8px;
   }
   
