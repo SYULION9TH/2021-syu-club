@@ -59,8 +59,8 @@
         main_club {
             position: relative;
             background-color: #00ff0000;
-            height: 28%;
-            margin-top: 10px;
+            height: 30%;
+            margin-top: 0px;
             margin-bottom: 10px;
             margin-left: 15px;
             margin-right: 15px;
@@ -170,6 +170,7 @@
             width: 30px;
             cursor: pointer;
             position: absolute;
+            top: 5px;
             right: 30px;
         }
 
@@ -178,6 +179,7 @@
             width: 30px;
             cursor: pointer;
             position: absolute;
+            top: 5px;
             right: 15px;
         }
 
@@ -186,8 +188,19 @@
             width: 30px;
             cursor: pointer;
             position: absolute;
+            top: 5px;
             right: 0;
         }
+
+        .top_bookmark {
+            margin: 0;
+            border: none;
+            width: 40%;
+            cursor: pointer;
+            position: absolute;
+            left: 5px;
+        }
+    
     </style>
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> 
@@ -234,7 +247,10 @@
     </nav_club>
 
     <main_club>
-
+        <a class="top_bookmark">
+            <img src="main_book.png" alt="bm로고" class="top_bookmark">
+            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;">학&nbsp술<br>분&nbsp과</p>
+        </a>
         <a class="top_youtube" target="_blank" href="https://youtube.com/">
             <img src="top_youtube.png" alt="yb로고" class="top_youtube">
         </a>
@@ -264,9 +280,9 @@
     <div_club>
         <p class="club-title">동아리 게시물<hr style="width: 40%; height: 0.4%; background-color:gray;
             border: none; position:absolute; left: 0; margin: 5px;"></p>
-
+        
         <div class="gallery">
-            <div><img src="image.jpg" style="width: 50%;"></div>
+            <div><img src="image.jpg" style="width: 50%"></div>
             <div><img src="image.jpg" style="width: 50%"></div>
             <div><img src="image.jpg" style="width: 50%"></div>
         </div>
