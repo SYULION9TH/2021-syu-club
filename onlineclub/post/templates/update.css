@@ -1,5 +1,21 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK KR Regular';
+    src: url("font/NotoSansCJKkr-Regular.otf");
+}
+
+@font-face {
+    font-family: 'Noto Sans CJK KR Medium';
+    src: url("font/NotoSansCJKkr-Medium.otf");
+}
 body{
     background-color:#f4f0ee;
     width: 100%;
@@ -21,29 +37,33 @@ body{
     position: fixed;
 }
 .club_nav>a{
-    color:#494949;
+    /* color:#494949;
     font-weight: bold;
-    font-size: 100%;
+    font-size: 100%; */
     /* text-align: center; */
     text-decoration-line: none;
 }
-
+#top{
+    font-family: 'Cafe24Danjunghae';
+    color:#494949;
+    /* font-weight: bold; */
+    font-size: 20px;
+}
 
 /* 내용 */
 
-/* pic,name */
+/* 이미지 미리보기 */
 
-.big_pic{
+.image-container{
     width: 100%;
 }
 
-.image{
+#preview-image{
     /* height: auto; */
     height: 250px;
     max-width: 100%;
-    margin-top: 20%;
+    /* margin-top: 20%; */
 }
-
 
 /* no1 */
 
@@ -85,14 +105,17 @@ body{
     display: inline-block;
 }
 .name{
+    font-family: 'Noto Sans CJK KR Regular';
     color: #4a4a4a;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
     margin-bottom: 0;
     /* margin-top: 0; */
 }
 
+
 .introduce{
+    font-family: 'Noto Sans CJK KR Regular';
     background-color: #f4f0ee;
     color: #817f7e;
     border-color: #727373;
@@ -107,8 +130,7 @@ body{
     /* text-align: left; */
 }
 
-
-
+  
 /* no2 */
 
 /* box*/
@@ -121,8 +143,9 @@ body{
     box-shadow: 0px 0px 2px 1px lightgrey;
 }
 .text{
+    font-family: 'Noto Sans CJK KR Medium';
     color: #000;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: left;
     margin-left: 20px;
     margin-bottom: 0;
@@ -133,13 +156,15 @@ body{
 }
 
 .content{
+    font-family: 'Noto Sans CJK KR Regular';
     color: #9f9c9b;
     width: 85%;
     height: 140px;
     font-size: smaller;
-    font-weight: bold;
+    /* font-weight: bold; */
     border-style: hidden;
     border-radius: 10px;
+    margin-left: -3px;
 }
 
 /* upload */
