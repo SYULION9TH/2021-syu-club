@@ -45,7 +45,11 @@
         }
 
         body {
-            background-color: aliceblue;
+            background-image: url('image.jpg');
+            /*원하는 이미지 넣기*/
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: #F4F0EE;
             display: flex;
             flex-direction: column;
         }
@@ -100,6 +104,7 @@
             margin-top: 12px;
             text-align: center;
             font-size: 20px;
+            color: #5523a0;
         }
         
         .article_main_club {
@@ -123,17 +128,18 @@
             float: left;
             width: 95px;
             border-radius: 70%;
-            box-shadow: 1px 1px 10px silver;
+            box-shadow: 1px 1px 10px gray;
         }
 
         .main-title {
             position: absolute;
-            bottom: 60px;
+            bottom: 65px;
             left: 140px;
             right: 0px;
             font-size: 1.2em;
             font-weight: bold;
             margin: 0;
+            color: white;
         }
 
         .intro {
@@ -141,9 +147,10 @@
             position: absolute;
             left: 140px;
             right:0;
-            bottom: 25px;
+            bottom: 30px;
             text-align: justify;
             font-size: 0.5em;
+            color: white;
         }
 
         .button_a {
@@ -151,18 +158,18 @@
             bottom: 0;
             left: 135px;
             line-height: 140%;
-            font-size: 1.5px;
+            font-size: 10pt;
             background-color: #451997;
-            /*버튼그림자(#451997)추가하기*/
             border: 0px #00ff0000;
+            box-shadow: 1px 1px 10px #451997;
             font-weight: bold;
             color: white;
 
             border-radius: 15px;
-            padding-top: 2%;
-            padding-bottom: 2%;
-            padding-left: 4%;
-            padding-right: 4%;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
         .top_youtube {
@@ -244,6 +251,9 @@
 
     <nav_club>
         <h1 class="nav-title" style="font-weight: bold;">동아리 홍보전</h1>
+        <a>
+            <img src="nav_edit.png" alt="ne로고" style="margin: 0px; width: 30px; position: absolute; top: 0; right: 20px;">
+        </a>
     </nav_club>
 
     <main_club>
@@ -274,6 +284,7 @@
         <article_section_club>
             <p class="club-title">모집요강<hr style="width: 40%; height: 0.4%; background-color:gray;
                 border: none; position:absolute; left: 0; margin: 5px;"></p>
+            <p style="font-size: 1em; margin: 0;">소개 글 입니다.</p>
         </article_section_club>
     </section_club>
 
