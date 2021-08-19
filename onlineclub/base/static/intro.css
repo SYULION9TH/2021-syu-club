@@ -111,9 +111,6 @@ body {
 }
 
 .container .stage {
-    background-image: url("./img/1.jpg");
-    background-size: cover;
-    background-position: center;
     margin: auto;
     position: absolute;
     left: 0;

@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>login</title>
-    <link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet" href="{% static 'login.css' %}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     
@@ -11,7 +13,8 @@
 </head>
 <body>
     <div class="alll">
-        <form action="animatedLogin.html" class="login-form">
+        <form method="POST" action="{% url 'login' %} "class="login-form">
+            {% csrf_token %}
         
             <div class="on11">2021-2 동아리 홍보전</div>
             <div class="on22">제 38대 동아리 연합회 벼리 X 멋쟁이 사자처럼 at SYU</div>

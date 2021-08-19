@@ -11,7 +11,7 @@ from .forms import SigninForm
 # Testing
 def loginhtml(request):
     form = SigninForm()
-    return render(request, 'accounts/login.html', {'form': form})
+    return render(request, 'login.html', {'form': form})
 
 # 관리자 로그인
 def logining(request):
