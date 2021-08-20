@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-from django.shortcuts import render
-
-# Create your views here.
-=======
 from django.shortcuts import render, get_object_or_404
 from base.models import *
 from django.db.models import Q
@@ -58,4 +53,3 @@ def haksool(request, club_type):
     else:
         club_list = Clubs.objects.all().filter(club_type = club_type).order_by('club_name')
         return render(request, template_name, {'club_list': club_list, 'club_type': club_type, 'side_menu1':side_menu1, 'side_menu2':side_menu2, 'side_menu3':side_menu3})
->>>>>>> 3521c9d2bc4740bda1e2a48cdbc626a27f10bcf5
