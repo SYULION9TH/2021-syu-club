@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from base import views
 from accounts import views
 from club import views
 from post import views
@@ -23,6 +24,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('base.urls')),
     path('accounts/', include('accounts.urls')),
     path('club/', include('club.urls')),
     path('post/', include('post.urls')),
