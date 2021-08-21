@@ -73,6 +73,13 @@
           <img src="{% static '1.png' %}" width="80px" height="80px" style="border-radius: 50%">
           {% endif %}
         </div>
+        <!-- <img class="flag" src="../static/중앙.svg" width="40px" height="45px"> -->
+        {% if club.main_club == 1 %}
+        <img class="flag" src="{% static '중앙.svg' %}" width="40px" height="45px">
+        {% elif club.main_club == 0 %}
+        <img class="flag" src="{% static '가등록.svg' %}" width="40px" height="45px">
+        {% endif %}
+      </div>
 
         <div class="text-wrap">
           <h1>{{club.club_name}}</h1>
