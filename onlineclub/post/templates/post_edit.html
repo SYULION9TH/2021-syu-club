@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'post_edit.css'}"> 
+</head>
+<body>
+
+
+    <div class= "post_detail_container" id="postdetail">
+        <div class = "post_detail">
+        <div class = "post_top">
+            <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'close.png' %}" class="close"></a>
+            <div class="inline">
+                <input type="text" class="title" name="post_title" value="{{post.post_title}}" >
+            </div>
+        </div>
+            <p class="create">{{post.updated_at}}</p>
+            <div class="post_background">
+                <div class="img_content">
+                    <label for="img" class="img_width"></label>
+                    <input type="file" name="post_img" class="img_width1" id="img">
+                    <img src="{% static 'img.png' %}" alt="게시물 사진입니다." class= "post_img"></a>
+                </div>
+            </div>
+        </div>
+        <div class = "post_content">
+            <textarea class="content" cols="50" row="5" placeholder="게시물 내용을 입력하세요">{{post.post_content}}</textarea>
+        </div>
+        <button class="submit" type="submit">업로드</button>
+    </div>
+
+        
+</div>
+</body>
+</html>
