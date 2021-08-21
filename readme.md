@@ -39,8 +39,6 @@ git branch -d 브랜치명
 `$git checkout master`
 
 # 개발 시작합시다.  
-<<<<<<< HEAD
-=======
 
 `2021-syu-club/onlineclub`폴더가 있는 위치에서 가상환경(`$source myvenv/bin/activate`)을 실행해 줍니다.  
 가상환경 실행 후 `requirements.txt`가 있는 위치에서 `$pip install -r requirements.txt`명령어를 입력합니다.  
@@ -85,4 +83,3 @@ QnA 예시)
 |한 동아리의 QnA상세를 나타낸다.|GET|/clubs/:id/qna/:id|
 |한 동아리의 QnA를 수정한다.|PUT|/clubs/:id/qna/:id|
 |한 동아리의 QnA를 삭제한다.|DELETE|/clubs/:id/qna/:id|
->>>>>>> 3521c9d2bc4740bda1e2a48cdbc626a27f10bcf5

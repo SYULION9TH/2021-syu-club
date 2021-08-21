@@ -44,6 +44,8 @@ def haksool(request, club_type):
     side_menu2 = Clubs.objects.all().filter(club_type = 2)
     side_menu3 = Clubs.objects.all().filter(club_type = 3)
 
+# Create your views here.
+
     # 검색어 유
     if request.GET.get("keyword"):
         keyword = request.GET.get("keyword")
