@@ -22,8 +22,8 @@ def home1(request):
     #     club_list = Clubs.objects.all().order_by('?')
     #     return render(request, 'club/home.html', {'club_list': club_list, 'side_menu1':side_menu1, 'side_menu2':side_menu2, 'side_menu3':side_menu3})
 
-    for club in club_list:
-        club.deadline = club.D_day(datetime.now())
+    # for club in club_list:
+    #     club.deadline = club.D_day(datetime.now())
     if request.GET.get('rank'):
         # rank = sorted(club_list, key=operator.attrgetter('rank')) # 우선순위 정렬
         # context = {'clubs':rank}

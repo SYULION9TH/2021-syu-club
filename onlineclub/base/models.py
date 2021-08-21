@@ -39,12 +39,13 @@ class Clubs(models.Model):
     user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
     club_type = models.ForeignKey(ClubTypes, models.DO_NOTHING)
     club_img = models.ImageField(upload_to='images/', blank=True, null=True) # 활동사진
-    club_logo_url = models.CharField(max_length=500, blank=True, null=True)
+    # club_logo_url = models.CharField(max_length=500, blank=True, null=True)
+    club_logo = models.ImageField(upload_to='images/', blank=True, null=True) #로고
     # established = models.DateTimeField()
     # created_at = models.DateTimeField()
     # updated_at = models.DateTimeField()
-    end_day = models.DateTimeField(blank=True, null=True)
-    deadline = models.IntegerField(blank=True, null=True)
+    # end_day = models.DateTimeField(blank=True, null=True)
+    # deadline = models.IntegerField(blank=True, null=True)
     rank = models.IntegerField(blank=True, null=True)
     sns_link = models.CharField(max_length=500, blank=True, null=True) # 여분
     instagram_link = models.CharField(max_length=500, blank=True, null=True)
@@ -56,8 +57,8 @@ class Clubs(models.Model):
     def __str__(self):
         return self.club_name
 
-    def D_day(self,now):
-        return int((self.end_day - now).days)
+    # def D_day(self,now):
+    #     return int((self.end_day - now).days)
 
     # class Meta:
     #     managed = False
@@ -68,14 +69,14 @@ class Clubs(models.Model):
 class Posts(models.Model):
     post_id = models.AutoField(primary_key=True)
     post_title = models.CharField(max_length=150)
-    post_content = models.CharField(max_length=3000)
-    post_introduce = models.CharField(max_length=200, blank=True, null=True)
-    post_img_url = models.CharField(max_length=1500, blank=True, null=True)
+    post_content = models.CharField(max_length=3000, blank=True, null=True)
+    # post_introduce = models.CharField(max_length=200, blank=True, null=True)
+    # post_img_url = models.CharField(max_length=1500, blank=True, null=True)
     post_img = models.ImageField(upload_to="post/", blank=True, null=True)
     user = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
-    is_deleted = models.IntegerField(blank=True, null=True)
+    # is_deleted = models.IntegerField(blank=True, null=True)
     club = models.ForeignKey(Clubs, models.DO_NOTHING, blank=True, null=True)
 
     def __str__(self):
