@@ -84,7 +84,7 @@
 
         header {
             position: sticky;
-            padding: 20px 5% 4% 4%;
+            /* padding: 20px 5% 4% 4%; */
             color: white;
             /* background: #696BCF; */
             background-image: url("../static/기타분과\ 배경.png");
@@ -109,6 +109,7 @@
             position: relative;
             width: 96%;
             margin: 10px 0 0 2%;
+            padding: 20px 5% 4% 4%;
         }
 
         .search-bar>input {
@@ -209,9 +210,10 @@
 
 <body>
     <header>
-        <nav>
-            <!-- 디데이 -->
-            <!-- <img class="dday_img" src="../static/분과페이지 디데이 달력.png" width="35px"> -->
+        {% include 'side.html' %}
+        <!-- <nav>
+            디데이
+            <img class="dday_img" src="../static/분과페이지 디데이 달력.png" width="35px">
             <img class="dday_img" src="{% static 'base/분과페이지 디데이 달력.png' %}" width="35px">
             <div class="dday">
                 <span id="d_txt">모집마감</span>
@@ -219,24 +221,32 @@
             </div>
             <a href="" class="menu_Btn"><i class="fas fa-bars"></i></a>
             <span>동아리 홍보전</span><br>
-        </nav>
+        </nav> -->
+
         <p> 기타 </p>
-        <div class="search-bar">
+        <!-- <div class="search-bar">
             <input type="text" placeholder="동아리 이름을 입력하세요">
             <i class="fas fa-search"></i>
-        </div><br><br>
+        </div><br><br> -->
+
+        <form action="{% url 'haksool' club_type %}" method="GET">
+            <div class="search-bar">
+                <input type="search" placeholder="동아리 이름을 입력하세요" name="keyword">
+                <button type="submit" class="fas fa-search"></button>
+                <!-- <i class="fas fa-search"></i> -->
+            </div>
+        </form>
 
     </header>
-
 
     <section>
 
         <!-- card -->
         <div class="card" style="border-radius: 10px;">
             <div class="c_img">
-                <div class="card_img"><img src="1.png" width="80px" height="80px" style="
+                <div class="card_img"><img src="{% static '1.png' %}" width="80px" height="80px" style="
               border-radius: 50%"></div>
-                <img class="flag" src="중앙.svg" width="40px" height="45px">
+                <img class="flag" src="{% static '중앙.svg' %}" width="40px" height="45px">
             </div>
 
             <div class="text-wrap">

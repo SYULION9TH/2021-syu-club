@@ -242,10 +242,10 @@
   <header>
     {% include 'side.html' %}
     <!-- <nav> -->
-      <!-- 디데이 -->
-      <!-- <img class="dday_img" src="../static/메인페이지 디데이 달력.png" width="35px"> -->
-      <!-- <img class="dday_img" src="{% static '메인페이지 디데이 달력.png' %}" width="35px"> -->
-      <!-- <div class="dday">
+    <!-- 디데이 -->
+    <!-- <img class="dday_img" src="../static/메인페이지 디데이 달력.png" width="35px"> -->
+    <!-- <img class="dday_img" src="{% static '메인페이지 디데이 달력.png' %}" width="35px"> -->
+    <!-- <div class="dday">
         <span id="d_txt">모집마감</span>
         <p id="day">D-N</p>
       </div>
@@ -258,7 +258,7 @@
       <p id="club_txt">지원 기간: 9월 6일 ~ 9월 17일</p>
       <p id="club_txt">2021 2학기에 신설된 신규 동아리는 포함되어 있지 않습니다.</p>
     </div>
-    
+
     <!-- 검색 -->
     <form action="{% url 'home1' %}" method="GET">
       <div class="search-bar">
@@ -280,32 +280,35 @@
   <main>
     {% for club in club_list %}
     <!-- card -->
-    <div class="card" style="border-radius: 10px;">
-      <div class="c_img">
-        <div class="card_img">
-          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
-          {% if club.club_logo_url %}
-          <img src="{{club.club_logo_url}}" width="80px" height="80px" style="border-radius: 50%">
-          {% else %}
-          <img src="{% static '1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+    <a href="{% url 'home' club.club_id %}">
+      <div class="card" style="border-radius: 10px;">
+        <div class="c_img">
+          <div class="card_img">
+            <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+            {% if club.club_logo_url %}
+            <img src="{{club.club_logo_url}}" width="80px" height="80px" style="border-radius: 50%">
+            {% else %}
+            <img src="{% static '1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+            {% endif %}
+          </div>
+          <!-- <img class="flag" src="../static/중앙.svg" width="40px" height="45px"> -->
+          {% if club.main_club == 1 %}
+          <img class="flag" src="{% static '중앙.svg' %}" width="40px" height="45px">
+          {% elif club.main_club == 0 %}
+          <img class="flag" src="{% static '가등록.svg' %}" width="40px" height="45px">
           {% endif %}
         </div>
-        <!-- <img class="flag" src="../static/중앙.svg" width="40px" height="45px"> -->
-        {% if club.main_club == 1 %}
-        <img class="flag" src="{% static '중앙.svg' %}" width="40px" height="45px">
-        {% elif club.main_club == 0 %}
-        <img class="flag" src="{% static '가등록.svg' %}" width="40px" height="45px">
-        {% endif %}
-      </div>
 
-      <div class="text-wrap">
-        <h1>{{club.club_name}}</h1>
-        <span>{{club.club_type}}</span>
-        <hr style="color: black;" width="60px">
-        <span id="club_t">{{club.club_desc}}</span>
+        <div class="text-wrap">
+          <h1>{{club.club_name}}</h1>
+          <span>{{club.club_type}}</span>
+          <hr style="color: black;" width="60px">
+          <span id="club_t">{{club.club_desc}}</span>
+        </div>
       </div>
-    </div>
+    </a>
     {% endfor %}
   </main>
 </body>
+
 </html>
