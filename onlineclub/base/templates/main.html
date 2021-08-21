@@ -35,7 +35,7 @@
       box-sizing: border-box;
     }
 
-    nav>span {
+    /* nav>span {
       font-family: 'Cafe24Danjunghae';
       font-size: 27px;
       display: flex;
@@ -79,14 +79,14 @@
       font-size: 20px;
       position: absolute;
       top: 8px;
-    }
+    } */
 
     header {
       color: white;
       position: sticky;
       background: linear-gradient(#070639, #231669);
       background-size: cover;
-      padding: 20px 5% 20px 4%;
+      /* padding: 20px 5% 20px 4%; */
       top: 0;
       left: 0;
       right: 0;
@@ -112,6 +112,7 @@
       position: relative;
       width: 100%;
       margin: 10px 0 10px 0;
+      padding: 20px 5% 20px 4%;
     }
 
     .search-bar>input {
@@ -125,10 +126,12 @@
     }
 
     .fa-search {
+      background-color: transparent;
+      border: none;
       position: absolute;
-      right: 15px;
-      top: 25%;
-      font-size: 20px;
+      right: 7%;
+      top: 32%;
+      font-size: 25px;
       color: #240E51;
     }
 
@@ -145,9 +148,10 @@
     .sort_btn {
       border: none;
       border-radius: 10px;
-      padding: 10px 5px 10px 0;
+      padding: 10px 5px 10px 0px;
       width: 33%;
-      margin-right: 10px;
+      /* margin-right: 10px; */
+      margin: 5px 1px 10px 4%;
       background-color: #1C1246;
     }
 
@@ -162,7 +166,7 @@
       padding: 3% 4% 5% 4%;
       width: 100%;
       height: 100%;
-      /* background: linear-gradient(#240E51, #4D29A8); */
+      background: linear-gradient(#240E51, #4D29A8);
       background-image: url("../static/메인배경.png");
       background-size: cover;
     }
@@ -236,155 +240,72 @@
 
 <body>
   <header>
-    <nav>
+    {% include 'side.html' %}
+    <!-- <nav> -->
       <!-- 디데이 -->
       <!-- <img class="dday_img" src="../static/메인페이지 디데이 달력.png" width="35px"> -->
-      <img class="dday_img" src="{% static 'base/메인페이지 디데이 달력.png' %}" width="35px">
-      <div class="dday">
+      <!-- <img class="dday_img" src="{% static '메인페이지 디데이 달력.png' %}" width="35px"> -->
+      <!-- <div class="dday">
         <span id="d_txt">모집마감</span>
         <p id="day">D-N</p>
       </div>
       <a href="" class="menu_Btn"><i class="fas fa-bars"></i></a>
       <span>동아리 홍보전</span><br>
-    </nav>
+    </nav> -->
 
 
     <div class="club_text">
       <p id="club_txt">지원 기간: 9월 6일 ~ 9월 17일</p>
       <p id="club_txt">2021 2학기에 신설된 신규 동아리는 포함되어 있지 않습니다.</p>
     </div>
-
-    <div class="search-bar">
-      <input type="text" placeholder="동아리 이름을 입력하세요">
-      <i class="fas fa-search"></i>
-    </div><br>
-
+    
+    <!-- 검색 -->
+    <form action="{% url 'home1' %}" method="GET">
+      <div class="search-bar">
+        <input type="search" placeholder="동아리 이름을 입력하세요" name="keyword">
+        <button type="submit" class="fas fa-search"></button>
+        <!-- <i class="fas fa-search"></i> -->
+      </div>
+    </form>
 
     <!-- 정렬 버튼 -->
     <div class="club_sort_btn">
-      <input type="submit" name="rank" class="sort_btn" value="▾ 동아리 순위 순">
-      <input type="submit" name="random" class="sort_btn" value="▾ 랜덤 순">
+      <form method="get">
+        <button type="submit" name="rank" class="sort_btn" value="rank">▾ 동아리 순위 순</button>
+        <button type="submit" name="random" class="sort_btn">▾ 랜덤 순</button>
+      </form>
     </div>
   </header>
 
   <main>
+    {% for club in club_list %}
     <!-- card -->
     <div class="card" style="border-radius: 10px;">
       <div class="c_img">
         <div class="card_img">
           <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
-          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+          {% if club.club_logo_url %}
+          <img src="{{club.club_logo_url}}" width="80px" height="80px" style="border-radius: 50%">
+          {% else %}
+          <img src="{% static '1.png' %}" width="80px" height="80px" style="border-radius: 50%">
+          {% endif %}
         </div>
         <!-- <img class="flag" src="../static/중앙.svg" width="40px" height="45px"> -->
-        <img class="flag" src="{% static 'base/중앙.svg' %}" width="40px" height="45px">
+        {% if club.main_club == 1 %}
+        <img class="flag" src="{% static '중앙.svg' %}" width="40px" height="45px">
+        {% elif club.main_club == 0 %}
+        <img class="flag" src="{% static '가등록.svg' %}" width="40px" height="45px">
+        {% endif %}
       </div>
 
       <div class="text-wrap">
-        <h1>동아리 이름</h1>
-        <span>분과</span>
+        <h1>{{club.club_name}}</h1>
+        <span>{{club.club_type}}</span>
         <hr style="color: black;" width="60px">
-        <span id="club_t">동아리 소개</span>
+        <span id="club_t">{{club.club_desc}}</span>
       </div>
     </div>
-
-
-    <div class="card" style="border-radius: 10px;">
-      <div class="c_img">
-        <div class="card_img">
-          <!-- <img src="../static/ll.jpg" width="80px" height="80px" style="border-radius: 50%"> -->
-          <img src="{% static 'base/ll.jpg' %}" width="80px" height="80px" style="border-radius: 50%">
-        </div>
-        <!-- <img class="flag" src="../static/가등록.svg" width="40px" height="45px"> -->
-        <img class="flag" src="{% static 'base/가등록.svg' %}" width="40px" height="45px">
-      </div>
-
-      <div class="text-wrap">
-        <h1>멋쟁이 사자처럼</h1>
-        <span>학술분과</span>
-        <hr style="color: black;" width="60px">
-        <span id="club_t">동아리 소개</span>
-      </div>
-    </div>
-
-
-    <div class="card" style="border-radius: 10px;">
-      <div class="c_img">
-        <div class="card_img">
-          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
-          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
-        </div>
-        <!-- <img class="flag" src="../static/가등록.svg" width="40px" height="45px"> -->
-        <img class="flag" src="{% static 'base/가등록.svg' %}" width="40px" height="45px">
-      </div>
-
-      <div class="text-wrap">
-        <h1>화소</h1>
-        <span>문화 체육 분과</span>
-        <hr style="color: black;" width="60px">
-        <span id="club_t">동아리 소개</span>
-      </div>
-    </div>
-
-
-    <div class="card" style="border-radius: 10px;">
-      <div class="c_img">
-        <div class="card_img">
-          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
-          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
-        </div>
-        <!-- <img class="flag" src="../static/신규.svg" width="40px" height="45px"> -->
-        <img class="flag" src="{% static 'base/신규.svg' %}" width="40px" height="45px">
-      </div>
-
-      <div class="text-wrap">
-        <h1>동행길</h1>
-        <span>종교 봉사 분과</span>
-        <hr style="color: black;" width="60px">
-        <span id="club_t">동아리 소개</span>
-      </div>
-    </div>
-
-
-    <div class="card" style="border-radius: 10px;">
-      <div class="c_img">
-        <div class="card_img">
-          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
-          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
-        </div>
-        <!-- <img class="flag" src="../static/신규.svg" width="40px" height="45px"> -->
-        <img class="flag" src="{% static 'base/신규.svg' %}" width="40px" height="45px">
-      </div>
-
-      <div class="text-wrap">
-        <h1>동아리이름</h1>
-        <span>분과</span>
-        <hr style="color: black;" width="60px">
-        <span id="club_t">동아리 소개</span>
-      </div>
-    </div>
-
-
-
-    <div class="card" style="border-radius: 10px;">
-      <div class="c_img">
-        <div class="card_img">
-          <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
-          <img src="{% static 'base/1.png' %}" width="80px" height="80px" style="border-radius: 50%">
-        </div>
-        <!-- <img class="flag" src="../static/신규.svg" width="40px" height="45px"> -->
-        <img class="flag" src="{% static 'base/신규.svg' %}" width="40px" height="45px">
-      </div>
-
-      <div class="text-wrap">
-        <h1>동아리이름</h1>
-        <span>분과</span>
-        <hr style="color: black;" width="60px">
-        <span id="club_t">동아리 소개</span>
-      </div>
-    </div>
-
+    {% endfor %}
   </main>
-
 </body>
-
 </html>

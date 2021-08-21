@@ -5,7 +5,7 @@ import operator
 from datetime import datetime
 
 def home1(request):
-    template_name='club/home.html'
+    template_name='main.html'
     club_list = Clubs.objects.all().order_by('?')
     #  사이드메뉴 (문화 학술 봉사)
     side_menu1 = Clubs.objects.all().filter(club_type = 1)
@@ -38,7 +38,13 @@ def home1(request):
 
 # 동아리 분과별
 def haksool(request, club_type):
-    template_name = 'club/haksool.html'
+    if club_type == 1:
+        template_name = 'club_list1.html'
+    elif club_type == 2:
+        template_name = 'club_list2.html'    
+    elif club_type == 3:
+        template_name = 'club_list3.html'      
+    
     # 사이드메뉴 (문화 학술 봉사)
     side_menu1 = Clubs.objects.all().filter(club_type = 1)
     side_menu2 = Clubs.objects.all().filter(club_type = 2)

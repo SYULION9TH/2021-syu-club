@@ -1,0 +1,355 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>syu-club</title>
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <script src="https://kit.fontawesome.com/d1c6c79e37.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+  <style>
+    @font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  section {
+    padding: 5% 4%;
+    width: 100%;
+    height: 100%;
+    color:white;
+    /* background: linear-gradient(#240E51, #4D29A8); */
+    background-color: transparent;
+
+  }
+
+  .dday_calendar {
+    margin-right: 50px;
+    margin-top: -40px;
+    float: right;
+    width: 39px;
+    height: 41px;
+  }
+
+  .counter {
+    text-align: center;
+    margin-right: -90px;
+    margin-top: -40px;
+    float: right;
+  }
+  
+  .sidebar {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background: none;
+    color: white;
+    width: 300px;
+    max-width: 90%;
+    z-index: 9999;
+    min-height: 100%;
+    padding-bottom: 110px;
+  }
+  
+  .sidebar_header {
+    height: 135px;
+    display: block;
+    background-color:  rgba(131, 131, 131, 0.85);
+    padding-bottom: 30px;
+  }
+
+  .sidebar_footer {
+    position: absolute;
+    text-align: center;
+    display: block;
+    color: black;
+    background-color: rgb(216, 216, 216);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+  }
+
+  .sidebar_header>h1 {
+    width: 200px;
+    padding-top: 30px;
+    padding-left: 20px;
+    margin-right: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    float: left;
+  }
+  
+  .sidebar_header>h4 {
+    margin-left: 65px;
+    margin-top: 63px;
+  }
+  
+  .sidebar_header>h4>a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar_header>h4>a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar_header>h4>a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .emphasized {
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+  }
+  
+  .admin_login {
+    width: 60px;
+    height: 40px;
+    margin-top: 6px;
+    padding-left: 20px;
+    float: left;
+  }
+  
+  .hide_Btn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    padding-top: 17px;
+    padding-right: 20px;
+  }
+  
+  .menu_Btn {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+  }
+  
+  .menu_Btn:hover {
+    color:#FED700;
+  }
+  
+  section>h1 {
+    padding-top: 2%;
+    font-family: 'twaysky';
+    font-size: 22px;
+    text-align: center;
+  }
+  
+  .sidenav {
+    width: 300px;
+    z-index: 1;
+    background-color:#4b3577;
+    overflow-x: hidden;
+    margin-top: 0px;
+  }
+  
+  .sidenav a, .dropdown-btn, .dropdown-all {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .sidenav a {
+    font-size: 17px;
+    color: black;
+  }
+  
+  .dropdown-btn {
+    color: #e4e4e4;
+  }
+  
+  .sidenav a:hover {
+    color: black;
+  }
+  
+  .dropdown-btn:hover {
+    color: white;
+  }
+
+  .active {
+    background-color: transparent;
+    color: white;
+  }
+  
+  .dropdown-container {
+    display: none;
+    background-color: #f7f7f7;
+    overflow: auto;
+    height: 350px;
+  }
+
+  .dropdown-all {
+    background-color:#9c85ca;
+  }
+  
+  .fa-caret-down, .fa-arrow-right {
+    float: right;
+    padding-right: 8px;
+    padding-top: 3px;
+  }
+  </style>
+
+</head>
+
+{% block content %}
+<body>
+    <div class="sidebar">
+      <div class="sidebar_header">
+        <h1>동아리 홍보전</h1>
+        <div class="hide_Btn"><i class="fas fa-angle-double-left" id="CloseBtn"></i></div><br>
+        <img class="admin_login" src="{% static 'admin_login.png' %}">
+        <h4><a href="#">관리자로 로그인하기</a></h4>
+      </div>
+        <div class="sidenav">
+          <button class="dropdown-btn">문화 체육 분과
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <button class="dropdown-all" onclick="location.href='1'">문화 체육 분과 모아보기
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <a href="#">화소</a>
+            <a href="#">클래시아</a>
+            <a href="#">일루젼</a>
+          </div>
+          <button class="dropdown-btn">학술 분과
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <button class="dropdown-all" onclick="location.href='2'">학술 분과 모아보기
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <a href="#">...</a>
+            <a href="#">...</a>
+            <a href="#">dfdf</a>
+            <a href="#">werwe</a>
+            <a href="#">gsdf</a>
+            <a href="#">asdf</a>
+            <a href="#">gggw</a>
+            <a href="#">dfsf</a>
+            <a href="#">agsd</a>
+            <a href="#">gggg</a>
+            <a href="#">sdfs</a>
+            <a href="#">tttt</a>
+            <a href="#">erer</a>
+            <a href="#">werw</a>
+            <a href="#">dgdg</a>
+            <a href="#">sdfs</a>
+            <a href="#">gggg</a>
+            <a href="#">ssss</a>
+            <a href="#">ffff</a>
+            <a href="#">aaaa</a>
+            <a href="#">aaaa</a>
+            <a href="#">ssss</a>
+            <a href="#">uuuu</a>
+            <a href="#">kkkk</a>
+            <a href="#">gggg</a>
+            <a href="#">dfdf</a>
+          </div>
+          <button class="dropdown-btn">종교 봉사 분과
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <button class="dropdown-all" onclick="location.href='3'">종교 봉사 분과 모아보기
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <a href="#">...</a>
+            <a href="#">...</a>
+            <a href="#">...</a>
+          </div>
+          <button class="dropdown-btn">기타
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="#">방송국</a>
+          </div>
+        </div>
+        <div class="sidebar_footer"><span>© 삼육대학교 38대 벼리 동아리연합회 | 멋쟁이 사자처럼 at 삼육대학교 9기<br>
+          서울 특별시 노원구 화랑로 815 삼육대학교 학생회관<br>
+          개발진 | 김지연 박미란 박세연 박현서 성예지 이민주 이보람<br>
+          이지수 윤예빈 정하늘 주미진 최정은 함승우 황한슬
+        </span></div>
+    </div>
+
+  <section>
+    <div class="menu_Btn"><i class="fas fa-bars" id="OpenBtn"></i></div>
+    <h1>동아리 홍보전</h1>
+    <img class="dday_calendar" src="{% static 'dday_calendar.png' %}"><div class="counter"></div>
+
+  </section>
+
+  <script>
+   $(document).ready(function(){
+        var target = $(".sidebar");
+
+        $(document).on("click", "#OpenBtn", function (e){
+            target.animate({width:'toggle'},200);
+            target.addClass('emphasized');
+            });
+   
+        $(document).on("click", "#CloseBtn", function (e){
+            target.animate({width:'toggle'},200);
+            target.removeClass('emphasized');
+            });
+        });
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+
+    let counter = document.querySelector('.counter');
+    let today = new Date(), //현재 날짜 가져오기
+        dday = new Date("Sep 17,2021, 11:59:59").getTime(), //디데이
+        gap = dday - today,
+        result = Math.floor(gap / (1000 * 60 * 60 * 24));
+        
+    counter.innerHTML = `모집마감<br><h1>D-${result}</h1>`
+
+  </script>
+</body>
+{% endblock %}
+</html>
