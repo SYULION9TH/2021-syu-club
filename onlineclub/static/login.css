@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,500&display=swap');
+
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+html {font-size: 1px;}
+body {font-size: 1rem;}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(120deg, #1e2358, #58007a);
+}
+
+.alll {
+    width: 450px;
+    background: #f1f1f1;
+    height: 68%;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+}
+
+.login-form {
+    width: 360px;
+    background: #f1f1f1;
+    height: 315px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);  
+}
+
+.on11 {
+    text-align: center;
+    margin-bottom: 15rem; 
+    font-family: 'Cafe24Danjunghae';
+    font-size: 37rem;
+}
+
+.on22 {
+    text-align: center;
+    margin-bottom: 24rem; 
+    font-family: 'GmarketSansLight';
+    font-size: 16rem;
+}
+
+.txti {
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 30rem 0;
+    font-size: 16.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.txti input {
+    font-size: 16.5rem;
+    color: #333;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5rem;
+    height: 40rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.txti span::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    color: #adadad;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: .5s;
+}
+
+.txti span::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2rem;
+    background: linear-gradient(120deg, #000d83, #5d0081);
+    transition: .5s;
+}
+
+.focus + span::before {
+    top: -5rem;
+}
+
+.focus + span::after {
+    width: 100%;
+}
+
+.sub {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    height: 50rem;
+    border: none;
+    background: linear-gradient(120deg,#0c0077,#4d006e,#00177e);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 17.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.sub:hover {
+    background-position: right;
+}
+
+
+@media (min-width:0) and (max-width: 440px) { 
+    body{
+        margin: 0;
+        background:#f1f1f1;
+    }
+
+    .alll {
+        width: 90%;
+        height: 50%;
+        background: #f1f1f1;
+    }
+
+    .login-form{
+        width: 90%;
+        height: 276px;
+    }
+
+    .on11{
+        color: #2c003d;
+        font-size:33rem;
+        margin-bottom: 15rem; 
+    }
+    
+    .on22{
+        color: #3a0052;
+        font-size: 14.5rem;
+    }
+    
+    .txti{
+        margin: 20rem 0;
+        font-size: 14.5rem;
+    }
+
+    .txti input{
+        font-size: 14.5rem;
+        height: 35rem;
+    }    
+    
+    .sub{
+        height: 45rem;
+        font-size: 16.5rem;
+    }
+}

@@ -280,6 +280,7 @@
   <main>
     {% for club in club_list %}
     <!-- card -->
+    <a href="{% url 'home' club.club_id %}">
     <div class="card" style="border-radius: 10px;">
       <div class="c_img">
         <div class="card_img">
