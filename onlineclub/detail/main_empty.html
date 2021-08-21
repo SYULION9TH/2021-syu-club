@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동아리 상세페이지</title>
+    <!--<script src="<https://code.jquery.com/jquery-3.6.0.js>"></script>
+    <script type="text/javascript">
+        $('.gallery').slick({
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3,
+            responsive: [
+              {
+                breakpoint: 768,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 3
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 1
+                }
+              }
+            ]
+          });
+    </script>-->
+
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            background-image: url('image.jpg');
+            /*원하는 이미지 넣기*/
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: #F4F0EE;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav_club {
+            top: fixed;
+            height: 50px;
+            background-color: #F4F0EE;
+        }
+
+        main_club {
+            position: relative;
+            background-color: #00ff0000;
+            height: 30%;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-radius: 15px;
+            border: 0px solid #00ff0000;
+        }
+
+        section_club {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 30%;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px silver;
+            border: 15px solid white;
+            position: relative;
+        }
+
+        div_club {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+            background-image: url('2021-syu-club\onlineclub\detail\div_background.png');
+            background-size: cover;
+            background-position: relative;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px silver;
+            border: 15px solid white;
+            position: relative;
+            bottom: 0;
+            height: 20%;
+
+            background-image: url('div_background.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: white;
+        }
+
+        .nav-title {
+            margin: 0;
+            margin-top: 12px;
+            text-align: center;
+            font-size: 20px;
+            color: #5523a0;
+        }
+        
+        .article_main_club {
+            width: 50%;
+        }
+
+        .club-title {
+            margin-left: 2px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: #451997;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .club_intro {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        /*멋사로고*/
+        .static {
+            position: absolute;
+            left: 30px;
+            bottom: 0;
+            float: left;
+            width: 95px;
+            border-radius: 70%;
+            box-shadow: 1px 1px 10px gray;
+        }
+
+        .main-title {
+            position: absolute;
+            bottom: 65px;
+            left: 140px;
+            right: 0px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0;
+            color: white;
+        }
+
+        .intro {
+            margin-right: 30px;
+            position: absolute;
+            left: 140px;
+            right:0;
+            bottom: 30px;
+            text-align: justify;
+            font-size: 0.5em;
+            color: white;
+        }
+
+        /*모집마감버튼*/
+        .button_e {
+            position: absolute;
+            bottom: 0;
+            left: 135px;
+            line-height: 140%;
+            font-size: 10pt;
+            background-color: #353535;
+            box-shadow: 1px 1px 10px #353535;
+            border: 0px #00ff0000;
+            font-weight: bold;
+            color: white;
+
+            border-radius: 15px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .top_youtube {
+            border: none;
+            width: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 34px;
+        }
+
+        .top_facebook {
+            border: none;
+            width: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 17px;
+        }
+
+        .top_instagram {
+            border: none;
+            width: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 0;
+        }
+
+        .top_bookmark {
+            margin: 0;
+            border: none;
+            width: 40%;
+            cursor: pointer;
+            position: absolute;
+            left: 5px;
+        }
+        
+    </style>
+
+    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            
+    <script>
+      $(document).ready(function(){
+        $('.gallery').slick({
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            }
+          ]
+
+        });
+      });
+    </script>-->
+
+</head>
+
+<body>
+
+    <nav_club>
+        <h1 class="nav-title" style="font-weight: bold;">동아리 홍보전</h1>
+        <a>
+            <img src="nav_edit.png" alt="ne로고" style="margin: 0px; width: 30px; position: absolute; top: 0; right: 20px;">
+        </a>
+    </nav_club>
+
+    <main_club>
+        <a class="top_bookmark">
+            <img src="main_book.png" alt="bm로고" class="top_bookmark">
+            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
+            font-family: 'Noto Sans CJK KR-Medium', sans-serif;">학&nbsp술<br>분&nbsp과</p>
+        </a>
+        <a class="top_youtube" target="_blank" href="https://youtube.com/">
+            <img src="top_youtube.png" alt="yb로고" class="top_youtube">
+        </a>
+        <a class="top_facebook" target="_blank" href="https://facebook.com/">
+            <img src="top_facebook.png" alt="fb로고" class="top_facebook">
+        </a>
+        <a class="top_instagram" target="_blank" href="https://instagram.com/">
+            <img src="top_instagram.png" alt="ig로고" class="top_instagram">
+        </a>
+        
+        <article_main_club>
+            <img src="LIKELION_LOGO.jpg" class="static">
+            <h1 class="main-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">멋쟁이 사자처럼</h1>
+            <p class="intro" style="font-family: 'Noto Sans CJK KR-Regular', sans-serif;">피가 든 현저하게 모래뿐일 곳으로 그들의 바이며, 있으랴 놀이 노래하며 구하지</p>
+            <input type="button" name="submit" class="button_e" value="모집 마감"
+            style="font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
+        </article_main_club>
+        
+    </main_club>
+
+    <section_club>
+        <article_section_club>
+            <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">모집요강<hr style="width: 40%; height: 0.4%; background-color:gray;
+                border: none; position:absolute; left: 0; margin: 5px;"></p>
+            <p style="font-size: 1em; margin: 0; font-family: 'Noto Sans CJK KR-Regular', sans-serif;">소개 글 입니다.</p>
+        </article_section_club>
+    </section_club>
+
+    <div_club>
+        <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">동아리 게시물<hr style="width: 40%; height: 0.4%; background-color:gray;
+            border: none; position:absolute; left: 0; margin: 5px;"></p>
+        
+        <!--<div class="gallery">
+            <div><img src="image.jpg" style="width: 50%;"></div>
+            <div><img src="image.jpg" style="width: 50%"></div>
+            <div><img src="image.jpg" style="width: 50%"></div>
+        </div>-->
+
+        <a>
+            <img src="plus.png" style="width: 30px; position: absolute; right:0; bottom: 130px;">
+        </a>
+    </div_club>
+
+</body>
+
+</html>
