@@ -1,0 +1,40 @@
+<a href = "{% url 'home1' %}">메인화면</a>
+
+<h1>분과 내 검색창</h1>
+<form action="{% url 'haksool' club_type %}" method="GET">
+    <input type="search" placeholder="검색 내용" id="keyword" name="keyword">
+    <input type="submit" value="검색">
+</form>
+{% for club in club_list %}
+    <br>
+    {{club.club_name}}
+    {{club.club_desc}}
+    {{club.club_type}}
+    <br>
+{% endfor %}
+<br>
+<br>
+<br>
+<br> 
+<h1>사이드 메뉴</h1>
+<!-- 분과 1 문화 체육 분과 -->
+<br>
+<a href = "{% url 'haksool' 1 %}">분과1</a>
+{% for side_1 in side_menu1 %}
+    <br>
+    {{side_1.club_name}} 
+{% endfor %}
+<hr>
+<!-- 분과 2 학술 분과 -->
+<a href = "{% url 'haksool' 2 %}">분과2</a>
+{% for side_2 in side_menu2 %}
+    <br>
+    {{side_2.club_name}} 
+{% endfor %}
+<hr>
+<!-- 분과3 종교 봉사 분과-->
+<a href = "{% url 'haksool' 3 %}">분과3</a>
+{% for side_3 in side_menu3 %}
+    <br>
+    {{side_3.club_name}} 
+{% endfor %}
