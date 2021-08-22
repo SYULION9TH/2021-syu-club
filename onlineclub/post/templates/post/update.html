@@ -1,0 +1,269 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <!-- <link rel="stylesheet" href="update.css"> -->
+    <style>
+        @font-face {
+            font-family: 'Cafe24Danjunghae';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Noto Sans CJK KR Regular';
+            src: url("font/NotoSansCJKkr-Regular.otf");
+        }
+        
+        @font-face {
+            font-family: 'Noto Sans CJK KR Medium';
+            src: url("font/NotoSansCJKkr-Medium.otf");
+        }
+        body{
+            background-color:#f4f0ee;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+        
+        
+        /* nav바 (menu, 동아리 홍보전) */
+        
+        .club_nav{
+            background-color:#f4f0ee;
+            width: 100%;
+            height: 35px;
+            top: 0;
+            margin: 0;
+            /* padding: 0; */
+            padding-top: 5%;
+            position: fixed;
+        }
+        .club_nav>a{
+            /* color:#494949;
+            font-weight: bold;
+            font-size: 100%; */
+            /* text-align: center; */
+            text-decoration-line: none;
+        }
+        #top{
+            font-family: 'Cafe24Danjunghae';
+            color:#494949;
+            /* font-weight: bold; */
+            font-size: 20px;
+        }
+        
+        /* 내용 */
+        
+        /* 이미지 미리보기 */
+        
+        .image-container{
+            width: 100%;
+        }
+        
+        #preview-image{
+            /* height: auto; */
+            height: 250px;
+            max-width: 100%;
+            /* margin-top: 20%; */
+        }
+        
+        /* no1 */
+        
+        .no1{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+        }
+        
+        /* circle */
+        
+        .circle_pic{
+            /* width: 28%; */
+            width: 30%;
+            position: relative;
+            margin-top: 3%;
+            margin-left: 3%;
+            /* display: inline-block; */
+            display: flex;
+            align-items: center;
+        }
+        .circle_pic>img{
+            width: 100%;
+            /* height: 110px; */
+            line-height: 50px;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            float: left;
+        }
+        /* club */
+        .club{
+            width: 70%;
+            text-align: left;
+            margin-left: 1%;
+            padding-left: 10px;
+            display: inline-block;
+        }
+        .name{
+            font-family: 'Noto Sans CJK KR Regular';
+            color: #4a4a4a;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 0;
+            /* margin-top: 0; */
+        }
+        
+        
+        .introduce{
+            font-family: 'Noto Sans CJK KR Regular';
+            background-color: #f4f0ee;
+            color: #817f7e;
+            border-color: #727373;
+            font-weight: normal;
+            font-size: 80%;
+            border-style: solid;
+            border-color: #b9b9b9;
+            width: 95%;
+            height: 60px;
+            /* height: 45%; */
+            margin-top: 4%;
+            /* text-align: left; */
+        }
+        
+          
+        /* no2 */
+        
+        /* box*/
+        .box{
+            background-color: white;
+            width: 90%;
+            height: 210px;
+            margin: auto;
+            border-radius: 12px;  
+            box-shadow: 0px 0px 2px 1px lightgrey;
+        }
+        .text{
+            font-family: 'Noto Sans CJK KR Medium';
+            color: #000;
+            /* font-weight: bold; */
+            text-align: left;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+        .line{
+            /* padding-left: px; */
+            margin-left: 20px;
+        }
+        
+        .content{
+            font-family: 'Noto Sans CJK KR Regular';
+            color: #9f9c9b;
+            width: 85%;
+            height: 140px;
+            font-size: smaller;
+            /* font-weight: bold; */
+            border-style: hidden;
+            border-radius: 10px;
+            margin-left: -3%;
+        }
+        
+        /* upload */
+        .upload{
+            background-color:#4d4d4d;
+            color: #f4f0ee;
+            width: 90%;
+            height: 40px;  
+            margin-top: 20px;
+            margin-bottom: 5%;
+        font-weight: bold;
+        font-size: 100%;
+        /* border-radius: 5px; */
+    }
+    </style>
+      
+</head>
+
+<body>
+<!-- nav바 (menu, 동아리 홍보전) -->
+    <nav>
+        <p class="club_nav">
+            <!-- <a href="#">menu</a> -->
+            <a href="#" id="top">동아리 홍보전</a>
+        </p>
+    </nav>
+    
+    <!-- 내용 -->
+    <form action="{% url 'detailupdate' club_id %}" method="post" enctype="multipart/form-data">    
+    {% csrf_token %}
+    <!--  이미지 미리보기  -->
+    <div class="image-container">
+        <!-- <img src="../static/sea.jpg" id="preview-image"> -->
+        <!-- <img src="{% static 'sea.jpg' %}" alt="활동사진" id="preview-image"> -->
+        <img src="{{ club.club_img.url }}" alt="활동사진" id="preview-image" name="club_img">
+        <input style="display: block;" type="file" id="input-image" name="club_img">
+    </div>
+
+    <!-- no1 -->
+    <section class="no1">
+        <!-- circle -->
+        <div class="circle_pic">
+            <!-- <img src="../static/lion.jpg" alt=""> -->
+            <!-- <img src="{% static 'lion.jpg' %}" alt="동아리 로고"> -->
+            <img src="{{ club.club_logo.url }}" alt="동아리 로고">
+        </div>
+        <!-- club -->
+        <div class="club">
+            <p class="name">멋쟁이 사자처럼</p>
+            <input name="club_desc" type="text" class="introduce" value="{{ club.club_desc }}"></input>
+        </div>
+    </section>
+    
+    <!-- no2 -->
+    <section class="no2">
+        <!-- box -->
+        <div class="box">
+            <p class="text">모집 요강</p>
+            <hr class="line" width="45%">
+            <textarea name="recruitment_content" class="content" cols="30" rows="10" value="{{ club.recruitment_content }}">{{ club.recruitment_content }}</textarea>
+        </div>
+        <!-- upload -->
+        <button type="submit" class="upload">업로드</button>
+    </section>
+    </form>
+    
+
+<!-- js -->
+<!-- 이미지 미리보기 -->
+<script type="text/javascript">
+    function readImage(input) {
+    // 인풋 태그에 파일이 있는 경우
+    if(input.files && input.files[0]) {
+        // 이미지 파일인지 검사 (생략)
+        // FileReader 인스턴스 생성
+        const reader = new FileReader()
+        // 이미지가 로드가 된 경우
+        reader.onload = e => {
+            const previewImage = document.getElementById("preview-image")
+            previewImage.src = e.target.result
+        }
+        // reader가 이미지 읽도록 하기
+        reader.readAsDataURL(input.files[0])
+    }
+}
+// input file에 change 이벤트 부여
+const inputImage = document.getElementById("input-image")
+inputImage.addEventListener("change", e => {
+    readImage(e.target)
+})
+</script>
+</body>
+</html>
