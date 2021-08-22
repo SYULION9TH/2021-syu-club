@@ -45,7 +45,6 @@
         }
 
         body {
-            background-image: url('../../../static/image.jpg');
             /*원하는 이미지 넣기*/
             background-size: 100%;
             background-repeat: no-repeat;
@@ -252,6 +251,7 @@
 <body>
     {% load static %}
 
+    <img src="{{ club.club_img.url }}" style="position: absolute; z-index: -1; max-width: 100%; height: auto; top:50px;">
     <nav_club>
         <h1 class="nav-title" style="font-weight: bold;">동아리 홍보전</h1>
         {% if user.id == club_id|add:1 or user.is_superuser %}
@@ -311,14 +311,13 @@
                 <hr style="width: 40%; height: 0.4%; background-color: gray;
                 border: none; position:absolute; left: 0; margin: 5px;">
             </p>
-            <p style="font-size: 1em; margin: 0; font-family: 'Noto Sans CJK KR-Regular', sans-serif;">
-                {{club.recruitment_content}}
-            </p>
+                <p style="overflow:auto; height: 80%; font-size: 1em; margin: 0; font-family: 'Noto Sans CJK KR-Regular', sans-serif;">
+                    {{club.recruitment_content}}
+                </p>
         </article_section_club>
     </section_club>
 
     <div_club>
-
         <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">동아리 게시물
             <hr style="width: 40%; height: 0.4%; background-color:gray;
             border: none; position:absolute; left: 0; margin: 5px;">
@@ -335,19 +334,17 @@
                 <img src="{{ post.post_img.url }}" style="width: 220px; height: 120px; border-radius: 5px;">
             </div>
             </a>
-            {% endfor %}
+        {% endfor %}
         </div>
 
         {% else %}
-        <div>
-            <h1 style="color: #6a6a6a; font-size:1em; text-align:center; position: relative; top:50px;
+        <h1 style="color: #6a6a6a; font-size:1em; text-align:center; position: relative; top:30px;
          margin: 0; font-family: 'Noto Sans CJK KR-Medium', sans-serif; font-weight:lighter;">등록된 동아리 게시물이 없습니다.</h1>
-        </div>
         {% endif %}
 
         {% if user.id == club_id|add:1 or user.is_superuser %}
         <a href="{% url 'new' club_id %}">
-            <img src="{% static 'plus.png' %}" style="width: 30px; position: absolute; right:0; bottom: 130px;">
+            <img src="{% static 'plus.png' %}" style="width: 30px; position: absolute; right:0; bottom: 100px;">
         </a>
         {% endif %}
     </div_club>
