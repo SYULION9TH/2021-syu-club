@@ -265,21 +265,38 @@
     <main_club>
         <a class="top_bookmark">
             <img src="{% static 'main_book.png' %}" alt="bm로고" class="top_bookmark">
+            {% if club.club_type_id == 1 %}
+            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
+            font-family: 'Noto Sans CJK KR-Medium', sans-serif;">문&nbsp화<br>체&nbsp육</p>
+            {% elif club.club_type_id == 2 %}
             <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
             font-family: 'Noto Sans CJK KR-Medium', sans-serif;">학&nbsp술<br>분&nbsp과</p>
+            {% elif club.club_type_id == 3 %}
+            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
+            font-family: 'Noto Sans CJK KR-Medium', sans-serif;">종&nbsp교<br>봉&nbsp사</p>
+            {% else %}
+            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
+            font-family: 'Noto Sans CJK KR-Medium', sans-serif;">기&nbsp타</p>
+            {% endif %}
         </a>
+        {% if club.youtube_link %}
         <a class="top_youtube" target="_blank" href="{{club.youtube_link}}">
             <img src="{% static 'top_youtube.png' %}" alt="yb로고" class="top_youtube">
         </a>
+        {% endif %}
+        {% if club.facebook_link %}
         <a class="top_facebook" target="_blank" href="{{club.facebook_link}}">
             <img src="{% static 'top_facebook.png' %}" alt="fb로고" class="top_facebook">
         </a>
+        {% endif %}
+        {%if club.instagram_link %}
         <a class="top_instagram" target="_blank" href="{{club.instagram_link}}">
             <img src="{% static 'top_instagram.png' %}" alt="ig로고" class="top_instagram">
         </a>
+        {% endif %}
 
         <article_main_club>
-            <img src="{{club.club_logo.url }}" class="static">
+            <img src="{{club.club_logo.url}}" class="static">
             <h1 class="main-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">{{club.club_name}}</h1>
             <p class="intro" style="font-family: 'Noto Sans CJK KR-Regular', sans-serif;">{{club.club_desc}}</p>
             <input type="button" name="submit" class="button_a" value="지원하기"
