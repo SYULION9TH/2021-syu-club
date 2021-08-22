@@ -10,7 +10,8 @@ def post_edit(request, club_id, id):
 def post_update(request, club_id, post_id):
     update_post = Posts.objects.get(post_id=post_id)
     update_post.post_title = request.POST['post_title']
-    update_post.post_content = request.POST['post_content']
+    # update_post.post_content = request.POST['post_content']
+    update_post.post_content = request.POST.get('post_content', 'post_content')
     update_post.post_img = request.FILES.get('post_img','post_img')
     update_post.updated_at = timezone.now()
     update_post.save()
