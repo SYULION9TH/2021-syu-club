@@ -1,40 +1,37 @@
+  
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        body {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'post_detail.css' %}"> 
 </head>
-
 <body>
-    <div class="container">
-        <h1>{{post.post_title}}</h1>
-        생성날짜: {{post.created_at}}<br>
-        수정날짜: {{post.updated_at}}<br>
-        내용: {{post.post_content}}<br>
 
-        {% if post.post_img_url %}
-        <img src="{{ post.post_img_url }}" /> <br>
-        {% endif %} 
-        
-        {% if post.post_img %}
-        사진: <img src="{{ post.post_img.url }}" alt="">
-        {% endif %}
+
+    <div class= "post_detail_container" id="postdetail">
+        <div class = "post_detail">
+        <div class = "post_top">
+            <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'close.png' %}" class="close"> </a>
+            <div class="inline">
+                <h1 class="title">{{post.post_title}}</h1>
+                {% if user.id == club_id|add:1 or user.is_superuser %}
+                <a href="{% url 'edit' club_id post.post_id %}" class="edit_btn"><img src="{% static 'post_edit.png' %}" class="edit" ></a>
+                {% endif %} 
+            </div>
+        </div>
+            <p class="create">{{post.created_at}}</p>
+            <img src="{{ post.post_img.url }}" alt="게시물 사진입니다." class= "post_img">
+        </div>
+        <div class = "post_content">
+            <p class="content">{{post.post_content}}</p>
+        </div>
+        <a href="{% url 'delete' club_id post.post_id %}" class="submit" >삭제하기</a>
     </div>
 
-    {% if user.id == club_id|add:1 or user.is_superuser %}
-    <a href="{% url 'edit' club_id post.post_id %}">Edit</a>
-    <a href="{% url 'delete' club_id post.post_id %}">Delete</a>
-    {% endif %}
-    <br>
-    <a href="{% url 'home' club_id %}">Main Page</a>
+        
+</div>
 </body>
-
 </html>
