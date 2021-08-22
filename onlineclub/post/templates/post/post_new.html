@@ -1,10 +1,41 @@
-<h1>Write Post Page</h1>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
 
-<form action="{% url 'create' club_id %}" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <p>제목: <input type="text" name="post_title"></p>
-    <p>내용: <input type="text" name="post_content"></p>
-    <p>CharField 일 경우 이미지: <input type="url" name="post_img_url"></p>
-    <p>ImageField 일 경우 이미지: <input type="file" name="post_img"></p>
-    <button type="submit">Submit</button>
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'post_edit.css' %}">
+</head>
+
+<body>
+    <form action="{% url 'create' club_id %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="post_detail_container" id="postdetail">
+            <div class="post_detail">
+                <div class="post_top">
+                    <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'close.png' %}"
+                            class="close"></a>
+                    <div class="inline">
+                        <input type="text" class="title" name="post_title" placeholder="게시물 제목을 입력하세요">
+                    </div>
+                </div>
+                
+                <div class="post_background">
+                    <div class="img_content">
+                        <label for="img" class="img_width"></label>
+                        <input type="file" name="post_img" class="img_width1" id="img">
+                        <img src="{% static 'img.png' %}" alt="게시물 사진입니다." class="post_img">
+                    </div>
+                </div>
+            </div>
+            <div class="post_content">
+                <textarea class="content" name="post_content" cols="50" row="5" placeholder="게시물 내용을 입력하세요"></textarea>
+            </div>
+            <button class="submit" type="submit">업로드</button>
+        </div>
+    </form>
+</body>
+
+</html>
