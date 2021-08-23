@@ -21,6 +21,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('../intro_back.png');
+    background-size: cover;
 }
 
 .container {
@@ -32,41 +33,44 @@ body {
 .boxint {
     z-index: 4;
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+    width: 100%;
 }
 
 .boxint h5 {
     font-family: 'GmarketSansMedium';
-    color: rgb(255, 255, 0);
+    color: #fcce08;
     font-size: 13.8rem;
-    margin-bottom: 45rem; 
+    margin-bottom: 47rem; 
+    font-weight: lighter;
 }
 
 .boxint h1 {
     font-family: 'Cafe24Danjunghae';
     color: rgb(255, 255, 255);
     text-shadow: 2rem 4rem 2rem rgb(0, 0, 0);
-    font-size: 33rem;
-    margin-bottom: 45rem; 
+    font-size: 40rem;
+    /* margin-bottom: 45rem;  */
+    margin-bottom: 120px;
 }
 
 .subb {
     border: 0;
     display: block;
-    margin: auto;  
+    margin: auto;
     padding: 15rem 10rem;
     width: 270rem;
     outline: none;
-    color: rgb(255, 230, 0);
+    color: #fcce08;
     border-radius: 10px;
     cursor: pointer;
     background: #0000008e;
     font-family: 'Cafe24Danjunghae';
     font-size: 18rem;
-    text-decoration:none;    
+    text-decoration:none; 
 }
 
 .buil3 {
