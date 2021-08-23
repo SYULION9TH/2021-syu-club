@@ -28,7 +28,7 @@
   }
 
   .dday{
-    display: flex;
+    display: inline-flex;
   }
 
   .dday_calendar {
