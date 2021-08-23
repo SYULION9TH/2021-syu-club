@@ -17,7 +17,7 @@
     box-sizing: border-box;
   }
   
-  section {
+  .section_side {
     padding: 5% 4%;
     width: 100%;
     height: 100%;
@@ -27,19 +27,23 @@
 
   }
 
+  .dday{
+    display: flex;
+  }
+
   .dday_calendar {
-    margin-right: 50px;
-    margin-top: -40px;
-    float: right;
     width: 39px;
     height: 41px;
   }
 
   .counter {
+    padding-left: 3px;
     text-align: center;
-    margin-right: -90px;
-    margin-top: -40px;
-    float: right;
+    display: inline-block;
+  }
+
+  .counter>h1{
+    display: inline-block;
   }
   
   .sidebar {
@@ -127,7 +131,7 @@
   }
   
   .menu_Btn {
-    position: absolute;
+    position: relative;
     font-size: 25px;
     color: white;
   }
@@ -136,12 +140,23 @@
     color:#FED700;
   }
   
-  section>h1 {
+  .section_side{
+    display: flex !important;
+    justify-content: space-between;
+  }
+  
+  .section_side>h1 {
     padding-top: 2%;
     font-family: 'twaysky';
     font-size: 22px;
+    display: block;
+    position: absolute;
     text-align: center;
+    z-index: 0;
+    left: calc(50% - 76px);
   }
+
+
   
   .sidenav {
     width: 300px;
