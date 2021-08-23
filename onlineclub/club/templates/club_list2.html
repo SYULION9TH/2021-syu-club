@@ -245,8 +245,8 @@
         <div class="c_img">
           <div class="card_img">
             <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
-            {% if club.club_logo_url %}
-            <img src="{{club.club_logo_url}}" width="80px" height="80px" style="border-radius: 50%">
+            {% if club.club_logo %}
+            <img src="{{club.club_logo.url}}" width="80px" height="80px" style="border-radius: 50%">
             {% else %}
             <img src="{% static '1.png' %}" width="80px" height="80px" style="border-radius: 50%">
             {% endif %}
