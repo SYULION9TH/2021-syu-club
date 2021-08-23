@@ -18,9 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
     rel="stylesheet">
-</head>
 
-<body>
+  </head>
+
+<body style="background: none;">
   <header>
     {% include 'side.html' %}
     <!-- <nav> -->
@@ -53,7 +54,7 @@
     <!-- 정렬 버튼 -->
     <div class="club_sort_btn">
       <form method="get">
-        <button type="submit" name="rank" class="sort_btn" value="rank">▾ 동아리 순위 순</button>
+        <button type="submit" name="rank" class="sort_btn" value="rank" style="min-width: 132px;">▾ 동아리 순위 순</button>
         <button type="submit" name="random" class="sort_btn">▾ 랜덤 순</button>
       </form>
     </div>
@@ -63,7 +64,7 @@
     {% for club in club_list %}
     <!-- card -->
     <a href="{% url 'home' club.club_id %}">
-    <div class="card" style="border-radius: 10px;">
+    <div class="card" style="border-radius: 10px; border: none;">
       <div class="c_img">
         <div class="card_img">
           <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
@@ -90,6 +91,7 @@
       </div>
     </a>
     {% endfor %}
+    
   </main>
 </body>
 
