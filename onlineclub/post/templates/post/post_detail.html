@@ -26,7 +26,7 @@
             <img src="{{ post.post_img.url }}" alt="게시물 사진입니다." class= "post_img">
         </div>
         <div class = "post_content">
-            <p class="content">{{post.post_content}}</p>
+            <p class="content">{{post.post_content | linebreaksbr}}</p>
         </div>
         <a href="{% url 'delete' club_id post.post_id %}" class="submit" >삭제하기</a>
     </div>

@@ -28,7 +28,7 @@
   }
 
   .dday{
-    display: flex;
+    display: inline-flex;
   }
 
   .dday_calendar {
@@ -62,7 +62,7 @@
   .sidebar_header {
     height: 135px;
     display: block;
-    background-color:  rgba(131, 131, 131, 0.85);
+    background-color:  rgba(131, 131, 131, 1);
     padding-bottom: 30px;
   }
 
