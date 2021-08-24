@@ -12,13 +12,19 @@
 <body>
     <form action="{% url 'update' club_id post.post_id %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
+        <nav>
+            <p class="club_nav">
+                <!-- <a href="#">menu</a> -->
+                <a href="{% url 'home1' %}" id="top">동아리 홍보전</a>
+            </p>
+        </nav>
         <div class="post_detail_container" id="postdetail">
             <div class="post_detail">
                 <div class="post_top">
-                    <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'close.png' %}"
+                    <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'post_close.png' %}"
                             class="close"></a>
                     <div class="inline">
-                        <input type="text" class="title" name="post_title" value="{{post.post_title}}">
+                        <textarea class="title" name="post_title" cols="28" row="5">{{post.post_title}}</textarea>
                     </div>
                 </div>
                 <p class="create">{{post.updated_at}}</p>
@@ -31,7 +37,7 @@
                 </div>
             </div>
             <div class="post_content">
-                <textarea class="content" name="post_content" cols="50" row="5" placeholder="게시물 내용을 입력하세요">{{post.post_content}}</textarea>
+                <textarea wrap="hard" class="content" name="post_content" cols="28" row="15" placeholder="  게시물 내용을 입력하세요">{{post.post_content}}</textarea>
             </div>
             <button class="submit" type="submit">업로드</button>
         </div>

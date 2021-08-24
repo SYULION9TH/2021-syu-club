@@ -31,19 +31,47 @@
             margin: 0;
             text-align: center;
         }
-        
+        a{
+            margin:0;
+        }
         
         /* nav바 (menu, 동아리 홍보전) */
-        
+        .nav{
+            z-index:5;
+            position:fixed;
+            left:0;
+            width:100%;
+            display:inline-block;
+            height: 50px;
+            vertical-align:middle;
+            line-height: 50px;
+            background-color: white;
+        }
+        .href{
+            display:inline-block;
+            z-index: 7;
+            width:30px;
+            height:30px;
+            position:absolute; 
+            top:50%; 
+            transform:translateY(-50%);
+            left:20px;
+        }
+        .update_img{
+            z-index: 5;
+            width:30px;
+            height:30px;
+            position:absolute; top:50%; 
+            transform:translateY(-50%);
+            left:-5px;
+        }
         .club_nav{
-            background-color:#f4f0ee;
+            background-color:transparent;
             width: 100%;
-            height: 35px;
-            top: 0;
-            margin: 0;
             /* padding: 0; */
-            padding-top: 5%;
+            /* padding-top: 5%; */
             position: fixed;
+            margin:0;
         }
         .club_nav>a{
             /* color:#494949;
@@ -65,20 +93,40 @@
         
         .image-container{
             width: 100%;
+            display:block;
+
+
         }
-        
-        #preview-image{
-            /* height: auto; */
-            height: 250px;
-            max-width: 100%;
-            /* margin-top: 20%; */
+        .__img{
+            position:relative;
+            top: 60px;
+            height: 60%;
+            width: 60%;
+            aspect-ratio: 1 / 1;
+            display:block;
+            margin:0 auto;
+        }
+
+        .cover_img_width{
+            height: 180px;
+            width: 60%;
+            position:absolute;
+            cursor: pointer;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin:0 auto;
+        }
+
+        .cover_img{
+            display:none;
         }
         
         /* no1 */
         
         .no1{
+            margin-top:50px;
             width: 90%;
-            margin: auto;
             display: flex;
             flex-direction: row;
             align-content: center;
@@ -125,7 +173,7 @@
         
         .introduce{
             font-family: 'Noto Sans CJK KR Regular';
-            background-color: #f4f0ee;
+            background-color:transparent;
             color: #817f7e;
             border-color: #727373;
             font-weight: normal;
@@ -133,9 +181,12 @@
             border-style: solid;
             border-color: #b9b9b9;
             width: 95%;
-            height: 60px;
+            line-height: 5em;
+            resize: none;
+            outline: none;
             /* height: 45%; */
             margin-top: 4%;
+            border-radius:10px;
             /* text-align: left; */
         }
         
@@ -146,34 +197,40 @@
         .box{
             background-color: white;
             width: 90%;
-            height: 210px;
             margin: auto;
+            margin-top:1.5em;
             border-radius: 12px;  
             box-shadow: 0px 0px 2px 1px lightgrey;
         }
         .text{
             font-family: 'Noto Sans CJK KR Medium';
-            color: #000;
-            /* font-weight: bold; */
+            color: #4a4a4a;
+            font-weight: bold;
+            padding-top: 10px;
             text-align: left;
             margin-left: 20px;
             margin-bottom: 0;
+            margin-top:0;
         }
         .line{
             /* padding-left: px; */
             margin-left: 20px;
+            border:none;
+            border:1px solid #817f7e;
         }
         
-        .content{
+        .recruitment_content{
             font-family: 'Noto Sans CJK KR Regular';
             color: #9f9c9b;
             width: 85%;
-            height: 140px;
+            height:30%;
             font-size: smaller;
             /* font-weight: bold; */
             border-style: hidden;
             border-radius: 10px;
             margin-left: -3%;
+            resize: none;
+            outline: none;
         }
         
         /* upload */
@@ -194,10 +251,11 @@
 
 <body>
 <!-- nav바 (menu, 동아리 홍보전) -->
-    <nav>
+    <nav class="nav">
+        <a href="{% url 'home' club_id %}" class="href"><img src="{% static 'update_close.png' %}" class="update_img"></a>
         <p class="club_nav">
             <!-- <a href="#">menu</a> -->
-            <a href="#" id="top">동아리 홍보전</a>
+            <a href="{% url 'home1' %}" id="top">동아리 홍보전</a>
         </p>
     </nav>
     
@@ -208,8 +266,10 @@
     <div class="image-container">
         <!-- <img src="../static/sea.jpg" id="preview-image"> -->
         <!-- <img src="{% static 'sea.jpg' %}" alt="활동사진" id="preview-image"> -->
-        <img src="{{ club.club_img.url }}" alt="활동사진" id="preview-image" name="club_img">
-        <input style="display: block;" type="file" id="input-image" name="club_img">
+        <img src="{{ club.club_img.url }}" alt="활동사진"  name="club_img" class="__img">
+        <label for="input-image" class="cover_img_width"></label>
+        <input type="file" id="input-image" name="club_img" class="cover_img">
+        
     </div>
 
     <!-- no1 -->
@@ -223,7 +283,7 @@
         <!-- club -->
         <div class="club">
             <p class="name">{{club.club_name}}</p>
-            <input name="club_desc" type="text" class="introduce" value="{{ club.club_desc }}"></input>
+            <input name="club_desc" type="text" class="introduce" cols="10" rows="3" value="{{ club.club_desc }}"></input>
         </div>
     </section>
     
@@ -232,8 +292,8 @@
         <!-- box -->
         <div class="box">
             <p class="text">모집 요강</p>
-            <hr class="line" width="45%">
-            <textarea name="recruitment_content" class="content" cols="30" rows="10" value="{{ club.recruitment_content }}">{{ club.recruitment_content }}</textarea>
+            <hr class="line" width="85%">
+            <textarea name="recruitment_content" class="recruitment_content" cols="30" rows="14" value="{{ club.recruitment_content }}">{{ club.recruitment_content }}</textarea>
         </div>
         <!-- upload -->
         <button type="submit" class="upload">업로드</button>

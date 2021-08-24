@@ -1,0 +1,168 @@
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #F4F0EE;
+    display: flex;
+    flex-direction: column;
+}
+
+nav_club {
+    top: fixed;
+    height: 50px;
+    background-color: #F4F0EE;
+}
+
+main_club {
+    position: relative;
+    background-color: #00ff0000;
+    height: 30%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+    border: 0px solid #00ff0000;
+}
+
+section_club {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 30%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px silver;
+    border: 15px solid white;
+    position: relative;
+}
+
+div_club {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px silver;
+    border: 15px solid white;
+    position: relative;
+    bottom: 0;
+    height: 20%;
+}
+
+.nav-title {
+    margin: 0;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 20px;
+    color: #5523a0;
+}
+
+.article_main_club {
+    width: 50%;
+}
+
+.club-title {
+    margin-left: 2px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #451997;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.static {
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    float: left;
+    width: 95px;
+    border-radius: 70%;
+    box-shadow: 1px 1px 10px gray;
+}
+
+.main-title {
+    position: absolute;
+    bottom: 65px;
+    left: 140px;
+    right: 0px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.intro {
+    margin-right: 30px;
+    position: absolute;
+    left: 140px;
+    right: 0;
+    bottom: 30px;
+    text-align: justify;
+    font-size: 0.5em;
+    color: white;
+}
+
+/*지원하기버튼*/
+.button_a {
+    position: absolute;
+    bottom: 0;
+    left: 135px;
+    line-height: 140%;
+    font-size: 10pt;
+    background-color: #451997;
+    border: 0px #00ff0000;
+    box-shadow: 1px 1px 10px #451997;
+    font-weight: bold;
+    color: white;
+
+    border-radius: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.top_youtube {
+    border: none;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 34px;
+}
+
+.top_facebook {
+    border: none;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 17px;
+}
+
+.top_instagram {
+    border: none;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+.top_bookmark {
+    top: 0;
+    margin: 0;
+    border: none;
+    width: 40%;
+    cursor: pointer;
+    position: absolute;
+    left: 3%;
+}
