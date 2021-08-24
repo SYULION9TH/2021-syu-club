@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="{% static 'post_detail.css' %}"> 
 </head>
 <body>
-
+    <nav>
+        <p class="club_nav">
+            <!-- <a href="#">menu</a> -->
+            <a href="{% url 'home1' %}" id="top">동아리 홍보전</a>
+        </p>
+    </nav>
 
     <div class= "post_detail_container" id="postdetail">
         <div class = "post_detail">
         <div class = "post_top">
-            <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'close.png' %}" class="close"> </a>
+            <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'post_close.png' %}" class="close"> </a>
             <div class="inline">
-                <h1 class="title">{{post.post_title}}</h1>
+                <h1 class="title">{{post.post_title | linebreaksbr}}</h1>
                 {% if user.id == club_id|add:1 or user.is_superuser %}
                 <a href="{% url 'edit' club_id post.post_id %}" class="edit_btn"><img src="{% static 'post_edit.png' %}" class="edit" ></a>
                 {% endif %} 
@@ -26,7 +31,7 @@
             <img src="{{ post.post_img.url }}" alt="게시물 사진입니다." class= "post_img">
         </div>
         <div class = "post_content">
-            <p class="content">{{post.post_content | linebreaksbr}}</p>
+            <p class="deatilcontent">{{post.post_content | linebreaksbr}}</p>
         </div>
         <a href="{% url 'delete' club_id post.post_id %}" class="submit" >삭제하기</a>
     </div>

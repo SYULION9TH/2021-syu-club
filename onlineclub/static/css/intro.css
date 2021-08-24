@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {font-size: 1px;}
+body {font-size: 1rem;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../intro_back.png');
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.boxint {
+    z-index: 4;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+}
+
+.boxint h5 {
+    font-family: 'GmarketSansMedium';
+    color: #fcce08;
+    font-size: 13.8rem;
+    margin-bottom: 47rem; 
+    font-weight: lighter;
+}
+
+.boxint h1 {
+    font-family: 'Cafe24Danjunghae';
+    color: rgb(255, 255, 255);
+    text-shadow: 2rem 4rem 2rem rgb(0, 0, 0);
+    font-size: 40rem;
+    /* margin-bottom: 45rem;  */
+    margin-bottom: 120px;
+}
+
+.subb {
+    border: 0;
+    display: block;
+    margin: auto;
+    padding: 15rem 10rem;
+    width: 270rem;
+    outline: none;
+    color: #fcce08;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #0000008e;
+    font-family: 'Cafe24Danjunghae';
+    font-size: 18rem;
+    text-decoration:none; 
+}
+
+.buil3 {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left:0;
+    right:0;
+    margin: 0 auto;
+}
+
+.buil2 {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left:0;
+    right:0;
+    margin: 0 auto;
+}
+
+.buil1 {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left:0;
+    right:0;
+    margin: 0 auto;
+}
+
+.loggg {
+    z-index: 5;
+    width: 110rem;
+    height: auto;
+    position: fixed;
+    bottom: 4%;
+    left:0;
+    right:0;
+    margin: 0 auto;
+}
+
+.container .stage {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    margin-top: -150px;
+}
+
+.container .stage span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: #af855d;
+    -webkit-box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.726), 0 0 0 1.6px #ffb68b94, 0 0 0px 1.7px #fffb009f;
+            box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.726), 0 0 0 1.6px #ffb68bab, 0 0 0px 1.7px #fffb009f;
+    border-radius: 50%;
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+}
+
+@media (min-width:0) and (max-width: 330px) {
+    .boxint h5 {
+        font-size: 12rem;
+    }
+    
+    .boxint h1 {
+        font-size: 32rem;
+    }
+    
+    .subb {
+        width: 260rem;
+        font-size: 15rem;
+    }
+
+    .loggg {
+        width: 95rem;
+    }
+}

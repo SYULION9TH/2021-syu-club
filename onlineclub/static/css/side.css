@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .section_side {
+    padding: 5% 4%;
+    width: 100%;
+    height: 100%;
+    color:white;
+    /* background: linear-gradient(#240E51, #4D29A8); */
+    background-color: transparent;
+
+  }
+
+  .dday{
+    display: inline-flex;
+  }
+
+  .dday_calendar {
+    width: 39px;
+    height: 41px;
+  }
+
+  .counter {
+    padding-left: 3px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .counter>h1{
+    display: inline-block;
+  }
+  
+  .sidebar {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background: none;
+    color: white;
+    width: 300px;
+    max-width: 90%;
+    z-index: 9999;
+    min-height: 100%;
+    padding-bottom: 110px;
+  }
+  
+  .sidebar_header {
+    height: 135px;
+    display: block;
+    background-color:  rgba(131, 131, 131, 1);
+    padding-bottom: 30px;
+  }
+
+  .sidebar_footer {
+    position: absolute;
+    text-align: center;
+    display: block;
+    color: black;
+    background-color: rgb(216, 216, 216);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+  }
+
+  .sidebar_header>h1 {
+    width: 200px;
+    padding-top: 30px;
+    padding-left: 20px;
+    margin-right: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    float: left;
+  }
+  
+  .sidebar_header>h4 {
+    margin-left: 65px;
+    margin-top: 63px;
+  }
+  
+  .sidebar_header>h4>a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar_header>h4>a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar_header>h4>a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .emphasized {
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+  }
+  
+  .admin_login {
+    width: 60px;
+    height: 40px;
+    margin-top: 6px;
+    padding-left: 20px;
+    float: left;
+  }
+  
+  .hide_Btn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    padding-top: 17px;
+    padding-right: 20px;
+  }
+  
+  .menu_Btn {
+    position: relative;
+    font-size: 25px;
+    color: white;
+  }
+  
+  .menu_Btn:hover {
+    color:#FED700;
+  }
+  
+  .section_side{
+    display: flex !important;
+    justify-content: space-between;
+  }
+  
+  .section_side>h1 {
+    padding-top: 2%;
+    font-family: 'twaysky';
+    font-size: 22px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    z-index: 0;
+    left: calc(50% - 76px);
+  }
+
+
+  
+  .sidenav {
+    width: 300px;
+    z-index: 1;
+    background-color:#4b3577;
+    overflow-x: hidden;
+    margin-top: 0px;
+  }
+  
+  .sidenav a, .dropdown-btn, .dropdown-all {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .sidenav a {
+    font-size: 17px;
+    color: black;
+  }
+  
+  .dropdown-btn {
+    color: #e4e4e4;
+  }
+  
+  .sidenav a:hover {
+    color: black;
+  }
+  
+  .dropdown-btn:hover {
+    color: white;
+  }
+
+  .active {
+    background-color: transparent;
+    color: white;
+  }
+  
+  .dropdown-container {
+    display: none;
+    background-color: #f7f7f7;
+    overflow: auto;
+    height: 350px;
+  }
+
+  .dropdown-all {
+    background-color:#9c85ca;
+  }
+  
+  .fa-caret-down, .fa-arrow-right {
+    float: right;
+    padding-right: 8px;
+    padding-top: 3px;
+  }
