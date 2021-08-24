@@ -30,9 +30,11 @@
                 <p class="create">{{post.updated_at}}</p>
                 <div class="post_background">
                     <div class="img_content">
-                        <label for="img" class="img_width"></label>
+                        <label for="img" class="img_width">
                         <input type="file" name="post_img" class="img_width1" id="img">
                         <img src="{% static 'img.png' %}" alt="게시물 사진입니다." class="post_img">
+                        <img src="{% static '투명.png' %}" class="img_width" id="preview-image">
+                        </label>
                     </div>
                 </div>
             </div>
@@ -42,6 +44,28 @@
             <button class="submit" type="submit">업로드</button>
         </div>
     </form>
+    <script type="text/javascript">
+        function readImage(input) {
+        // 인풋 태그에 파일이 있는 경우
+        if(input.files && input.files[0]) {
+            // 이미지 파일인지 검사 (생략)
+            // FileReader 인스턴스 생성
+            const reader = new FileReader()
+            // 이미지가 로드가 된 경우
+            reader.onload = e => {
+                const previewImage = document.getElementById("preview-image")
+                previewImage.src = e.target.result
+            }
+            // reader가 이미지 읽도록 하기
+            reader.readAsDataURL(input.files[0])
+        }
+    }
+    // input file에 change 이벤트 부여
+    const inputImage = document.getElementById("img")
+    inputImage.addEventListener("change", e => {
+        readImage(e.target)
+    })
+    </script>
 </body>
 
 </html>
