@@ -165,7 +165,7 @@
         dday = new Date("Sep 17,2021, 23:59:59").getTime(), //디데이
         gap = dday - today,
         result = Math.floor(gap / (1000 * 60 * 60 * 24));
-        if (result == 0){
+        if (result == 0) {
           result = "DAY"
         }
     counter.innerHTML = `모집마감<br><h1>D-${result}</h1>`
