@@ -1,1 +1,13 @@
-<svg width="109" height="125" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="clip0"><rect x="995" y="910" width="109" height="125"/></clipPath><clipPath id="clip1"><rect x="1017" y="951" width="67" height="38"/></clipPath><clipPath id="clip2"><rect x="1017" y="951" width="67" height="38"/></clipPath><clipPath id="clip3"><rect x="985" y="930" width="134" height="80"/></clipPath><clipPath id="clip4"><rect x="985" y="930" width="134" height="80"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-995 -910)"><rect x="995" y="910" width="109" height="103" fill="#5160AB"/><path d="M0 23 0 0 57.9997 23Z" fill="#5160AB" fill-rule="evenodd" transform="matrix(1 -1.22465e-16 -1.22465e-16 -1 995 1035)"/><path d="M1104 1011 1104 1034 1046 1011Z" fill="#5160AB" fill-rule="evenodd"/><g clip-path="url(#clip1)"><g clip-path="url(#clip2)"><g clip-path="url(#clip3)"><g clip-path="url(#clip4)"><text fill="#FFFFFF" font-family="KoreanGD12R,KoreanGD12R_MSFontService,sans-serif" font-weight="400" font-size="37" transform="matrix(0.980563 0 0 0.96006 1018.08 980)">중앙</text></g></g></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="109" height="125" viewBox="0 0 109 125">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_6" data-name="사각형 6" width="109" height="125" transform="translate(995 910)"/>
+    </clipPath>
+  </defs>
+  <g id="중앙" transform="translate(-995 -910)" clip-path="url(#clip-path)">
+    <rect id="사각형_1" data-name="사각형 1" width="109" height="103" transform="translate(995 910)" fill="#5160ab"/>
+    <path id="패스_1" data-name="패스 1" d="M0-23V0L58-23Z" transform="translate(995 1035)" fill="#5160ab" fill-rule="evenodd"/>
+    <path id="패스_2" data-name="패스 2" d="M1104,1011v23l-58-23Z" fill="#5160ab" fill-rule="evenodd"/>
+    <text id="중앙-2" data-name="중앙" transform="translate(1014 977)" fill="#fff" font-size="36" font-family="MalgunGothic, Malgun Gothic"><tspan x="0" y="0">중앙</tspan></text>
+  </g>
+</svg>

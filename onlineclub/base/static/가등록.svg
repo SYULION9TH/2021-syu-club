@@ -1,1 +1,13 @@
-<svg width="110" height="125" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden"><defs><clipPath id="clip0"><rect x="903" y="1107" width="110" height="125"/></clipPath><clipPath id="clip1"><rect x="908" y="1149" width="99" height="37"/></clipPath><clipPath id="clip2"><rect x="908" y="1149" width="99" height="37"/></clipPath><clipPath id="clip3"><rect x="877" y="1127" width="163" height="83"/></clipPath><clipPath id="clip4"><rect x="877" y="1127" width="163" height="83"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-903 -1107)"><rect x="903" y="1107" width="110" height="103" fill="#309AC4"/><path d="M0 24.0001 0 0 59.0001 24.0001Z" fill="#309AC4" fill-rule="evenodd" transform="matrix(1 -1.22465e-16 -1.22465e-16 -1 903 1232)"/><path d="M1013 1208 1013 1231 954 1208Z" fill="#309AC4" fill-rule="evenodd"/><g clip-path="url(#clip1)"><g clip-path="url(#clip2)"><g clip-path="url(#clip3)"><g clip-path="url(#clip4)"><text fill="#FFFFFF" font-family="KoreanGD12R,KoreanGD12R_MSFontService,sans-serif" font-weight="400" font-size="37" transform="matrix(0.987734 0 0 0.987901 909.928 1178)">가등록</text></g></g></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="125" viewBox="0 0 110 125">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_12" data-name="사각형 12" width="110" height="125" transform="translate(903 1107)"/>
+    </clipPath>
+  </defs>
+  <g id="가등록" transform="translate(-903 -1107)" clip-path="url(#clip-path)">
+    <rect id="사각형_7" data-name="사각형 7" width="110" height="103" transform="translate(903 1107)" fill="#309ac4"/>
+    <path id="패스_3" data-name="패스 3" d="M0-24V0L59-24Z" transform="translate(903 1232)" fill="#309ac4" fill-rule="evenodd"/>
+    <path id="패스_4" data-name="패스 4" d="M1013,1208v23l-59-23Z" fill="#309ac4" fill-rule="evenodd"/>
+    <text id="가등록-2" data-name="가등록" transform="translate(904 1174)" fill="#fff" font-size="36" font-family="MalgunGothic, Malgun Gothic"><tspan x="0" y="0">가등록</tspan></text>
+  </g>
+</svg>

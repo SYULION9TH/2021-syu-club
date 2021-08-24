@@ -51,21 +51,21 @@
     display: none;
     position: absolute;
     overflow: auto;
-    background-color: white;
+    background-color: #EAE5E3;
     color: white;
     width: 300px;
     max-width: 90%;
     z-index: 9999;
     min-height: 100vh;
     padding-bottom: 110px;
-    background-color: #8774ac;
+    /* background-color: #8774ac; */
   }
   
   .sidebar_header {
     height: 135px;
     display: block;
-    /* background-color:  rgba(131, 131, 131, 0.95); */
-    background: linear-gradient(#070639, #4b3577);   
+    background-color:rgba(131, 131, 131, 1);
+    /* background: linear-gradient(#070639, #4b3577);    */
     padding-bottom: 30px;
   }
 
@@ -217,7 +217,7 @@
   
   .dropdown-container {
     display: none;
-    background-color: #f7f7f7;
+    background-color: #EAE5E3;
     overflow: auto;
     height: 270px;
   }
