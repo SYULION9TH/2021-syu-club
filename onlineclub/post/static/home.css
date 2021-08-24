@@ -166,3 +166,36 @@ div_club {
     position: absolute;
     left: 3%;
 }
+
+
+.slick-prev:before,
+.slick-next:before
+{
+    color: #5523a0;
+    background-color: white;
+    border-radius: 50%;
+    border-width: 10px;
+    border: solid white;
+}
+
+button.slick-prev
+{
+    border: 0;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    left: 17px;
+    top: 88%;
+    z-index: 1;
+}
+
+button.slick-next
+{
+    border: 0;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    right: 17px;
+    top: 88%;
+    z-index: 1;
+}

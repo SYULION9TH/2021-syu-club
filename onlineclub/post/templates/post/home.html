@@ -47,12 +47,20 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/d1c6c79e37.js" crossorigin="anonymous"></script>
+    
+
     <script>
         $(document).ready(function () {
             $('.gallery').slick({
                 centerMode: true,
                 centerPadding: '40px',
                 slidesToShow: 3,
+                prevArrow: "<button type='button' class='slick-prev fas fa-chevron-circle-left fa-lg'></button>",
+                nextArrow: "<button type='button' class='slick-next fas fa-chevron-circle-right fa-lg'></button>",
+
                 responsive: [
                     {
                         breakpoint: 768,
@@ -61,7 +69,7 @@
                             centerMode: true,
                             centerPadding: '40px',
                             slidesToShow: 3,
-                            prevArrow: "<button type='button' class='slick-prev'>Prev</button>"
+                            // prevArrow: "<button type='button' class='slick-prev'>Prev</button>"
                         }
                     },
                     {
@@ -71,7 +79,7 @@
                             centerMode: true,
                             centerPadding: '40px',
                             slidesToShow: 1,
-                            nextArrow: "<button type='button' class='slick-next'>Next</button>"
+                            // nextArrow: "<button type='button' class='slick-next'>Next</button>"
                         }
                     }
                 ]

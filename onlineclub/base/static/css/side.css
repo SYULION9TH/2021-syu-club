@@ -32,10 +32,17 @@
     display: inline-flex;
   }
 
+  @media (min-width:330px) {
   .dday_calendar {
     width: 39px;
     height: 41px;
-  }
+  }}
+
+  @media (max-width:330px) {
+  .dday_calendar {
+    width: 0px;
+    height: 0px;
+  }}
 
   .counter {
     padding-left: 3px;
