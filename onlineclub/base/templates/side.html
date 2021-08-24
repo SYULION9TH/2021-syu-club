@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>syu-club</title>
 
-  <link rel="stylesheet" href="{% static 'css/side.css' %}">
+  <link rel="stylesheet" href="{% static 'css/side.css' %}?after ">
   <script src="https://kit.fontawesome.com/d1c6c79e37.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -28,71 +28,82 @@
           <h4><a href="{% url 'loginhtml' %}">관리자로 로그인하기</a></h4>
         {% endif %}
         {% if user.is_authenticated %}
-          {{user.username}}님!
-          <a href="{% url 'logout' %}">LOGOUT</a>
+          <div class="admin_logout">
+            {{user.username}}님!
+            <a href="{% url 'logout' %}">LOGOUT</a>
+          </div>
         {% endif %}
       </div>
         <div class="sidenav">
-          <button class="dropdown-btn">문화 체육 분과
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-container">
-            <button class="dropdown-all" onclick="location.href='1'">문화 체육 분과 모아보기
-              <i class="fas fa-arrow-right"></i>
+          <div class="dropdown">
+            <button class="dropdown-btn">문화 체육 분과
+              <i class="fa fa-caret-down"></i>
             </button>
-            <a href="#">클래시아</a>
-            <a href="#">Firebat</a>
-            <a href="#">화소</a>
-            <a href="#">악바리들</a>
-            <a href="#">요소</a>
-            <a href="#">빛감</a>
-            <a href="#">뷰파인더</a>
-            <a href="#">러너스하이</a>
-            <a href="#">랠리유</a>
-            <a href="#">Wings</a>
-            <a href="#">D.M</a>
+            <div class="dropdown-container">
+              <button class="dropdown-all" onclick="location.href='1'">문화 체육 분과 모아보기
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <a href="#">클래시아</a>
+              <a href="#">Firebat</a>
+              <a href="#">화소</a>
+              <a href="#">악바리들</a>
+              <a href="#">요소</a>
+              <a href="#">빛감</a>
+              <a href="#">뷰파인더</a>
+              <a href="#">러너스하이</a>
+              <a href="#">랠리유</a>
+              <a href="#">Wings</a>
+              <a href="#">D.M</a>
+            </div>
           </div>
-          <button class="dropdown-btn">학술 분과
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-container">
-            <button class="dropdown-all" onclick="location.href='2'">학술 분과 모아보기
-              <i class="fas fa-arrow-right"></i>
+          <div class="dropdown">
+            <button class="dropdown-btn">학술 분과
+              <i class="fa fa-caret-down"></i>
             </button>
-            <a href="#">멋쟁이 사자처럼</a>
-            <a href="#">Draftmation</a>
-            <a href="#">파이널컷</a>
-            <a href="#">TeamMFS</a>
-            <a href="#">불기둥</a>
-            <a href="#">Su-Eco</a>
-            <a href="#">GDSC삼육</a>
-            <a href="#">Creator</a>
-            <a href="#">ELL</a>
+            <div class="dropdown-container">
+              <button class="dropdown-all" onclick="location.href='2'">학술 분과 모아보기
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <a href="#">멋쟁이 사자처럼</a>
+              <a href="#">Draftmation</a>
+              <a href="#">파이널컷</a>
+              <a href="#">TeamMFS</a>
+              <a href="#">불기둥</a>
+              <a href="#">Su-Eco</a>
+              <a href="#">GDSC삼육</a>
+              <a href="#">Creator</a>
+              <a href="#">ELL</a>
+            </div>
           </div>
-          <button class="dropdown-btn">종교 봉사 분과
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-container">
-            <button class="dropdown-all" onclick="location.href='3'">종교 봉사 분과 모아보기
-              <i class="fas fa-arrow-right"></i>
+          <div class="dropdown">
+            <button class="dropdown-btn">종교 봉사 분과
+              <i class="fa fa-caret-down"></i>
             </button>
-            <a href="#">동행길</a>
-            <a href="#">은빛샘</a>
-            <a href="#">온소리</a>
-            <a href="#">심금</a>
-            <a href="#">보담</a>
-            <a href="#">RCY</a>
-            <a href="#">ACT</a>
+            <div class="dropdown-container">
+              <button class="dropdown-all" onclick="location.href='3'">종교 봉사 분과 모아보기
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <a href="#">동행길</a>
+              <a href="#">은빛샘</a>
+              <a href="#">온소리</a>
+              <a href="#">심금</a>
+              <a href="#">보담</a>
+              <a href="#">RCY</a>
+              <a href="#">ACT</a>
+            </div>
           </div>
-          <button class="dropdown-btn">기타
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-container">
-            <a href="#">VOS</a>
+          <div class="dropdown">
+            <button class="dropdown-btn">기타
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">VOS</a>
+            </div>
           </div>
         </div>
-        <div class="sidebar_footer"><span>© 삼육대학교 38대 벼리 동아리연합회 | 멋쟁이 사자처럼 at 삼육대학교 9기<br>
-          서울 특별시 노원구 화랑로 815 삼육대학교 학생회관<br>
+        <div class="sidebar_footer"><span>© 삼육대학교 38대 벼리 동아리연합회 | <br>
+          멋쟁이 사자처럼 at 삼육대학교 9기<br>
+          <br>
           개발진 | 김지연 박미란 박세연 박현서 성예지 이민주 이보람<br>
           이지수 윤예빈 정하늘 주미진 최정은 함승우 황한슬
         </span></div>
@@ -114,12 +125,12 @@
         var target = $(".sidebar");
 
         $(document).on("click", "#OpenBtn", function (e){
-            target.animate({width:'toggle'},200);
+            target.animate({left:'toggle'}, 500);
             target.addClass('emphasized');
             });
    
         $(document).on("click", "#CloseBtn", function (e){
-            target.animate({width:'toggle'},200);
+            target.animate({left:'toggle'}, 0);
             target.removeClass('emphasized');
             });
         });
@@ -138,6 +149,17 @@
             }
         });
     }
+
+    $('.dropdown').on('click',function(){
+        var postMenu = $(this).find('.dropdown-container');
+        
+        if( !postMenu.is(':hidden') ){
+            $('.dropdown-container').hide();
+            postMenu.show();
+        }else{
+            postMenu.hide() ;
+        }
+    });
 
     let counter = document.querySelector('.counter');
     let today = new Date(), //현재 날짜 가져오기
