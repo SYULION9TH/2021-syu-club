@@ -92,6 +92,7 @@
 
 <body>    
     <nav_club>
+        <!-- {% include 'side.html' %} -->
         <h1 class="nav-title" style="font-weight: bold;">동아리 홍보전</h1>
         {% if user.id == club_id|add:1 or user.is_superuser %}
         <a href="{% url 'detailupdate' club_id %}">

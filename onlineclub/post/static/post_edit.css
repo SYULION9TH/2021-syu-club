@@ -11,6 +11,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 .club_nav{
     z-index:10;
     background-color:#f4f0ee;
@@ -132,9 +133,10 @@ h1,p{
     z-index: 4;
     display:none;
     height: 100%;
-    width:100%;
+    width: 100%;
     display:block;
     cursor:pointer;
+    position:absolute;
 }
 .img_width1{
     display:none;
