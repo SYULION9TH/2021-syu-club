@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="{% static 'notFound.css'%}">
   <style>
     @font-face {
       font-family: 'Cafe24Danjunghae';
@@ -213,7 +213,7 @@
 </head>
 
 <body>
-  <header>
+  <header style="position: fixed">
     {% include 'side.html' %}
     <!-- <nav>
       디데이
@@ -246,6 +246,7 @@
 
 
   <section>
+      {% if club_list %}
     {% for club in club_list %}
     <!-- card -->
     <a href="{% url 'home' club.club_id %}">
@@ -271,13 +272,28 @@
           <h1>{{club.club_name}}</h1>
           <span>{{club.club_type}}</span>
           <hr style="color: black;" width="60px">
-          <span id="club_t">{{club.club_desc}}</span>
+          <span id="club_t">{{club.club_desc|truncatechars:25}}</span>
         </div>
 
       </div>
     </a>
     {% endfor %}
-
+{% else %}
+      <figure style="margin-top: 41px; display:block">
+	<div class="sad-mac" ></div>
+	<figcaption>
+		<span class="sr-text"> {{mess}}</span>
+	
+		<span class="n"></span>
+		<span class="o"></span>
+		<span class="t"></span>
+		<span class="f"></span>
+		<span class="o"></span>
+		<span class="u"></span>
+		<span class="n"></span>
+		<span class="d"></span>
+	</figcaption>
+      {% endif %}
   </section>
 </body>
 
