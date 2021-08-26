@@ -110,21 +110,17 @@
     </div>
     <main_club>
         <a class="top_bookmark">
-            <img src="{% static 'main_book.png' %}" alt="bm로고" class="top_bookmark">
             {% if club.club_type_id == 1 %}
-            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
-            font-family: 'Noto Sans CJK KR-Medium', sans-serif;">문&nbsp화<br>체&nbsp육</p>
+            <img src="{% static '문화체육.svg' %}" alt="문화체육로고" class="top_bookmark">
             {% elif club.club_type_id == 2 %}
-            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
-            font-family: 'Noto Sans CJK KR-Medium', sans-serif;">학&nbsp술<br>분&nbsp과</p>
+            <img src="{% static '학술분과.svg' %}" alt="학술분과로고" class="top_bookmark">
             {% elif club.club_type_id == 3 %}
-            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
-            font-family: 'Noto Sans CJK KR-Medium', sans-serif;">종&nbsp교<br>봉&nbsp사</p>
+            <img src="{% static '종교봉사.svg' %}" alt="종교봉사로고" class="top_bookmark">
             {% else %}
-            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
-            font-family: 'Noto Sans CJK KR-Medium', sans-serif;">기&nbsp타</p>
+            <img src="{% static '기타분과.svg' %}" alt="기타로고" class="top_bookmark">
             {% endif %}
         </a>
+
         {% if club.youtube_link %}
         <a class="top_youtube" target="_blank" href="{{club.youtube_link}}">
             <img src="{% static 'top_youtube.png' %}" alt="yb로고" class="top_youtube">
