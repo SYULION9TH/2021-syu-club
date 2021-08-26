@@ -42,9 +42,9 @@ body {
 
 .boxint h5 {
     font-family: 'GmarketSansMedium';
-    color: #fcce08;
+    color: #ffd900;
     font-size: 13.8rem;
-    margin-bottom: 47rem; 
+    margin-bottom: 55rem; 
     font-weight: lighter;
 }
 
@@ -53,6 +53,7 @@ body {
     color: rgb(255, 255, 255);
     text-shadow: 2rem 4rem 2rem rgb(0, 0, 0);
     font-size: 40rem;
+    font-weight: normal;
     /* margin-bottom: 45rem;  */
     margin-bottom: 120px;
 }

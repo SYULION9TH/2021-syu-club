@@ -176,11 +176,12 @@
             background-color:transparent;
             color: #817f7e;
             border-color: #727373;
-            font-weight: normal;
-            font-size: 80%;
+            font-weight: bold;
+            font-size: 30%;
             border-style: solid;
             border-color: #b9b9b9;
-            width: 95%;
+            border-width: 2px;
+            width: 100%;
             line-height: 5em;
             resize: none;
             outline: none;
@@ -283,7 +284,7 @@
         <!-- club -->
         <div class="club">
             <p class="name">{{club.club_name}}</p>
-            <input name="club_desc" type="text" class="introduce" cols="10" rows="3" value="{{ club.club_desc }}"></input>
+            <textarea name="club_desc" class="introduce" cols="10" rows="3" value="{{ club.club_desc }}">{{ club.club_desc }}</textarea>
         </div>
     </section>
     

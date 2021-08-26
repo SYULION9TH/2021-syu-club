@@ -92,12 +92,13 @@
   }
 
   .sidebar_header>h1 {
+    font-family: 'twaysky';
     width: 200px;
     padding-top: 30px;
-    padding-left: 20px;
+    padding-left: 25px;
     margin-right: 40px;
     font-size: 22px;
-    font-weight: bold;
+    /* font-weight: bold; */
     float: left;
   }
   
@@ -109,6 +110,7 @@
   .sidebar_header>h4>a:link {
     color: white;
     text-decoration: none;
+    font-size: 15px;
   }
   
   .sidebar_header>h4>a:hover {
@@ -134,13 +136,15 @@
   }
   
   .admin_logout {
-    font-size: 15px;
-    padding-top: 59px;
+    font-size: 18px;
+    padding-top: 50px;
     padding-left: 65px;
   }
 
   .admin_logout>a {
     color: white;
+    font-size: 15px;
+    margin-left: 80px;
   }
 
   .hide_Btn {

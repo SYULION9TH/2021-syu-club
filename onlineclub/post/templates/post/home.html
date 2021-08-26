@@ -11,6 +11,8 @@
 
     <script src="<https://code.jquery.com/jquery-3.6.0.js>"></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <script type="text/javascript">
         $('.gallery').slick({
@@ -93,7 +95,7 @@
 <body>    
     <nav_club>
         <!-- {% include 'side.html' %} -->
-        <h1 class="nav-title" style="font-weight: bold;">동아리 홍보전</h1>
+        <a href="{% url 'home1' %}" style="text-decoration: none;"><h1 class="nav-title" style="font-weight: bold; font-family:'twaysky';">동아리 홍보전</h1></a>
         {% if user.id == club_id|add:1 or user.is_superuser %}
         <a href="{% url 'detailupdate' club_id %}">
             <img src="{% static 'nav_edit.png' %}" alt="ne로고"
@@ -152,9 +154,7 @@
                 <hr style="width: 40%; height: 0.4%; background-color: gray;
                 border: none; position:absolute; left: 0; margin: 5px;">
             </p>
-                <p style="overflow:auto; height: 80%; font-size: 1em; margin: 0; font-family: 'Noto Sans CJK KR-Regular', sans-serif;">
-                    {{club.recruitment_content}}
-                </p>
+                <p style="overflow:auto; height: 80%; font-size: 1em; margin: 0; font-family: 'Noto Sans CJK KR-Regular', sans-serif; white-space: pre-wrap;">{{club.recruitment_content}}</p>
         </article_section_club>
     </section_club>
 

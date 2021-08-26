@@ -79,6 +79,8 @@
         <img class="flag" src="{% static '중앙.svg' %}" width="40px" height="45px">
         {% elif club.main_club == 0 %}
         <img class="flag" src="{% static '가등록.svg' %}" width="40px" height="45px">
+        {% else %}
+        <img class="flag" src="{% static '기타.svg' %}" width="40px" height="45px">
         {% endif %}
       </div>
 
