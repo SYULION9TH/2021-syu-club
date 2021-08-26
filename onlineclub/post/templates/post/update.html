@@ -45,7 +45,7 @@
             height: 50px;
             vertical-align:middle;
             line-height: 50px;
-            background-color: white;
+            background-color: #f4f0ee;
         }
         .href{
             display:inline-block;
@@ -267,7 +267,7 @@
     <div class="image-container">
         <!-- <img src="../static/sea.jpg" id="preview-image"> -->
         <!-- <img src="{% static 'sea.jpg' %}" alt="활동사진" id="preview-image"> -->
-        <img src="{{ club.club_img.url }}" alt="활동사진"  name="club_img" class="__img">
+        <img src="{{ club.club_img.url }}" alt="활동사진"  name="club_img" class="__img" id="preview-image">
         <label for="input-image" class="cover_img_width"></label>
         <input type="file" id="input-image" name="club_img" class="cover_img">
         
