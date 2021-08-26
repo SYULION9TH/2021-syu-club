@@ -33,7 +33,9 @@
         <div class = "post_content">
             <p class="deatilcontent">{{post.post_content | linebreaksbr}}</p>
         </div>
+        {% if user.id == club_id|add:1 or user.is_superuser %}
         <a href="{% url 'delete' club_id post.post_id %}" class="submit" >삭제하기</a>
+        {% endif %}
     </div>
 
         

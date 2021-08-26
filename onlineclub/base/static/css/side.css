@@ -10,6 +10,7 @@
     font-weight: 400;
     font-style: normal;
   }
+ 
   
   body {
     margin: 0;
@@ -215,6 +216,7 @@
   
   .sidenav a:hover {
     color: black;
+    text-decoration: none;
   }
   
   .dropdown-btn:hover {
