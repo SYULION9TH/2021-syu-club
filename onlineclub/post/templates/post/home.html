@@ -1,56 +1,196 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동아리 상세페이지</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
 
-    <style>
-        body {
-            text-align: center;
-        }
-    </style>
+    <script src="<https://code.jquery.com/jquery-3.6.0.js>"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $('.gallery').slick({
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: true,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: true,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    </script>
+
+    <!-- style 태그 css 파일로 -->
+
+    <!--슬라이드 배너 효과 코드-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/d1c6c79e37.js" crossorigin="anonymous"></script>
+    
+
+    <script>
+        $(document).ready(function () {
+            $('.gallery').slick({
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3,
+                prevArrow: "<button type='button' class='slick-prev fas fa-chevron-circle-left fa-lg'></button>",
+                nextArrow: "<button type='button' class='slick-next fas fa-chevron-circle-right fa-lg'></button>",
+
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3,
+                            // prevArrow: "<button type='button' class='slick-prev'>Prev</button>"
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1,
+                            // nextArrow: "<button type='button' class='slick-next'>Next</button>"
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+
 </head>
 
-<body>
-    {% load static %}
-    {{club.club_name}}
-    <img src="{{club.club_img.url}}">
-    {{club.club_logo_url}}
-    <br>
-    {{club.recruitment_content}}
-    {% if user.id == club_id|add:1 or user.is_superuser %}
-    <a href="{% url 'detailupdate' club_id %}">모집요강 수정</a>
-    <div>
-        <a href="{% url 'new' club_id %}">Write Post Page</a>
-    </div>
-    {% endif %}
-    <br> <br>
+<body>    
+    <nav_club>
+        <!-- {% include 'side.html' %} -->
+        <a href="javascript:history.back();" class="href"><img src="{% static 'update_close.png' %}" class="update_img"></a>
+        <a href="{% url 'home1' %}" style="text-decoration: none;"><h1 class="nav-title" style="font-weight: bold; font-family:'twaysky';">동아리 홍보전</h1></a>
+        {% if user.id == club_id|add:1 or user.is_superuser %}
+        <a href="{% url 'detailupdate' club_id %}">
+            <img src="{% static 'nav_edit.png' %}" alt="ne로고"
+                style="margin: 0px; width: 30px; position: absolute; top: 0; right: 20px;">
+        </a>
+        {% endif %}
+    </nav_club>
     
-    <div class="container">
-        {% for post in posts %}
-        {% if post.post_img_url %}
-        사진: <img src="{{ post.post_img_url }}" /> <br>
+    <img src="{{club.club_img.url}}" style="position: absolute; z-index: 0; width:100%; height:40%; top:50px;">
+    <div class="background-img">    
+    </div>
+    <main_club>
+        <a class="top_bookmark">
+            {% if club.club_type_id == 1 %}
+            <img src="{% static '문화체육.svg' %}" alt="문화체육로고" class="top_bookmark">
+            {% elif club.club_type_id == 2 %}
+            <img src="{% static '학술분과.svg' %}" alt="학술분과로고" class="top_bookmark">
+            {% elif club.club_type_id == 3 %}
+            <img src="{% static '종교봉사.svg' %}" alt="종교봉사로고" class="top_bookmark">
+            {% else %}
+            <img src="{% static '기타분과.svg' %}" alt="기타로고" class="top_bookmark">
+            {% endif %}
+        </a>
+
+        {% if club.youtube_link %}
+        <a class="top_youtube" target="_blank" href="{{club.youtube_link}}">
+            <img src="{% static 'top_youtube.png' %}" alt="yb로고" class="top_youtube">
+        </a>
+        {% endif %}
+        {% if club.facebook_link %}
+        <a class="top_facebook" target="_blank" href="{{club.facebook_link}}">
+            <img src="{% static 'top_facebook.png' %}" alt="fb로고" class="top_facebook">
+        </a>
+        {% endif %}
+        {%if club.instagram_link %}
+        <a class="top_instagram" target="_blank" href="{{club.instagram_link}}">
+            <img src="{% static 'top_instagram.png' %}" alt="ig로고" class="top_instagram">
+        </a>
         {% endif %}
 
-        {% if post.post_img %}
-        사진: <img src="{{post.post_img.url}}" alt="">
+        <article_main_club>
+            <img src="{{club.club_logo.url}}" class="static">
+            <h1 class="main-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">{{club.club_name}}</h1>
+            <p class="intro" style="font-family: 'Noto Sans CJK KR-Regular', sans-serif;">{{club.club_desc}}</p>
+            <input type="button" name="submit" class="button_a" value="지원하기"
+                style="font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
+        </article_main_club>
+
+    </main_club>
+
+    <section_club>
+        <article_section_club>
+            <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">모집요강
+                <hr style="width: 40%; height: 0.4%; background-color: gray;
+                border: none; position:absolute; left: 0; margin: 5px;">
+            </p>
+                <p style="overflow:auto; height: 80%; font-size: 1em; margin: 0; font-family: 'Noto Sans CJK KR-Regular', sans-serif; white-space: pre-wrap;">{{club.recruitment_content}}</p>
+        </article_section_club>
+    </section_club>
+
+    <div_club>
+        <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">동아리 게시물
+            <hr style="width: 40%; height: 0.4%; background-color:gray;
+            border: none; position:absolute; left: 0; margin: 5px;">
+        </p>
+
+        {% if posts %}
+        <!--<img src="{% static 'post_left.png' %}" id='slick-prev' style="width: 10%; position: absolute; bottom: 30%; z-index: 2; transform: translate(-40%);">
+        <img src="{% static 'post_right.png' %}" id='slick-next' style="width: 10%; position: absolute; right:0; bottom: 30%; z-index: 2; transform: translate(40%);">-->
+
+        <div class="gallery" style="overflow:auto; height: 80%; padding: 0px; position: relative; z-index: 0;">
+            {% for post in posts %}
+            <a href="{% url 'detail' club_id post.post_id %}">
+            <div>
+                <p style="background-color: #160f07; font-family: 'Noto Sans CJK KR-Regular', sans-serif;
+                position: relative; position: absolute; bottom: 10px; z-index: 1; width: 220px; height: 30px; opacity: 0.8;
+                color: white; font-size: 1em; margin: 0;">{{post.post_title}}</p>
+                <img src="{{ post.post_img.url }}" style="width: 220px; height: 120px; border-radius: 5px;">
+            </div>
+            </a>
+        {% endfor %}
+        </div>
+
+        {% else %}
+        <h1 style="color: #6a6a6a; font-size:1em; text-align:center; position: relative; top:30px;
+         margin: 0; font-family: 'Noto Sans CJK KR-Medium', sans-serif; font-weight:lighter;">등록된 동아리 게시물이 없습니다.</h1>
         {% endif %}
-        <br>
-        
-        <h5 class="card-title"><a href="{% url 'detail' club_id post.post_id %}">{{post.post_title}}</a>
-            <p class="card-text">{{post.post_content | truncatechars:20}}</p>
-            {% endfor %}
-    </div>
+
+        {% if user.id == club_id|add:1 or user.is_superuser %}
+        <a href="{% url 'new' club_id %}">
+            <img src="{% static 'plus.png' %}" style="width: 30px; position: absolute; right:0; bottom: 80%;">
+        </a>
+        {% endif %}
+    </div_club>
 
 </body>
 

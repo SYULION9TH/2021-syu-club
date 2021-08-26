@@ -1,10 +1,71 @@
-<h1>Write Post Page</h1>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
 
-<form action="{% url 'update' club_id post.post_id %}" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <p>제목: <input type="text" name="post_title" value="{{post.post_title}}"></p>
-    <p>내용: <input type="text" name="post_content" value="{{post.post_content}}"></p>
-    <p>CharField 일 경우 이미지: <input type="url" name="post_img_url" value="{{post.post_img_url}}"></p>
-    <p>ImageField 일 경우 이미지: <input type="file" name="post_img"></p>
-    <button type="submit">Submit</button>
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'post_edit.css' %}">
+</head>
+
+<body>
+    <form action="{% url 'update' club_id post.post_id %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <nav>
+            <p class="club_nav">
+                <!-- <a href="#">menu</a> -->
+                <a href="{% url 'home1' %}" id="top">동아리 홍보전</a>
+            </p>
+        </nav>
+        <div class="post_detail_container" id="postdetail">
+            <div class="post_detail">
+                <div class="post_top">
+                    <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'post_close.png' %}"
+                            class="close"></a>
+                    <div class="inline">
+                        <textarea class="title" name="post_title" cols="28" row="5">{{post.post_title}}</textarea>
+                    </div>
+                </div>
+                <p class="create">{{post.updated_at}}</p>
+                <div class="post_background">
+                    <div class="img_content">
+                        <label for="img" class="img_width">
+                            <input type="file" name="post_img" class="img_width1" id="img">
+                            <img src="{% static 'img.png' %}" alt="게시물 사진입니다." class="post_img">
+                            <img src="{{post.post_img.url}}" class="img_width" id="preview-image">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="post_content">
+                <textarea wrap="hard" class="content" name="post_content" cols="28" row="15" placeholder="  게시물 내용을 입력하세요">{{post.post_content}}</textarea>
+            </div>
+            <button class="submit" type="submit">업로드</button>
+        </div>
+    </form>
+    <script type="text/javascript">
+        function readImage(input) {
+        // 인풋 태그에 파일이 있는 경우
+        if(input.files && input.files[0]) {
+            // 이미지 파일인지 검사 (생략)
+            // FileReader 인스턴스 생성
+            const reader = new FileReader()
+            // 이미지가 로드가 된 경우
+            reader.onload = e => {
+                const previewImage = document.getElementById("preview-image")
+                previewImage.src = e.target.result
+            }
+            // reader가 이미지 읽도록 하기
+            reader.readAsDataURL(input.files[0])
+        }
+    }
+    // input file에 change 이벤트 부여
+    const inputImage = document.getElementById("img")
+    inputImage.addEventListener("change", e => {
+        readImage(e.target)
+    })
+    </script>
+</body>
+
+</html>

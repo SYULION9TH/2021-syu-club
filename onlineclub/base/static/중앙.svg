@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="109" height="125" viewBox="0 0 109 125">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_6" data-name="사각형 6" width="109" height="125" transform="translate(995 910)"/>
+    </clipPath>
+  </defs>
+  <g id="중앙" transform="translate(-995 -910)" clip-path="url(#clip-path)">
+    <rect id="사각형_1" data-name="사각형 1" width="109" height="103" transform="translate(995 910)" fill="#5160ab"/>
+    <path id="패스_1" data-name="패스 1" d="M0-23V0L58-23Z" transform="translate(995 1035)" fill="#5160ab" fill-rule="evenodd"/>
+    <path id="패스_2" data-name="패스 2" d="M1104,1011v23l-58-23Z" fill="#5160ab" fill-rule="evenodd"/>
+    <text id="중앙-2" data-name="중앙" transform="translate(1014 977)" fill="#fff" font-size="36" font-family="MalgunGothic, Malgun Gothic"><tspan x="0" y="0">중앙</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  html{
+    height: 100%;
+    background-image: url("../../../static/main_back.png");
+    /* background-image: url("../static/main_back.png"); */
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #28106E;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  /* nav>span {
+    font-family: 'Cafe24Danjunghae';
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu_Btn {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    margin-left: 8px;
+  }
+
+  .menu_Btn:hover {
+    color: #D4CED5;
+  }
+
+  .dday_img {
+    position: absolute;
+    right: 63px;
+    margin-top: 2px;
+  }
+
+  .dday {
+    position: absolute;
+    margin-top: 2px;
+    right: 23px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #d_txt {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    font-size: 9px;
+  }
+
+  #day {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    position: absolute;
+    top: 8px;
+  } */
+
+  header {
+    color: white;
+    position: sticky;
+    background: linear-gradient(#070639, #231669);
+    background-size: cover;
+    /* padding: 20px 5% 20px 4%; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .club_text {
+    margin: 5px 0 20px 0;
+    text-align: center;
+  }
+
+  #club_txt {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    color: #D5D0FD;
+  }
+
+
+  /* search */
+  .search-bar {
+    position: relative;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 20px 4%;
+  }
+
+  .search-bar>input {
+    width: 100%;
+    height: 40px;
+    border: 0px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: black;
+    padding-right: 40px;
+  }
+
+  .fa-search {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 8px;
+    top: 36%;
+    font-size: 20px;
+    color: #240E51;
+    margin-right: 4%;
+  }
+
+
+  /* sort button */
+  .club_sort_btn {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: white;
+    display: contents;
+  }
+
+  .sort_btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 5px 10px 0px;
+    width: 33%;
+    /* margin-right: 10px; */
+    margin: 5px 1px 10px 4%;
+    background-color: #1C1246;
+  }
+
+  .sort_btn:hover {
+    background-color: #D4CED5;
+    color: black;
+    font-weight: 400;
+  }
+
+
+  main {
+    padding: 3% 4% 5% 4%;
+    width: 100%;
+    background-size: cover;
+  }
+
+  /* card */
+  .card {
+    z-index: 0;
+    transition: 0.3s;
+    position: relative;
+    border: none;
+    width: 100%;
+    max-width: 100%;
+    height: 105px;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+
+  .card:hover {
+    transform: scale(0.97);
+  }
+
+  .c_img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .card_img {
+    position: absolute;
+    left: 15px;
+    top: 11px;
+  }
+
+  .flag {
+    position: relative;
+    z-index: 1;
+    margin: 0 7px;
+  }
+
+
+  .text-wrap {
+    position: absolute;
+    bottom: 12px;
+    left: 80px;
+    z-index: 10;
+    padding-left: 25px;
+  }
+
+  .text-wrap h1 {
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+  }
+
+  .text-wrap span {
+    color: black;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+  }
+
+  .text-wrap #club_t {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+  }

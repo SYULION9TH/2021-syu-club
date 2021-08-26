@@ -1,15 +1,56 @@
+{% load static %}
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>login Html!</title>
+    <meta charset="UTF-8">
+    <title>login</title>
+
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <h1>LOGIN!</h1>
-    <form method="POST" action="{% url 'login' %}">
-        {% csrf_token %}    
-        {% for field in form %}
-        <label>{{field.label}}</label>
-        <input type="{{field.field.widget.input_type}}" id="{{field.id_for_label}}" placeholder="{{field.label}}" name="{{field.name}}">
-        {% endfor %}
-        <button type="submit">Submit</button>
-    </form>
+    <div class="alll">
+        <form method="POST" action="{% url 'login' %} "class="login-form">
+            {% csrf_token %}
+            <div class="on11">2021-2 동아리 홍보전</div>
+            <div class="on22">제 38대 동아리 연합회 벼리 X 멋쟁이 사자처럼 at SYU</div>
+            
+            {% for field in form %}
+            <div class="txti">
+                <!-- <label>{{field.label}}</label> -->
+                <input type="{{field.field.widget.input_type}}" id="{{field.id_for_label}}" name="{{field.name}}">
+                <span data-placeholder="{{field.label}}"></span>
+            </div>
+            {% endfor %}
+
+            <!-- <div class="txti">
+                <input type="text">
+                <span data-placeholder="Username"></span>
+            </div>
+
+            <div class="txti">
+                <input type="password">
+                <span data-placeholder="Password"></span>
+            </div> -->
+
+            <input type="submit" class="sub" value="SIGN IN">
+            
+        </form>
+    </div>
+    
+    <script type="text/javascript">
+        $(".txti input").on("focus",function(){
+            $(this).addClass("focus");
+        });
+
+        $(".txti input").on("blur",function(){
+            if($(this).val() == "")
+            $(this).removeClass("focus");
+        })
+    </script>
+
 </body>
+</html>

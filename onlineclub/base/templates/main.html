@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>syu-club</title>
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/d1c6c79e37.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body style="background: none">
+    <header style="position: fixed">
+      {% include 'side.html' %}
+      <!-- <nav> -->
+      <!-- 디데이 -->
+      <!-- <img class="dday_img" src="../static/메인페이지 디데이 달력.png" width="35px"> -->
+      <!-- <img class="dday_img" src="{% static '메인페이지 디데이 달력.png' %}" width="35px"> -->
+      <!-- <div class="dday">
+        <span id="d_txt">모집마감</span>
+        <p id="day">D-N</p>
+      </div>
+      <a href="" class="menu_Btn"><i class="fas fa-bars"></i></a>
+      <span>동아리 홍보전</span><br>
+    </nav> -->
+
+      <div class="club_text">
+        <p id="club_txt">지원 기간: 9월 6일 ~ 9월 17일</p>
+        <p id="club_txt">
+          2021 2학기에 신설된 신규 동아리는 포함되어 있지 않습니다.
+        </p>
+      </div>
+
+      <!-- 검색 -->
+      <form action="{% url 'home1' %}" method="GET">
+        <div class="search-bar">
+          <input
+            type="search"
+            placeholder="동아리 이름을 입력하세요"
+            name="keyword"
+          />
+          <button type="submit" class="fas fa-search"></button>
+          <!-- <i class="fas fa-search"></i> -->
+        </div>
+      </form>
+
+      <!-- 정렬 버튼 -->
+      <div class="club_sort_btn">
+        <form method="get">
+          <button
+            type="submit"
+            name="rank"
+            class="sort_btn"
+            value="rank"
+            style="min-width: 132px"
+          >
+            ▾ 동아리 순위 순
+          </button>
+          <button type="submit" name="random" class="sort_btn">
+            ▾ 랜덤 순
+          </button>
+        </form>
+      </div>
+    </header>
+
+    <main style="margin-top: 330px">
+      {% for club in club_list %}
+      <!-- card -->
+      <a href="{% url 'home' club.club_id %}">
+        <div class="card" style="border-radius: 10px; border: none">
+          <div class="c_img">
+            <div class="card_img">
+              <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+              {% if club.club_logo %}
+              <img
+                src="{{club.club_logo.url}}"
+                width="80px"
+                height="80px"
+                style="border-radius: 50%"
+              />
+              {% else %}
+              <img
+                src="{% static '1.png' %}"
+                width="80px"
+                height="80px"
+                style="border-radius: 50%"
+              />
+              {% endif %}
+            </div>
+            <!-- <img class="flag" src="../static/중앙.svg" width="40px" height="45px"> -->
+            {% if club.main_club == 1 %}
+            <img
+              class="flag"
+              src="{% static '중앙.svg' %}"
+              width="40px"
+              height="45px"
+            />
+            {% elif club.main_club == 0 %}
+            <img
+              class="flag"
+              src="{% static '가등록.svg' %}"
+              width="40px"
+              height="45px"
+            />
+            {% else %}
+            <img
+              class="flag"
+              src="{% static '기타.svg' %}"
+              width="40px"
+              height="45px"
+            />
+            {% endif %}
+          </div>
+
+          <div class="text-wrap">
+            <h1>{{club.club_name}}</h1>
+            <span>{{club.club_type}}</span>
+            <hr style="color: black" width="60px" />
+            <span id="club_t">{{club.club_desc|truncatechars:25}}</span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </main>
+  </body>
+</html>

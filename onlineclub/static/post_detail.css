@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.club_nav{
+    z-index:10;
+    background-color:#f4f0ee;
+    width: 100%;
+    height: 35px;
+    top: 0;
+    margin: 0;
+    /* padding: 0; */
+    padding-top: 5%;
+    position: fixed;
+    text-align: center;
+}
+.club_nav>a{
+    text-decoration-line: none;
+}
+#top{
+    font-family: 'Cafe24Danjunghae';
+    color:#494949;
+    font-size: 20px;
+}
+
+.post_detail_container{
+    margin-top:4em;
+}
+.post_detail_container, .title{ 
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body{
+    margin:0;
+    background-color: #f4f0ee;
+}
+h1,p{
+    margin:0;
+}
+
+.post_detail{
+    width:100%;
+    height:100%;
+}
+
+.post_top{
+    width:100%;
+}
+.title{
+    margin-right:0;
+    display:contents;
+    padding-left:20px;
+    color:#61605f;
+    line-height: 40px;
+    font-size: 1.8em;
+    height:40px;
+}
+.post_list{
+    height: 25px;
+    width: 25px;
+    display:block;
+    margin:0 auto;
+    cursor:pointer;
+}
+.create{
+    margin:0;
+    float:right;
+    padding: 10px;
+    color: #61605f;
+}
+.inline{
+    margin-top:10px;
+    margin-left:15px;
+    width:90%;
+    display: inline-block;
+    line-height: 40px;
+    flex-wrap: wrap;
+}
+
+.edit{
+    overflow:hidden;
+    width:2em;
+    height:2em;
+    vertical-align: sub;
+    padding-left: 10px;
+}
+.edit_btn{
+    width:100%;
+    height:100%;
+    z-index:10;
+    cursor:pointer;
+}
+.close{
+    height: 25px;
+    width: 25px;
+    display:block;
+    margin:0 auto;
+    margin-top: 1.8em;
+}
+.post_img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+.post_content{
+    width:100%;
+    height: 100%;
+    text-align: center;
+}
+
+.deatilcontent{
+    padding:15px;
+    color:#61605f;
+    font-size:1.3em;
+}
+
+
+.submit{
+    float:right;
+    color: white;
+    font-size:15px;
+    width: 100px;
+    padding: 1em;
+    background-color: #353535;
+    text-align: center;
+    text-decoration: none;
+    border:none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin:10px;
+
+}

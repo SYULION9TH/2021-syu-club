@@ -7,7 +7,6 @@ from django.contrib.auth.forms import AuthenticationForm
 
 from .forms import SigninForm
 
-# Create your views here.
 # Testing
 def loginhtml(request):
     form = SigninForm()

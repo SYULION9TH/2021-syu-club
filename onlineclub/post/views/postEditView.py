@@ -10,7 +10,8 @@ def post_edit(request, club_id, id):
 def post_update(request, club_id, post_id):
     update_post = Posts.objects.get(post_id=post_id)
     update_post.post_title = request.POST['post_title']
-    update_post.post_content = request.POST['post_content']
+    # update_post.post_content = request.POST['post_content']
+    update_post.post_content = request.POST.get('post_content', 'post_content')
     update_post.post_img = request.FILES.get('post_img','post_img')
     update_post.updated_at = timezone.now()
     update_post.save()
@@ -28,13 +29,14 @@ def detailpage_update(request, club_id):
     update_detailpage = Clubs.objects.get(club_id=club_id)
 
     if request.method =="POST":
-        # update_detailpage.club_img = request.FILES.get('club_img', '')
-        update_detailpage.club_img = request.FILES['club_img']      
-        update_detailpage.club_desc = request.POST.get('desc','club_desc')
-        update_detailpage.recruitment_content = request.POST['recruitment_content']
+        update_detailpage.club_img = request.FILES.get('club_img', 'club_img')
+        # update_detailpage.club_img = request.FILES['club_img']
+        update_detailpage.club_desc = request.POST.get('club_desc','club_desc')
+        # update_detailpage.recruitment_content = request.POST['recruitment_content']
+        update_detailpage.recruitment_content = request.POST.get('recruitment_content', 'recruitment_content')
         # update_detailpage.save(commit=False)
         update_detailpage.save()
         return redirect('home' , str(update_detailpage.club_id))
 
     else:
-        return render(request,'post/recruit_edit.html',{'club':update_detailpage, 'club_id':club_id})
+        return render(request,'post/update.html',{'club':update_detailpage, 'club_id':club_id})
