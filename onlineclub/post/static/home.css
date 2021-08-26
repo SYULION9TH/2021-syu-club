@@ -186,15 +186,6 @@ div_club {
 }
 
 .top_bookmark {
-<<<<<<< HEAD
-  top: 0;
-  margin: 0;
-  border: none;
-  width: 40%;
-  cursor: pointer;
-  position: absolute;
-  left: 3%;
-=======
     top: 0;
     margin: 0;
     border: none;
@@ -202,7 +193,6 @@ div_club {
     cursor: pointer;
     position: absolute;
     left: 3%;
->>>>>>> 13e3446dcddd0f95366a0d96fab2c229d5341410
 }
 
 .slick-prev:before,
