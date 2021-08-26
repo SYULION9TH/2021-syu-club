@@ -117,11 +117,10 @@
             {% elif club.club_type_id == 3 %}
             <img src="{% static '종교봉사.svg' %}" alt="종교봉사로고" class="top_bookmark">
             {% else %}
-            <p style="color: white; position:absolute; left: 13%; margin-top: 5%; font-size:1em;
-            font-family: 'Noto Sans CJK KR-Medium', sans-serif;">기&nbsp타</p>
+            <img src="{% static '기타분과.svg' %}" alt="기타로고" class="top_bookmark">
             {% endif %}
         </a>
-        
+
         {% if club.youtube_link %}
         <a class="top_youtube" target="_blank" href="{{club.youtube_link}}">
             <img src="{% static 'top_youtube.png' %}" alt="yb로고" class="top_youtube">
