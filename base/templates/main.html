@@ -44,22 +44,20 @@
         padding: 2px;
       }
       /* I. Containers */
+      .notfound{
+        position:relative;
+        margin-top:8em;
+      }
       figure {
-        
-        font-size: 6px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 64em;
+        font-size:6px;
    
       }
       figcaption {
-           color: white;
-    display: block;
-    font-size: 3px;
-    margin: 0 auto;
-    text-align: center;
+          color: white;
+          display: block;
+          font-size: 3px;
+          margin: 0 auto;
+          text-align: center;
       }
       figcaption span:before,
       .sad-mac:before {
@@ -280,9 +278,10 @@
           </div>
         </div>
       </a>
-      {% endfor %} {% else %}
-      <figure style="margin-top: 41px; display:block">
-	<div class="sad-mac" ></div>
+      {% endfor %} {% else %}	
+  <div class="notfound">
+  <figure>
+  <div class="sad-mac" ></div>
 	<figcaption>
 		<span class="sr-text"> {{mess}}</span>
 	
@@ -295,6 +294,7 @@
 		<span class="n"></span>
 		<span class="d"></span>
 	</figcaption>
+  </div>
       {% endif %}
     </main>
   </body>

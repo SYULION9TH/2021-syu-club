@@ -33,8 +33,7 @@ def home1(request):
         # dday = sorted(club_list, key=operator.attrgetter('deadline'), reverse=True) #디데이 정렬
         # context = {'clubs':dday}
         club_list = sorted(club_list, key=operator.attrgetter('deadline'), reverse=True)
-        # return render(request, 'club/home.html', context)
-    print(club_list)    
+        # return render(request, 'club/home.html', context) 
     return render(request, template_name, {'club_list':club_list}) 
 
 # 동아리 분과별
