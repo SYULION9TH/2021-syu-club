@@ -95,6 +95,7 @@
 <body>    
     <nav_club>
         <!-- {% include 'side.html' %} -->
+        <a href="javascript:history.back();" class="href"><img src="{% static 'update_close.png' %}" class="update_img"></a>
         <a href="{% url 'home1' %}" style="text-decoration: none;"><h1 class="nav-title" style="font-weight: bold; font-family:'twaysky';">동아리 홍보전</h1></a>
         {% if user.id == club_id|add:1 or user.is_superuser %}
         <a href="{% url 'detailupdate' club_id %}">

@@ -17,6 +17,17 @@ body {
     flex-direction: column;
 }
 
+.href{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+.update_img{
+    width:30px;
+    height:30px;
+}
 nav_club {
     top: fixed;
     height: 50px;
