@@ -185,10 +185,10 @@ div_club {
 }
 
 .top_bookmark {
-    top: 0;
+    top: 1px;
     margin: 0;
     border: none;
-    width: 40%;
+    width: 50%;
     cursor: pointer;
     position: absolute;
     left: 3%;
