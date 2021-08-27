@@ -19,19 +19,20 @@
 <body>
     <div class="sidebar">
       <div class="sidebar_header">
-        <h1>동아리 홍보전</h1>
-        <div class="hide_Btn"><i class="fas fa-angle-double-left" id="CloseBtn"></i></div><br>
-        <img class="admin_login" src="{% static 'admin_login.png' %}">
-
+        <div class="hide_Btn"><i class="fas fa-angle-double-left" id="CloseBtn"></i></div>
+        <a href="{% url 'home1' %}"><h1>동아리 홍보전</h1></a>
+        <div class="user">
+          <div>
+            <img class="admin_login" src="{% static 'admin_login.png' %}">
         {% if not user.is_authenticated %}
-          <h4><a href="{% url 'loginhtml' %}">관리자로 로그인하기</a></h4>
+          <h4><a href="{% url 'loginhtml' %}">관리자로 로그인하기</a></h4></div>
         {% endif %}
         {% if user.is_authenticated %}
-          <div class="admin_logout">
-            반갑습니다.<br>{{user.username}}님!
-            <a href="{% url 'logout' %}">LOGOUT</a>
-          </div>
+          <span>반갑습니다.<br><sapn class="user_name">{{user.username}}</sapn>님!</span></div>
+            <a class="admin_logout" href="{% url 'logout' %}">LOGOUT</a>
         {% endif %}
+        </div>
+        
       </div>
         <div class="sidenav">
           <div class="dropdown">
@@ -103,12 +104,6 @@
             </div>
           </div>
         </div>
-        <div class="sidebar_footer"><span>© 삼육대학교 38대 벼리 동아리연합회 | <br>
-          멋쟁이 사자처럼 at 삼육대학교 9기<br>
-          <br>
-          개발진 | 김지연 박미란 박세연 박현서 성예지 이민주 이보람<br>
-          이지수 윤예빈 정하늘 주미진 최정은 함승우 황한슬
-        </span></div>
     </div>
 
   <section class="section_side">
