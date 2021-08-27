@@ -39,6 +39,10 @@
         margin: 0;
         padding: 0;
       }
+      
+      a{
+        text-decoration: none !important;
+      }
 
       div .alert {
         padding: 2px;
@@ -163,11 +167,14 @@
           margin-top: 70px;
         }
       }
+      .card{
+        flex-direction: row !important;
+      }
     </style>
   </head>
 
   <body style="background: none">
-    <header style="position: fixed">
+    <header>
       {% include 'side.html' %}
       <!-- <nav> -->
       <!-- 디데이 -->
@@ -181,17 +188,15 @@
       <span>동아리 홍보전</span><br>
     </nav> -->
 
-      <div class="club_text">
-        <p id="club_txt">지원 기간: 9월 6일 ~ 9월 17일</p>
-        <p id="club_txt">
-          2021 2학기에 신설된 신규 동아리는 포함되어 있지 않습니다.
-        </p>
-      </div>
+      <p class="club_text" id="club_txt">
+          <span>지원 기간: 9월 6일 ~ 9월 17일</span><br>
+          2021-2학기에 신설된 동아리는 포함하지 않습니다.
+      </p>
 
       <!-- 검색 -->
       <form action="{% url 'home1' %}" method="GET">
         <div class="search-bar">
-          <input
+          <input class="search"
             type="search"
             placeholder="동아리 이름을 입력하세요"
             name="keyword"
@@ -219,34 +224,13 @@
         </form>
       </div>
     </header>
-
-    <main style="margin-top: 330px">
+    <main>
       {% if club_list %} {% for club in club_list %}
       <!-- card -->
 
-      <a href="{% url 'home' club.club_id %}">
+      <a href="{% url 'home' club.club_id %}" class="card_a">
         <div class="card" style="border-radius: 10px; border: none">
-          <div class="c_img">
-            <div class="card_img">
-              <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
-              {% if club.club_logo %}
-              <img
-                src="{{club.club_logo.url}}"
-                width="80px"
-                height="80px"
-                style="border-radius: 50%"
-              />
-              {% else %}
-              <img
-                src="{% static '1.png' %}"
-                width="80px"
-                height="80px"
-                style="border-radius: 50%"
-              />
-              {% endif %}
-            </div>
-            <!-- <img class="flag" src="../static/중앙.svg" width="40px" height="45px"> -->
-            {% if club.main_club == 1 %}
+          {% if club.main_club == 1 %}
             <img
               class="flag"
               src="{% static '중앙.svg' %}"
@@ -268,13 +252,32 @@
               height="45px"
             />
             {% endif %}
+          <div class="c_img">
+            <div class="card_img">
+              <!-- <img src="../static/1.png" width="80px" height="80px" style="border-radius: 50%"> -->
+              {% if club.club_logo %}
+              <img
+                src="{{club.club_logo.url}}"
+                width="90px"
+                height="90px"
+                style="border-radius: 50%; border: 1px solid #cfcfcf;"
+              />
+              {% else %}
+              <img
+                src="{% static '1.png' %}"
+                width="90px"
+                height="90px"
+                style="border-radius: 50%; border: 1px solid #cfcfcf;"
+              />
+              {% endif %}
+            </div>
+            <!-- <img class="flag" src="../static/중앙.svg" width="40px" height="45px"> -->
           </div>
 
           <div class="text-wrap">
             <h1>{{club.club_name}}</h1>
-            <span>{{club.club_type}}</span>
-            <hr style="color: black" width="60px" />
-            <span id="club_t">{{club.club_desc|truncatechars:25}}</span>
+            <span id="club_t">{{club.club_type}}</span>
+            <div>{{club.club_desc|truncatechars:25}}</div>
           </div>
         </div>
       </a>
@@ -297,5 +300,6 @@
   </div>
       {% endif %}
     </main>
+  </div>
   </body>
 </html>
