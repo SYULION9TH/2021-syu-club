@@ -135,9 +135,11 @@ article_main_club {
   font-weight: bold;
   margin: 0;
   color: white;
+  margin-bottom:5px;
 }
 
 .intro {
+  padding-right:10px;
   margin-bottom: 0px;
   display: flex;
   position: absolute;
