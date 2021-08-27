@@ -14,40 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <script type="text/javascript">
-        $('.gallery').slick({
-            centerMode: false,
-            centerPadding: '5px',
-            variableWidth: false,
-            slidesToShow: 3,
-            responsive: [
-            {
-                    breakpoint: 1024,
-                    settings: {
-                        arrows: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    </script>
 
     <!-- style 태그 css 파일로 -->
 
@@ -64,7 +30,7 @@
     <script>
         $(document).ready(function () {
             $('.gallery').slick({
-                centerMode: true,
+                centerMode: false,
                 centerPadding: '5px',
                 slidesToShow: 3,
                 prevArrow: "<button type='button' class='slick-prev fas fa-chevron-circle-left fa-lg'></button>",
