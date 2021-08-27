@@ -146,14 +146,13 @@ article_main_club {
   text-align: justify;
   font-size: 0.5em;
   color: white;
-  height:50px;
   margin:0;
 }
 
 /*지원하기버튼*/
 .button_a {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 135px;
   line-height: 140%;
   font-size: 10pt;
