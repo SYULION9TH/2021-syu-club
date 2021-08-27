@@ -12,7 +12,7 @@
 <body>
     <form action="{% url 'update' club_id post.post_id %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <nav>
+        <nav style="width:100%;height: 35px;margin-top: 5%;">
             <p class="club_nav">
                 <!-- <a href="#">menu</a> -->
                 <a href="{% url 'home1' %}" id="top">동아리 홍보전</a>
@@ -21,7 +21,8 @@
         <div class="post_detail_container" id="postdetail">
             <div class="post_detail">
                 <div class="post_top">
-                    <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'post_close.png' %}"
+                    <a href="{% url 'home' club_id %}" class="post_list">
+                        <img src="{% static 'post_close.png' %}"
                             class="close"></a>
                     <div class="inline">
                         <textarea class="title" name="post_title" cols="28" row="5">{{post.post_title}}</textarea>
