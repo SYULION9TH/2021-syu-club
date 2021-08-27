@@ -9,13 +9,12 @@ div .alert {
   padding: 2px;
 }
 /* I. Containers */
+.notfound{
+  position:relative;
+  margin-top:8em;
+}
 figure {
   font-size: 6px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 64em;
 }
 figcaption {
   color: white;
