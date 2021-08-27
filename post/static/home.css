@@ -153,6 +153,8 @@ article_main_club {
   margin: 0;
   align-content: center;
   font-size:13px;
+  align-content: space-around;
+  flex-wrap: wrap;
 }
 
 /*지원하기버튼*/
