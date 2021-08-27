@@ -151,8 +151,8 @@
     <section_club>
         <article_section_club>
             <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">모집요강
-                <hr style="width: 40%; height: 0.4%; background-color: gray;
-                border: none; position:absolute;  margin: 5px;">
+                <hr style="width: 40%; background-color: gray;
+                border: none; position:absolute; border-top: 1px solid #817f7e; margin: 5px;">
             </p>
                 <p style="overflow:auto; height: 80%; font-size: 1em; margin: 0; font-family: 'Noto Sans CJK KR-Regular', sans-serif; white-space: pre-wrap;">{{club.recruitment_content}}</p>
         </article_section_club>
@@ -160,35 +160,40 @@
 
     <div_club>
         <div class="div_wrap">
+            {% if user.id == club_id|add:1 or user.is_superuser %}
+            <div class="plus_img">
+            <a href="{% url 'new' club_id %}">
+                <img src="{% static 'plus.png' %}" style="width: 30px;">
+            </a>
+            </div>
+            {% endif %}
         <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">동아리 게시물
             <hr style="width: 40%; height: 0.4%; background-color:gray;
             border: none; position:absolute; left: 15px; margin: 5px;">
         </p>
-
-        {% if posts %}
+            
+        
         <!--<img src="{% static 'post_left.png' %}" id='slick-prev' style="width: 10%; position: absolute; bottom: 30%; z-index: 2; transform: translate(-40%);">
         <img src="{% static 'post_right.png' %}" id='slick-next' style="width: 10%; position: absolute; right:0; bottom: 30%; z-index: 2; transform: translate(40%);">-->
+            {% if posts %}
+            <div class="gallery">
+                
+                {% for post in posts %}
+                <a href="{% url 'detail' club_id post.post_id %}">
+                    <p class="gallery_text">{{post.post_title|truncatechars:10}}</p>
+                    <img class="gallery_img"src="{{ post.post_img.url }}">
+                </a>
+                {% endfor %}
 
-        <div class="gallery">
-            {% for post in posts %}
-            <a href="{% url 'detail' club_id post.post_id %}">
-                <p class="gallery_text">{{post.post_title|truncatechars:10}}</p>
-                <img class="gallery_img"src="{{ post.post_img.url }}">
-            </a>
-        {% endfor %}
-        </div>
+                {% else %}
+                <h1 style="color: #6a6a6a; font-size:1em; text-align:center; font-family: 'Noto Sans CJK KR-Medium', sans-serif; font-weight:lighter;">등록된 동아리 게시물이 없습니다.</h1>
+                {% endif %}
+            </div>
     </div>
 
-        {% else %}
-        <h1 style="color: #6a6a6a; font-size:1em; text-align:center; position: relative; top:30px;
-         margin: 0; font-family: 'Noto Sans CJK KR-Medium', sans-serif; font-weight:lighter;">등록된 동아리 게시물이 없습니다.</h1>
-        {% endif %}
 
-        {% if user.id == club_id|add:1 or user.is_superuser %}
-        <a href="{% url 'new' club_id %}">
-            <img src="{% static 'plus.png' %}" style="width: 30px; position: absolute; right:20px; bottom: 85%;">
-        </a>
-        {% endif %}
+        
+
     </div_club>
     </div>
 </div>   
