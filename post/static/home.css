@@ -241,8 +241,8 @@ button.slick-next {
   overflow:hidden;
 }
 .gallery_text{
-  font-family: 'Noto Sans CJK KR-Regular', sans-serif;
   padding:5px;
+  font-family: 'Noto Sans CJK KR-Regular', sans-serif;
   z-index: 1;;
   height: 30px;
   color: white;
