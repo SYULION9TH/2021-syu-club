@@ -138,15 +138,18 @@ article_main_club {
 }
 
 .intro {
-  margin-bottom:0px;
+  margin-bottom: 0px;
+  display: flex;
   position: absolute;
+  height: 40px;
   left: 140px;
   right: 0;
   bottom: 30px;
   text-align: justify;
   font-size: 0.5em;
   color: white;
-  margin:0;
+  margin: 0;
+  align-content: center;
 }
 
 /*지원하기버튼*/
