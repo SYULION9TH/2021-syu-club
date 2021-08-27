@@ -242,6 +242,7 @@ button.slick-next {
 }
 .gallery_text{
   font-family: 'Noto Sans CJK KR-Regular', sans-serif;
+  padding:5px;
   z-index: 1;;
   height: 30px;
   color: white;
