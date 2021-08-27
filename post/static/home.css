@@ -12,12 +12,12 @@ body {
   height: 100%;
 }
 
-body {
+.body_wrap{
   background-color: #f4f0ee;
   display: flex;
   flex-direction: column;
+  height:100%;
 }
-
 .href{
     width: 30px;
     height: 30px;
@@ -56,16 +56,16 @@ main_club {
 }
 
 section_club {
+  list-style-type: none;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
   margin-right: 20px;
-  height: 30%;
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 10px silver;
   border: 15px solid white;
-  position: relative;
+  display:list-item;
   z-index: 10;
 }
 
@@ -77,10 +77,13 @@ div_club {
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 10px silver;
-  border: 15px solid white;
   position: relative;
+  display:block;
   bottom: 0;
-  height: 20%;
+}
+.div_wrap{
+  display:block;
+  padding:15px;
 }
 
 .nav-title {
@@ -91,14 +94,18 @@ div_club {
   color: #5523a0;
 }
 
-.article_main_club {
-  width: 50%;
+article_main_club {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  top:10%;
 }
 
 .club-title {
   margin-left: 2px;
   margin-right: 0px;
-  margin-top: 0px;
+  margin-top:0px;
   margin-bottom: 0px;
   color: #451997;
   font-size: 1.1em;
@@ -222,4 +229,35 @@ button.slick-next {
   right: 17px;
   top: 88%;
   z-index: 1;
+}
+
+.gallery_text{
+  background-color: #160f07; 
+  font-family: 'Noto Sans CJK KR-Regular', sans-serif;
+  position: absolute; 
+  border-radius: 5px;
+  bottom: 0; 
+  z-index: 1; 
+  width: 200px; 
+  height: 30px; 
+  opacity: 0.8;
+  color: white; font-size: 1em; margin: 0
+}
+.gallery_img{
+  width: 200px; 
+  border-radius: 5px;
+  aspect-ratio: 1 / 1;
+}
+.gallery{
+  overflow:auto; 
+  height: 80%; 
+  padding: 0px; 
+  position: relative; 
+  z-index: 0;
+}
+.__post_content{
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  z-index: 5;
 }
