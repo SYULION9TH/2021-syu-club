@@ -126,6 +126,7 @@ article_main_club {
 }
 
 .main-title {
+  height:30px;
   position: absolute;
   bottom: 65px;
   left: 140px;
@@ -137,7 +138,7 @@ article_main_club {
 }
 
 .intro {
-  margin-right: 10px;
+  margin-bottom:0px;
   position: absolute;
   left: 140px;
   right: 0;
@@ -145,6 +146,8 @@ article_main_club {
   text-align: justify;
   font-size: 0.5em;
   color: white;
+  height:50px;
+  margin:0;
 }
 
 /*지원하기버튼*/
@@ -159,7 +162,6 @@ article_main_club {
   box-shadow: 1px 1px 10px #451997;
   font-weight: bold;
   color: white;
-
   border-radius: 15px;
   padding-top: 6px;
   padding-bottom: 6px;
