@@ -282,3 +282,16 @@ button.slick-next {
 .gallery_pluse{
   width: 30px;
 }
+.gallery{
+  overflow:unset;
+}
+button.slick-prev{
+  position: absolute;
+  top: 50%;
+  left: -5%;
+}
+button.slick-next{
+  position: absolute;
+  top: 50%;
+  right: -5%;
+}
