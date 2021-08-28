@@ -294,14 +294,14 @@ button.slick-prev{
   height:40px;
   position: absolute;
   top: 50%;
-  left: -5%;
+  left: -3%;
 }
 button.slick-next{
   width:40px;
   height:40px;
   position: absolute;
   top: 50%;
-  right: -5%;
+  right: -3%;
 }
 button.slick-prev::before{
 
