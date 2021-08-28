@@ -259,7 +259,7 @@ button.slick-next {
   text-align: center;
   box-sizing: border-box;
 }
-#gallery_img{
+.gallery_img{
   aspect-ratio: 1 / 1;
   width:100%; 
 }
