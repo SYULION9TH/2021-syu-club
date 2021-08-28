@@ -241,19 +241,16 @@ button.slick-next {
   overflow:hidden;
 }
 .gallery_text{
-  padding:5px;
+  padding: 5px;
   font-family: 'Noto Sans CJK KR-Regular', sans-serif;
-  z-index: 1;;
+  z-index: 1;
   height: 30px;
   color: white;
   font-size: 1em;
-  margin:0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: absolute;
+  margin: 0;
+  position: relative;
+  display: block;
   border-radius: 5px;
-  bottom: 0;
   background-color: #160f07;
   opacity: 0.8;
   text-align: center;
