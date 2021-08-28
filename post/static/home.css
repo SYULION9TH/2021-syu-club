@@ -290,12 +290,20 @@ button.slick-next {
 
 }
 button.slick-prev{
-  width:45px;
-  height:45px;
+  top: 50%;
+  width: 45px;
+  right: -10px;
+  display: block;
+  position: absolute;
+  height: 45px;
 }
 button.slick-next{
-  width:45px;
-  height:45px;
+  top: 50%;
+  width: 45px;
+  left: -10px;
+  display: block;
+  position: absolute;
+  height: 45px;
 
 }
 button.slick-prev::before{
