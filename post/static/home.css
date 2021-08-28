@@ -297,7 +297,7 @@ button.slick-prev{
 button.slick-next{
   position: absolute;
   top: 50%;
-  left: -5%;
+  right: -5%;
 }
 button.slick-prev::before{
   border-width: 8px;
