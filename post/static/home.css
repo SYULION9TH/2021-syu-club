@@ -332,4 +332,5 @@ button.slick-next::before{
   border-radius: 5px;
   margin:0 5px;
   width:100%;
+  object-fit: cover;
 }
