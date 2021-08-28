@@ -84,10 +84,8 @@ div_club {
   bottom: 0;
 }
 .div_wrap{
-  display: block;
-  /* padding: 15px; */
-  width: 100%;
-  height: 40%;
+  display:block;
+  padding:15px;
 }
 
 .nav-title {
@@ -269,12 +267,10 @@ button.slick-next {
   object-fit: cover;
 }
 .gallery{
-  display:block;
-  overflow:auto; 
-  height: 80%; 
-  padding: 0px; 
-  position: relative; 
-  z-index: 0;
+  width:100%;
+  position:relative;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 .__post_content{
   width: 100%;
