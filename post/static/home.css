@@ -260,7 +260,7 @@ button.slick-next {
   box-sizing: border-box;
 }
 .gallery_img{
-  width:100%; 
+  width:25vh; 
   height:100%;
   border-radius: 5px;
   aspect-ratio: 1 / 1;
@@ -322,7 +322,7 @@ button.slick-next::before{
   margin:0;
 }
 .slick-track{
-  top:100px;
+  height:40%;
 }
 .gallery .slick-list {
   margin:0 10px;
