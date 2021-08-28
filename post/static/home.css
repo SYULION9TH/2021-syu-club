@@ -297,7 +297,8 @@ button.slick-prev{
   left: -5%;
 }
 button.slick-next{
-
+  width:40px;
+  height:40px;
   position: absolute;
   top: 50%;
   right: -5%;
@@ -307,12 +308,12 @@ button.slick-prev::before{
   border-width:1px;
 }
 button.slick-next::before{
-  width:40px;
-  height:40px;
   border-width:1px;
 }
 
-
+.slick-list{
+  margin:0;
+}
 .slick-track{
   top:100px;
 }
