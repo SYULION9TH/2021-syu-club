@@ -4,7 +4,7 @@ from .models import *
 # from django.contrib import auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
-
+from django.contrib import messages
 from .forms import SigninForm
 
 # Testing
@@ -29,7 +29,8 @@ def logining(request):
         else:
             # TODO - if user is None
             print("Login Fail!")
-            return redirect('accounts/loginhtml') # 틀리면 다시 loginhtml 실행!
+            messages.error(request, "ID 또는 Password가 잘못되었습니다.")
+            return redirect('loginhtml') # 틀리면 다시 loginhtml 실행!
 ## 관리자 로그인 - 로그아웃 
 def logoutting(request):
     logout(request)

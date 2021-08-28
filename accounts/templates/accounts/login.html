@@ -26,6 +26,14 @@
             </div>
             {% endfor %}
 
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert" role="alert">
+            {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+
             <!-- <div class="txti">
                 <input type="text">
                 <span data-placeholder="Username"></span>

@@ -181,3 +181,8 @@ body {
         font-size: 16.5rem;
     }
 }
+
+.alert {
+    margin-bottom: 10px;
+    color:red;
+}
