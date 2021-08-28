@@ -289,6 +289,13 @@ button.slick-next {
   overflow:unset;
 
 }
+.img_content{
+  height: 100%;
+  width: 100%;
+  display:block;
+  cursor:pointer;
+  position:absolute;
+}
 button.slick-prev{
   top: 50%;
   width: 45px;

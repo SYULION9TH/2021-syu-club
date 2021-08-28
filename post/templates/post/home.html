@@ -153,7 +153,7 @@
             <div class="gallery">
                 
                 {% for post in posts %}
-                <a href="{% url 'detail' club_id post.post_id %}">
+                <a class="img_content" href="{% url 'detail' club_id post.post_id %}">
                     <p class="gallery_text">{{post.post_title|truncatechars:10}}</p>
                     <img class="gallery_img"src="{{ post.post_img.url }}">
                 </a>
