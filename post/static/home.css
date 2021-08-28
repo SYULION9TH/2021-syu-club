@@ -264,6 +264,7 @@ button.slick-next {
   height:100%;
   border-radius: 5px;
   aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 .gallery{
   overflow:auto; 
