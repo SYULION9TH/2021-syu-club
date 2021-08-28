@@ -301,7 +301,7 @@ button.slick-next{
   height:40px;
   position: absolute;
   top: 50%;
-  right: -4%;
+  right: -8%;
 }
 button.slick-prev::before{
 
