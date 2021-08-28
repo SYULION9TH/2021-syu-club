@@ -289,12 +289,12 @@ button.slick-next {
   overflow:unset;
 
 }
-button.slick-prev{
+button.slick-prev::before{
   position: absolute;
   top: 50%;
   left: -5%;
 }
-button.slick-next{
+button.slick-next::before{
   position: absolute;
   top: 50%;
   right: -5%;
