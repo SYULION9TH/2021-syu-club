@@ -292,7 +292,7 @@ button.slick-next {
 button.slick-prev{
   top: 50%;
   width: 45px;
-  right: -10px;
+  left: -10px;
   display: block;
   position: absolute;
   height: 45px;
@@ -300,7 +300,7 @@ button.slick-prev{
 button.slick-next{
   top: 50%;
   width: 45px;
-  left: -10px;
+  right: -10px;
   display: block;
   position: absolute;
   height: 45px;
