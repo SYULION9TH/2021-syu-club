@@ -250,7 +250,7 @@ button.slick-next {
   margin: 0;
   position: relative;
   display: block;
-  border-radius: 5px;
+  border-radius: 5px 0 0;
   background-color: #160f07;
   opacity: 0.8;
   text-align: center;
