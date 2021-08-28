@@ -320,7 +320,6 @@ button.slick-next::before{
 }
 
 .slick-slide {
-  border: 1px solid #8b8282;
   border-radius: 5px;
   margin:0 5px;
   width:100%;
