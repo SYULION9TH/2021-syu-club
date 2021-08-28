@@ -12,18 +12,17 @@
 <body>
     <form action="{% url 'create' club_id %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <nav>
+        <nav style="width:100%;height: 35px;margin-top: 5%;">
             <p class="club_nav">
                 <!-- <a href="#">menu</a> -->
                 <a href="{% url 'home1' %}" id="top">동아리 홍보전</a>
             </p>
         </nav>
+        <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'post_close.png' %}"
+            class="close"></a>
         <div class="post_detail_container" id="postdetail">
             <div class="post_detail">
-                <div class="post_top">
-                    <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'post_close.png' %}"
-                            class="close"></a>
-                    <div class="inline">
+                    <div class="post_top"><div class="inline">
                         <textarea class="title" name="post_title" cols="28" row="5 " placeholder="게시물 제목을 입력하세요"></textarea> 
                     </div>
                 </div>
