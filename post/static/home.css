@@ -260,15 +260,12 @@ button.slick-next {
   box-sizing: border-box;
 }
 .gallery_img{
-  max-width:100%; 
-  width: auto ! important;
-  height: auto;
+  width:100%; 
+  aspect-ratio: 1 / 1;
 }
 .gallery{
   width:100%;
   position:relative;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
 }
 .__post_content{
   width: 100%;
@@ -330,4 +327,7 @@ button.slick-next::before{
   margin:0 5px;
   width:100%;
   object-fit: cover;
+}
+.slick-slider{
+  height:150px;
 }
