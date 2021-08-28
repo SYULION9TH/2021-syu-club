@@ -54,6 +54,8 @@ h1,p{
 }
 
 .post_top{
+    position: relative;
+    margin-top: 30px;
     width:100%;
 }
 .title{
