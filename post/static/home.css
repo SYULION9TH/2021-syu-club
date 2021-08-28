@@ -328,6 +328,3 @@ button.slick-next::before{
   width:100%;
   object-fit: cover;
 }
-.slick-slider{
-  height:150px;
-}
