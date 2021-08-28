@@ -292,7 +292,6 @@ button.slick-next {
 .img_content{
   height: 100%;
   width: 100%;
-  display:block;
   cursor:pointer;
   position:absolute;
 }
