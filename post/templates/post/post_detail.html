@@ -18,8 +18,9 @@
 
     <div class= "post_detail_container" id="postdetail">
         <div class = "post_detail">
-        <div class = "post_top">
+        
             <a href="{% url 'home' club_id %}" class="post_list"><img src="{% static 'post_close.png' %}" class="close"> </a>
+            <div class = "post_top">
             <div class="inline">
                 <h1 class="title">{{post.post_title | linebreaksbr}}</h1>
                 {% if user.id == club_id|add:1 or user.is_superuser %}
