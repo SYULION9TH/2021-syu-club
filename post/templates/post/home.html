@@ -105,7 +105,7 @@
 
         {% if club.youtube_link %}
         <a class="top_youtube" target="_blank" href="{{club.youtube_link}}">
-            <img src="{% static 'top_youtube.png' %}" alt="yb로고" class="top_youtube">
+            <img src="{% static 'kakao-talk.png' %}" alt="yb로고" class="top_youtube">
         </a>
         {% endif %}
         {% if club.facebook_link %}
@@ -116,6 +116,11 @@
         {%if club.instagram_link %}
         <a class="top_instagram" target="_blank" href="{{club.instagram_link}}">
             <img src="{% static 'top_instagram.png' %}" alt="ig로고" class="top_instagram">
+        </a>
+        {% endif %}
+        {%if club.sns_link %}
+        <a class="top_instagram" target="_blank" href="{{club.sns_link}}">
+            <img src="{% static 'link.png'%}" alt="기타로고" class="top_instagram">
         </a>
         {% endif %}
 
