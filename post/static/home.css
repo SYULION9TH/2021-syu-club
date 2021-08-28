@@ -321,7 +321,7 @@ button.slick-next::before{
   top:100px;
 }
 .gallery .slick-list {
-  margin:0 12px;
+  margin:0 5px;
 }
 
 .slick-slide {
