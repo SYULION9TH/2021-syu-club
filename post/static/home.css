@@ -292,6 +292,7 @@ button.slick-next {
 button.slick-prev{
   top: 50%;
   width: 45px;
+  padding:0;
   left: -10px;
   display: block;
   position: absolute;
@@ -299,6 +300,7 @@ button.slick-prev{
 }
 button.slick-next{
   top: 50%;
+  padding:0;
   width: 45px;
   right: -10px;
   display: block;
@@ -321,7 +323,7 @@ button.slick-next::before{
   top:100px;
 }
 .gallery .slick-list {
-  margin:0 5px;
+  margin:0 10px;
 }
 
 .slick-slide {
