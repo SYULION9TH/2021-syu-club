@@ -281,18 +281,19 @@
         display: inline-block;
         width: 100px;
         height: 40px;
-        background: #f4f0ee;
+        background:#f4f0ee;
         border-radius: 50px;
-        box-shadow: 0 0 10px #00000030 inset;
+        box-shadow: 0 0 10px #00000052 inset;
         position: relative;
         cursor: pointer;    
       }
       .checkbox:before{
           content:"OFF"; 
+          font-family: "Noto Sans CJK KR Regular";
             width:55px;
             height:30px;
             display:block;
-            background:#f00;
+            background:#88A185;
             border-radius:40px;
             position:absolute;
             left:5px;
@@ -309,8 +310,9 @@
       }
       input[type="checkbox"]:checked + label:before{  
         content:"ON"; 
+        font-family: "Noto Sans CJK KR Regular";
         left: 38px;
-        background:#35e908;   
+        background:#506358;   
   }  
     </style>
   </head>
