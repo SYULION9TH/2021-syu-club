@@ -8,15 +8,25 @@ def post_edit(request, club_id, id):
     return render(request, 'post/post_edit.html', {'post':edit_post, 'club_id':club_id})
 
 def post_update(request, club_id, post_id):
-    update_post = Posts.objects.get(post_id=post_id)
-    update_post.post_title = request.POST['post_title']
-    # update_post.post_content = request.POST['post_content']
-    update_post.post_content = request.POST.get('post_content', 'post_content')
-    update_post.post_img = request.FILES.get('post_img','post_img')
-    update_post.updated_at = timezone.now()
-    update_post.save()
-    return redirect('detail', str(club_id), str(update_post.post_id))
-
+    selected = request.POST.getlist('selected')
+    Strselected = "".join(selected)
+    if Strselected == "checked":
+        update_post = Posts.objects.get(post_id=post_id)
+        update_post.post_title = request.POST['post_title']
+        # update_post.post_content = request.POST['post_content']
+        update_post.post_content = request.POST.get('post_content', 'post_content')
+        update_post.post_img = request.FILES.get('post_img','post_img')
+        update_post.updated_at = timezone.now()
+        update_post.save()
+        return redirect('detail', str(club_id), str(update_post.post_id))
+    else:
+        update_post = Posts.objects.get(post_id=post_id)
+        update_post.post_title = request.POST['post_title']
+        # update_post.post_content = request.POST['post_content']
+        update_post.post_content = request.POST.get('post_content', 'post_content')
+        update_post.updated_at = timezone.now()
+        update_post.save()
+        return redirect('detail', str(club_id), str(update_post.post_id))
 
 def club(request):
     #동아리 이름과 동아리 한줄 설명 가져오기 위해서
@@ -29,7 +39,6 @@ def detailpage_update(request, club_id):
     update_detailpage = Clubs.objects.get(club_id=club_id)
 
     if request.method =="POST":
-        print(request.POST.getlist('selected'))
         selected = request.POST.getlist('selected')
         Strselected = "".join(selected)
         if  Strselected == "checked":
