@@ -161,6 +161,12 @@
         padding-left: 10px;
         display: inline-block;
       }
+
+      .formlink {
+        width: 85%;
+        margin-left: 5%;
+      }
+
       .name {
         font-family: "Noto Sans CJK KR Regular";
         color: #4a4a4a;
@@ -168,9 +174,29 @@
         font-size: 20px;
         margin-bottom: 0;
         /* margin-top: 0; */
+        text-align: left;
       }
 
       .introduce {
+        font-family: "Noto Sans CJK KR Regular";
+        background-color: transparent;
+        color: #817f7e;
+        font-weight: bold;
+        font-size: 1;
+        font-size: 13px;
+        line-height: 20px;
+        border-style: solid;
+        border-color: #b9b9b9;
+        border-width: 2px;
+        width: 100%;
+        resize: none;
+        outline: none;
+        margin-top: 4%;
+        border-radius: 10px;
+        padding: 7px;
+      }
+
+      .apply {
         font-family: "Noto Sans CJK KR Regular";
         background-color: transparent;
         color: #817f7e;
@@ -300,6 +326,19 @@
           >
 {{ club.club_desc }}</textarea
           >
+        </div>
+      </section>
+      <section>
+        <div class="formlink">
+          <p class="name">지원링크</p>
+          <textarea 
+            name="form_link" 
+            class="apply"
+            col="10"
+            rows="3"
+            placeholder="지원 링크 입력"
+            value="{{ club.form_link }}">
+{{ club.form_link }}</textarea>
         </div>
       </section>
 

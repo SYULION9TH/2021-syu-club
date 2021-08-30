@@ -32,6 +32,7 @@ def detailpage_update(request, club_id):
         update_detailpage.club_img = request.FILES.get('club_img', 'club_img')
         # update_detailpage.club_img = request.FILES['club_img']
         update_detailpage.club_desc = request.POST.get('club_desc','club_desc')
+        update_detailpage.form_link = request.POST.get('form_link', 'form_link')
         # update_detailpage.recruitment_content = request.POST['recruitment_content']
         update_detailpage.recruitment_content = request.POST.get('recruitment_content', 'recruitment_content')
         # update_detailpage.save(commit=False)

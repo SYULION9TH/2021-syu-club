@@ -77,7 +77,7 @@
     <div class="body_wrap">   
     <nav_club>
         <!-- {% include 'side.html' %} -->
-        <a href="javascript:history.back();" class="href"><img src="{% static 'update_close.png' %}" class="update_img"></a>
+        <!-- <a href="javascript:history.back();" class="href"><img src="{% static 'update_close.png' %}" class="update_img"></a> -->
         <a href="{% url 'home1' %}" style="text-decoration: none;"><h1 class="nav-title" style="font-weight: bold; font-family:'twaysky';">동아리 홍보전</h1></a>
         {% if user.id == club_id|add:1 or user.is_superuser %}
         <a href="{% url 'detailupdate' club_id %}">
@@ -105,7 +105,7 @@
 
         {% if club.youtube_link %}
         <a class="top_youtube" target="_blank" href="{{club.youtube_link}}">
-            <img src="{% static 'kakao-talk.png' %}" alt="yb로고" class="top_youtube">
+            <img src="{% static 'kakao-talk.png' %}" alt="yb로고" class="top_facebook">
         </a>
         {% endif %}
         {% if club.facebook_link %}
@@ -128,7 +128,7 @@
             <img src="{{club.club_logo.url}}" class="static">
             <h1 class="main-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">{{club.club_name}}</h1>
             <p class="intro" style="font-family: 'Noto Sans CJK KR-Regular', sans-serif;">{{club.club_desc}}</p>
-            <input type="button" name="submit" class="button_a" value="지원하기"
+            <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'"
                 style="font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
         </article_main_club>
 
