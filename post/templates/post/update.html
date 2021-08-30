@@ -125,7 +125,6 @@
       /* no1 */
 
       .no1 {
-        margin-top: 50px;
         width: 90%;
         display: flex;
         flex-direction: row;
@@ -269,6 +268,50 @@
         font-size: 100%;
         /* border-radius: 5px; */
       }
+      .checkbox_container{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        margin-top: 80px;
+      }
+      #selected{
+        display:none;
+      }
+      .checkbox{        
+        display: inline-block;
+        width: 100px;
+        height: 40px;
+        background: #f4f0ee;
+        border-radius: 50px;
+        box-shadow: 0 0 10px #00000030 inset;
+        position: relative;
+        cursor: pointer;    
+      }
+      .checkbox:before{
+          content:"OFF"; 
+            width:55px;
+            height:30px;
+            display:block;
+            background:#f00;
+            border-radius:40px;
+            position:absolute;
+            left:5px;
+            top:5px;
+            box-shadow:0 0 5px #000;      
+            text-align:center;
+            line-height:28px;
+            color:#fff;
+            font-size:18px;
+            font-weight:bold;
+            letter-spacing:2px;
+            text-shadow:0 0  2px #000;  
+            transition: all 0.3s;     
+      }
+      input[type="checkbox"]:checked + label:before{  
+        content:"ON"; 
+        left: 38px;
+        background:#35e908;   
+  }  
     </style>
   </head>
 
@@ -302,6 +345,12 @@
           class="__img"
           id="preview-image"
         />
+        <div class="checkbox_container">
+          <input id="selected" type ="checkbox" name="selected" value="checked" >
+          <label for="selected" class="checkbox"></label>
+        </div>
+        <input id="selected" type ="checkbox" name="selected" value="checked">
+        <label for="selected" class="checkbox"></label>
         <label for="input-image" class="cover_img_width"></label>
         <input type="file" id="input-image" name="club_img" class="cover_img" />
       </div>
