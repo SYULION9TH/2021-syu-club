@@ -112,6 +112,7 @@ h1,p{
 .post_img{
     width: 100%;
     aspect-ratio: 1 / 1;
+    object-fit: contain;
 }
 .post_content{
     width:100%;

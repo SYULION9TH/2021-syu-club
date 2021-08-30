@@ -196,3 +196,47 @@ h1,p{
     margin:10px;
 
 }
+.checkbox_container{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin-top: 80px;
+  }
+  #selected{
+    display:none;
+  }
+  .checkbox{        
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    background: #f4f0ee;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #00000030 inset;
+    position: relative;
+    cursor: pointer;    
+  }
+  .checkbox:before{
+      content:"OFF"; 
+        width:55px;
+        height:30px;
+        display:block;
+        background:#f00;
+        border-radius:40px;
+        position:absolute;
+        left:5px;
+        top:5px;
+        box-shadow:0 0 5px #000;      
+        text-align:center;
+        line-height:28px;
+        color:#fff;
+        font-size:18px;
+        font-weight:bold;
+        letter-spacing:2px;
+        text-shadow:0 0  2px #000;  
+        transition: all 0.3s;     
+  }
+  input[type="checkbox"]:checked + label:before{  
+    content:"ON"; 
+    left: 38px;
+    background:#35e908;   
+}  
