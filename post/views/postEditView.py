@@ -29,14 +29,24 @@ def detailpage_update(request, club_id):
     update_detailpage = Clubs.objects.get(club_id=club_id)
 
     if request.method =="POST":
-        update_detailpage.club_img = request.FILES.get('club_img', 'club_img')
-        # update_detailpage.club_img = request.FILES['club_img']
-        update_detailpage.club_desc = request.POST.get('club_desc','club_desc')
-        update_detailpage.form_link = request.POST.get('form_link', 'form_link')
-        # update_detailpage.recruitment_content = request.POST['recruitment_content']
-        update_detailpage.recruitment_content = request.POST.get('recruitment_content', 'recruitment_content')
-        # update_detailpage.save(commit=False)
-        update_detailpage.save()
+        print(request.POST.getlist('selected'))
+        selected = request.POST.getlist('selected')
+        Strselected = "".join(selected)
+        if  Strselected == "checked":
+            update_detailpage.club_img = request.FILES.get('club_img', 'club_img')
+            # update_detailpage.club_img = request.FILES['club_img']
+            update_detailpage.club_desc = request.POST.get('club_desc','club_desc')
+            # update_detailpage.recruitment_content = request.POST['recruitment_content']
+            update_detailpage.recruitment_content = request.POST.get('recruitment_content', 'recruitment_content')
+            # update_detailpage.save(commit=False)
+            update_detailpage.save()
+            return redirect('home' , str(update_detailpage.club_id))
+        else:
+            update_detailpage.club_desc = request.POST.get('club_desc','club_desc')
+            # update_detailpage.recruitment_content = request.POST['recruitment_content']
+            update_detailpage.recruitment_content = request.POST.get('recruitment_content', 'recruitment_content')
+            # update_detailpage.save(commit=False)
+            update_detailpage.save()
         return redirect('home' , str(update_detailpage.club_id))
 
     else:
