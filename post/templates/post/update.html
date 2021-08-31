@@ -10,10 +10,16 @@
     <title>Update</title>
     <!-- <link rel="stylesheet" href="update.css"> -->
     <script>
-
-
-
-    </script>
+      function ckLength()
+      {
+         if (form.text.value.length > 40)
+         {
+             alert("40자 내외로 적어주세요!");
+             form.text.value =  form.text.value.substr(0, 40);
+         }
+      }
+      </script>
+     
   </head>
 
   <body>
@@ -38,6 +44,7 @@
 
     <!-- 내용 -->
     <form
+      name="form"
       action="{% url 'detailupdate' club_id %}"
       method="post"
       enctype="multipart/form-data"
