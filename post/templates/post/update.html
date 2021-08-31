@@ -150,16 +150,18 @@
       inputImage.addEventListener("change", (e) => {
         readImage(e.target);
       });
-      
-      $(document).ready(function() {
 
 
 
-$('#text').on('keyup', function() {
-    if($(this).val().length > 40) {
-        $(this).val($(this).val().substring(0, 40));
+
+            let maxlength = 40;
+    document.getElementById('#text').addEventListener('keydown',function(e){// 키다운 이벤트 리스너 등록
+    let lengthCheckRegEx = new RegExp('^.{'+maxlength+',}$');
+    if(lengthCheckRegEx.test(e.target.value)){//정규표현식 test 메서드로 최대길이 이상인지 체크
+        //최대 길이 초과 차단
+        e.target.value = e.target.value.substr(0,maxlength);// 최대 글자수만큼 잘라냄
+        console.log(e.target.value);
     }
-});
 });
 
 
