@@ -18,6 +18,14 @@ body {
   flex-direction: column;
   height:100%;
 }
+.bookmark-absolute{
+  text-align: right;
+  width: 100%;
+  /* float: right; */
+  top: 10px;
+  position: absolute;
+  right: 0;
+}
 .href{
     width: 30px;
     height: 30px;
@@ -168,7 +176,7 @@ article_main_club {
   padding-right: 15px;
 }
 
-.top_youtube {
+/* .top_youtube {
   border: none;
   width: 30px;
   cursor: pointer;
@@ -203,6 +211,19 @@ article_main_club {
     cursor: pointer;
     position: absolute;
     left: 3%;
+} */
+.icon{
+  display: inline-block;
+  /* display: inline-block; */
+  height: 30px;
+  border: none;
+  width: 30px;
+  cursor: pointer;
+  /* position: absolute; */
+  /* top: 5px; */
+  /* right: 34px; */
+  margin: 2px;
+  position: relative;
 }
 
 .slick-prev:before,

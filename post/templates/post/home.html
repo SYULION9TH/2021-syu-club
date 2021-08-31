@@ -102,27 +102,28 @@
             <img src="{% static '기타분과.svg' %}" alt="기타로고" class="top_bookmark">
             {% endif %}
         </a>
-
+        <div class="bookmark-absolute">
         {% if club.youtube_link %}
-        <a class="top_youtube" target="_blank" href="{{club.youtube_link}}">
+        <a class="icon" target="_blank" href="{{club.youtube_link}}">
             <img src="{% static 'kakao-talk.png' %}" alt="yb로고" class="top_facebook">
         </a>
         {% endif %}
         {% if club.facebook_link %}
-        <a class="top_facebook" target="_blank" href="{{club.facebook_link}}">
+        <a class="icon" target="_blank" href="{{club.facebook_link}}">
             <img src="{% static 'top_facebook.png' %}" alt="fb로고" class="top_facebook">
         </a>
         {% endif %}
         {%if club.instagram_link %}
-        <a class="top_instagram" target="_blank" href="{{club.instagram_link}}">
+        <a class="icon" target="_blank" href="{{club.instagram_link}}">
             <img src="{% static 'top_instagram.png' %}" alt="ig로고" class="top_instagram">
         </a>
         {% endif %}
         {%if club.sns_link %}
-        <a class="top_instagram" target="_blank" href="{{club.sns_link}}">
+        <a class="icon" target="_blank" href="{{club.sns_link}}">
             <img src="{% static 'link.png'%}" alt="기타로고" class="top_instagram">
         </a>
         {% endif %}
+    </div>
 
         <!-- <article_main_club>
             <img src="{{club.club_logo.url}}" class="static">
