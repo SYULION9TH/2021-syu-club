@@ -144,11 +144,11 @@
             <div class="main-top-wrap">
             <h1 class="main-title" style="display: inline-block;font-family: 'Noto Sans CJK KR-Bold', sans-serif; position: relative;">{{club.club_name}}</h1>
             <p class="intro" style="display: inline-block;font-family: 'Noto Sans CJK KR-Regular', sans-serif;font-size: 0.9em;margin: 5px 0;">{{club.club_desc}}</p>
-            <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='None'" style="margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
+            <!-- <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='None'" style="margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;"> -->
         </div>
             {% if club.form_link %}
-            <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'"
-                style="font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
+            <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'" style="margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
+            </div>
             {% endif %}
         </article_main_club>
 
