@@ -134,7 +134,7 @@ article_main_club {
 }
 
 .main-title {
-  /* position: absolute;
+  position: absolute;
   bottom: 65px;
   left: 140px;
   right: 0px;
@@ -142,48 +142,20 @@ article_main_club {
   font-weight: bold;
   margin: 0;
   color: white;
-  margin-bottom:5px; */
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 0;
-  color: white;
   margin-bottom:5px;
-  display: contents;
-  /* display: inline-block; */
-  height: 30px;
-  border: none;
-  width: 30px;
-  cursor: pointer;
-  /* position: absolute; */
-  /* top: 5px; */
-  /* right: 34px; */
-  margin: 2px;
-  position: relative;
+
 }
 
 .intro {
-  /* padding-right: 10px;
+  padding-right: 10px;
   position: absolute;
   left: 140px;
   right: 0;
   bottom: 30px;
   text-align: justify;
   font-size: 0.5em;
-  color: white; */
-  padding-right: 10px;
-  font-size: 0.5em;
   color: white;
-  display: contents;
-  /* display: inline-block; */
-  height: 30px;
-  border: none;
-  width: 30px;
-  cursor: pointer;
-  /* position: absolute; */
-  /* top: 5px; */
-  /* right: 34px; */
-  margin: 2px;
-  position: relative;
+
 }
 
 /*지원하기버튼*/
@@ -392,11 +364,11 @@ button.slick-next::before{
   object-fit: cover;
   position: relative;
 }
-.main-top-wrap{
+/* .main-top-wrap{
   text-align: right;
   width: 100%;
   /* float: right; */
   top: 10px;
   position: absolute;
   right: 0;
-}
+} */
