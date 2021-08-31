@@ -100,11 +100,11 @@
       .__img {
         position: relative;
         top: 60px;
-        height: 60%;
-        width: 60%;
-        aspect-ratio: 1 / 1;
+        height: 40%;
+        width: 100%;
         display: block;
         margin: 0 auto;
+        object-fit:cover;
       }
 
       .cover_img_width {
@@ -178,7 +178,7 @@
 
       .introduce {
         font-family: "Noto Sans CJK KR Regular";
-        background-color: transparent;
+        background-color: White;
         color: #817f7e;
         font-weight: bold;
         font-size: 1;
@@ -197,7 +197,7 @@
 
       .apply {
         font-family: "Noto Sans CJK KR Regular";
-        background-color: transparent;
+        background-color: White;
         color: #817f7e;
         font-weight: bold;
         font-size: 1;
@@ -347,8 +347,18 @@
           class="__img"
           id="preview-image"
         />
-        <div class="checkbox_container">
-          <input id="selected" type ="checkbox" name="selected" value="checked" >
+        <div class="checkbox_container" style="
+    background-color: #d1d1d1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 30px;
+">
+    <p style="
+    color: #434343;
+    font-weight: bold;
+">이미지를 수정하겠습니까?</p>
+          <input id="selected" type="checkbox" name="selected" value="checked">
           <label for="selected" class="checkbox"></label>
         </div>
         <label for="input-image" class="cover_img_width"></label>
