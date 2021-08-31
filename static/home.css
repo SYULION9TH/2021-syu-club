@@ -18,6 +18,14 @@ body {
   flex-direction: column;
   height:100%;
 }
+.bookmark-absolute{
+  text-align: right;
+  width: 100%;
+  /* float: right; */
+  top: 10px;
+  position: absolute;
+  right: 0;
+}
 .href{
     width: 30px;
     height: 30px;
@@ -65,7 +73,7 @@ section_club {
   margin-right: 20px;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 2px 2px 10px silver;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 44%);
   border: 15px solid white;
   display:list-item;
   z-index: 10;
@@ -78,7 +86,7 @@ div_club {
   margin-right: 20px;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 2px 2px 10px silver;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 44%);
   position: relative;
   display:block;
   bottom: 0;
@@ -122,11 +130,11 @@ article_main_club {
   width: 90px;
   height: 90px;
   border-radius: 70%;
-  box-shadow: 1px 1px 10px gray;
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 44%);
 }
 
 .main-title {
-  position: absolute;
+  /* position: absolute;
   bottom: 65px;
   left: 140px;
   right: 0px;
@@ -134,18 +142,48 @@ article_main_club {
   font-weight: bold;
   margin: 0;
   color: white;
+  margin-bottom:5px; */
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  color: white;
   margin-bottom:5px;
+  display: contents;
+  /* display: inline-block; */
+  height: 30px;
+  border: none;
+  width: 30px;
+  cursor: pointer;
+  /* position: absolute; */
+  /* top: 5px; */
+  /* right: 34px; */
+  margin: 2px;
+  position: relative;
 }
 
 .intro {
-  padding-right: 10px;
+  /* padding-right: 10px;
   position: absolute;
   left: 140px;
   right: 0;
   bottom: 30px;
   text-align: justify;
   font-size: 0.5em;
+  color: white; */
+  padding-right: 10px;
+  font-size: 0.5em;
   color: white;
+  display: contents;
+  /* display: inline-block; */
+  height: 30px;
+  border: none;
+  width: 30px;
+  cursor: pointer;
+  /* position: absolute; */
+  /* top: 5px; */
+  /* right: 34px; */
+  margin: 2px;
+  position: relative;
 }
 
 /*지원하기버튼*/
@@ -168,41 +206,66 @@ article_main_club {
   padding-right: 15px;
 }
 
+.button_b {
+  position: absolute;
+  bottom: 0;
+  left: 135px;
+  line-height: 140%;
+  font-size: 10pt;
+  background-color: #45199700;
+  border: 0px #00ff0000;
+  box-shadow: 1px 1px 10px #45199700;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0);
+
+  border-radius: 15px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .top_youtube {
   border: none;
   width: 30px;
   cursor: pointer;
-  position: absolute;
-  top: 5px;
-  right: 34px;
 }
 
 .top_facebook {
   border: none;
   width: 30px;
   cursor: pointer;
-  position: absolute;
   top: 5px;
-  right: 17px;
 }
 
 .top_instagram {
   border: none;
   width: 30px;
   cursor: pointer;
-  position: absolute;
   top: 5px;
-  right: 0;
 }
 
 .top_bookmark {
-    top: 0;
-    margin: 0;
-    border: none;
-    width: 50%;
-    cursor: pointer;
-    position: absolute;
-    left: 3%;
+  top: 0;
+  margin: 0;
+  border: none;
+  width: 50%;
+  cursor: pointer;
+  position: absolute;
+  left: 3%;
+}
+.icon{
+  display: inline-block;
+  /* display: inline-block; */
+  height: 30px;
+  border: none;
+  width: 30px;
+  cursor: pointer;
+  /* position: absolute; */
+  /* top: 5px; */
+  /* right: 34px; */
+  margin: 2px;
+  position: relative;
 }
 
 .slick-prev:before,
@@ -261,6 +324,7 @@ button.slick-next {
   aspect-ratio: 1 / 1;
   width:100%; 
   border-radius: 0 0 5px 5px ;
+  object-fit:cover;
 }
 
 .gallery{
@@ -327,4 +391,12 @@ button.slick-next::before{
   width:100%;
   object-fit: cover;
   position: relative;
+}
+.main-top-wrap{
+  text-align: right;
+  width: 100%;
+  /* float: right; */
+  top: 10px;
+  position: absolute;
+  right: 0;
 }

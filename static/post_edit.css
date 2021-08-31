@@ -11,11 +11,20 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "twaysky";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
 .post_list{
     position: fixed;
     display: flex;
     z-index: 10;
     width: 100%;
+    background-color: #f4f0ee;
+    padding-bottom: 10px;
 }
 
 .club_nav{
@@ -33,11 +42,13 @@
 .club_nav>a{
     text-decoration-line: none;
 }
-#top{
-    font-family: 'Cafe24Danjunghae';
-    color:#494949;
-    font-size: 20px;
-}
+#top {
+    font-family: "twaysky";
+    color: #5523a0;
+    /* font-weight: bold; */
+    font-size: 22px;
+    font-weight:bold;
+  }
 .post_content, .title{ 
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -117,7 +128,7 @@ h1,p{
 .post_background{
     width:100%;
     padding-top:100%;
-    background-color:#61605f;
+    background-color:#61605f05;
     display:inline-block;
     text-align:center;
     position: relative;
@@ -140,6 +151,7 @@ h1,p{
     display:block;
     cursor:pointer;
     position:absolute;
+    object-fit:contain;
 }
 .img_width1{
     display:none;
