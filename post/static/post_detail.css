@@ -11,6 +11,13 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "twaysky";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
 .post_list{
     position: fixed;
     display: flex;
@@ -34,11 +41,13 @@
 .club_nav>a{
     text-decoration-line: none;
 }
-#top{
-    font-family: 'Cafe24Danjunghae';
-    color:#494949;
-    font-size: 20px;
-}
+#top {
+    font-family: "twaysky";
+    color: #5523a0;
+    /* font-weight: bold; */
+    font-size: 22px;
+    font-weight:bold;
+  }
 
 .post_detail_container, .title{ 
     font-family: 'Noto Sans KR', sans-serif;
