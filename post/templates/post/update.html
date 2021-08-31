@@ -9,6 +9,11 @@
     <link rel=stylesheet href="{% static 'update.css' %}" >
     <title>Update</title>
     <!-- <link rel="stylesheet" href="update.css"> -->
+    <script>
+
+
+
+    </script>
   </head>
 
   <body>
@@ -76,6 +81,7 @@
         <div class="club">
           <p class="name">{{club.club_name}}</p>
           <textarea
+            id="text"
             name="club_desc"
             class="introduce"
             cols="10"
@@ -144,6 +150,18 @@
       inputImage.addEventListener("change", (e) => {
         readImage(e.target);
       });
+      $(document).ready(function() {
+
+
+
+$('#text').on('keyup', function() {
+    if($(this).val().length > 40) {
+        $(this).val($(this).val().substring(0, 40));
+    }
+});
+});
+
+
     </script>
   </body>
 </html>
