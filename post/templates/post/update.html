@@ -13,6 +13,7 @@
 
   <body>
     <!-- nav바 (menu, 동아리 홍보전) -->
+    <div>
     <nav class="nav">
       <a href="{% url 'home' club_id %}" class="href"
         ><img src="{% static 'update_close.png' %}" class="update_img"
@@ -22,6 +23,7 @@
         <a href="{% url 'home1' %}" id="top">동아리 홍보전</a>
       </p>
     </nav>
+  </div>
 
     <!-- 내용 -->
     <form
@@ -42,7 +44,6 @@
           class="__img"
           id="preview-image"
         />      
-        
         <label for="input-image" class="cover_img_width"></label>
         <input type="file" id="input-image" name="club_img" class="cover_img" />
       </div>
