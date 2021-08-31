@@ -176,20 +176,16 @@ article_main_club {
   padding-right: 15px;
 }
 
-/* .top_youtube {
+.top_youtube {
   border: none;
   width: 30px;
   cursor: pointer;
-  position: absolute;
-  top: 5px;
-  right: 34px;
 }
 
 .top_facebook {
   border: none;
   width: 30px;
   cursor: pointer;
-  position: absolute;
   top: 5px;
   right: 17px;
 }
@@ -198,9 +194,7 @@ article_main_club {
   border: none;
   width: 30px;
   cursor: pointer;
-  position: absolute;
   top: 5px;
-  right: 0;
 }
 
 .top_bookmark {
@@ -209,9 +203,7 @@ article_main_club {
     border: none;
     width: 50%;
     cursor: pointer;
-    position: absolute;
-    left: 3%;
-} */
+}
 .icon{
   display: inline-block;
   /* display: inline-block; */
