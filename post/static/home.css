@@ -143,7 +143,12 @@ article_main_club {
   margin: 0;
   color: white;
   margin-bottom:5px; */
-  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  margin-bottom:5px;
+  display: contents;
   /* display: inline-block; */
   height: 30px;
   border: none;
@@ -165,7 +170,10 @@ article_main_club {
   text-align: justify;
   font-size: 0.5em;
   color: white; */
-  display: inline-block;
+  padding-right: 10px;
+  font-size: 0.5em;
+  color: white;
+  display: contents;
   /* display: inline-block; */
   height: 30px;
   border: none;
