@@ -92,46 +92,29 @@
     </div>
     <main_club>
         <a class="top_bookmark">
-            {% if club.club_type_id == 1 %}
-            <img src="{% static '문화체육.svg' %}" alt="문화체육로고" class="top_bookmark">
-            {% elif club.club_type_id == 2 %}
-            <img src="{% static '학술분과.svg' %}" alt="학술분과로고" class="top_bookmark">
-            {% elif club.club_type_id == 3 %}
-            <img src="{% static '종교봉사.svg' %}" alt="종교봉사로고" class="top_bookmark">
-            {% else %}
-            <img src="{% static '기타분과.svg' %}" alt="기타로고" class="top_bookmark">
-            {% endif %}
+            
+            <img src="/static/%ED%95%99%EC%88%A0%EB%B6%84%EA%B3%BC.svg" alt="학술분과로고" class="top_bookmark">
+            
         </a>
 
-        {% if club.youtube_link %}
-        <a class="top_youtube" target="_blank" href="{{club.youtube_link}}">
-            <img src="{% static 'kakao-talk.png' %}" alt="yb로고" class="top_facebook">
+        
+        
+        
+        <a class="top_instagram" target="_blank" href="https://www.instagram.com/wings_syu/">
+            <img src="/static/top_instagram.png" alt="ig로고" class="top_instagram">
         </a>
-        {% endif %}
-        {% if club.facebook_link %}
-        <a class="top_facebook" target="_blank" href="{{club.facebook_link}}">
-            <img src="{% static 'top_facebook.png' %}" alt="fb로고" class="top_facebook">
-        </a>
-        {% endif %}
-        {%if club.instagram_link %}
-        <a class="top_instagram" target="_blank" href="{{club.instagram_link}}">
-            <img src="{% static 'top_instagram.png' %}" alt="ig로고" class="top_instagram">
-        </a>
-        {% endif %}
-        {%if club.sns_link %}
-        <a class="top_instagram" target="_blank" href="{{club.sns_link}}">
-            <img src="{% static 'link.png'%}" alt="기타로고" class="top_instagram">
-        </a>
-        {% endif %}
+        
+        
 
-        <article_main_club>
-            <img src="{{club.club_logo.url}}" class="static">
-            <h1 class="main-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">{{club.club_name}}</h1>
-            <p class="intro" style="font-family: 'Noto Sans CJK KR-Regular', sans-serif;">{{club.club_desc}}</p>
-            {% if club.form_link %}
-            <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'"
-                style="font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
-            {% endif %}
+        <article_main_club style="
+    display: flex;
+    gap: 10px;
+    align-items: center;
+">
+            <img src="/media/images/Wings.jpg" class="static"><div>
+            <h1 class="main-title" style="display: inline-block;font-family: 'Noto Sans CJK KR-Bold', sans-serif;/* position: relative; */margin: 0;">Wings</h1>
+            <p class="intro" style="display: inline-block;font-family: 'Noto Sans CJK KR-Regular', sans-serif;font-size: 0.9em;margin: 5px 0;">모든 아이디어는 세상을 변활시킬 수 있는 힘이 있습니다.</p>
+            <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='None'" style="margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;"></div>
         </article_main_club>
 
     </main_club>
