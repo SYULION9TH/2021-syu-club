@@ -9,17 +9,7 @@
     <link rel=stylesheet href="{% static 'update.css' %}" >
     <title>Update</title>
     <!-- <link rel="stylesheet" href="update.css"> -->
-    <script>
-      function ckLength()
-      {
-         if (form.text.value.length > 40)
-         {
-             alert("40자 내외로 적어주세요!");
-             form.text.value =  form.text.value.substr(0, 40);
-         }
-      }
-      </script>
-     
+
   </head>
 
   <body>
@@ -87,12 +77,12 @@
         <!-- club -->
         <div class="club">
           <p class="name">{{club.club_name}}</p>
-          <textarea
+          <input type="text"
+            maxlength="40"
             id="text"
             name="club_desc"
             class="introduce"
-            cols="10"
-            rows="3"
+
             value="{{ club.club_desc }}"
           >
 {{ club.club_desc }}</textarea
