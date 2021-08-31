@@ -179,10 +179,10 @@
       .introduce {
         font-family: "Noto Sans CJK KR Regular";
         background-color: White;
-        color: #817f7e;
-        font-weight: bold;
+        color: black;
+        /* font-weight: bold; */
         font-size: 1;
-        font-size: 13px;
+        font-size: 12px;
         line-height: 20px;
         border-style: solid;
         border-color: #b9b9b9;
@@ -195,13 +195,14 @@
         padding: 7px;
       }
 
+
       .apply {
         font-family: "Noto Sans CJK KR Regular";
         background-color: White;
-        color: #817f7e;
-        font-weight: bold;
+        color: black;
+        /* font-weight: bold; */
         font-size: 1;
-        font-size: 13px;
+        font-size: 12px;
         line-height: 20px;
         border-style: solid;
         border-color: #b9b9b9;
@@ -215,7 +216,9 @@
       }
 
       /* no2 */
-
+      .no2{
+        margin-bottom:60px;
+      }
       /* box*/
       .box {
         background-color: white;
@@ -258,22 +261,22 @@
 
       /* upload */
       .upload {
-        border: none;
-        box-shadow: none;
-        background-color: #975ebc;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        position: fixed;
-        z-index: 99;
-        margin: 0;
+      border: none;
+      box-shadow: none;
+      background-color: #975ebc;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      position: fixed;
+      z-index: 99;
+      margin: 0;
         /* border-radius: 5px; */
       }
       .checkbox_container{
-        width: 100%;
-        height: 50px;
-        position: relative;
-        margin-top: 80px;
+        background-color: #d1d1d1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
       }
       #selected{
         display:none;
@@ -348,13 +351,7 @@
           class="__img"
           id="preview-image"
         />
-        <div class="checkbox_container" style="
-    background-color: #d1d1d1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 30px;
-">
+        <div class="checkbox_container">
     <p style="
     color: #434343;
     font-weight: bold;
