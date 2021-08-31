@@ -91,17 +91,7 @@
     <div class="background-img">    
     </div>
     <main_club>
-        <a class="top_bookmark">
-            {% if club.club_type_id == 1 %}
-            <img src="{% static '문화체육.svg' %}" alt="문화체육로고" class="top_bookmark">
-            {% elif club.club_type_id == 2 %}
-            <img src="{% static '학술분과.svg' %}" alt="학술분과로고" class="top_bookmark">
-            {% elif club.club_type_id == 3 %}
-            <img src="{% static '종교봉사.svg' %}" alt="종교봉사로고" class="top_bookmark">
-            {% else %}
-            <img src="{% static '기타분과.svg' %}" alt="기타로고" class="top_bookmark">
-            {% endif %}
-        </a>
+
         <div class="bookmark-absolute">
         {% if club.youtube_link %}
         <a class="icon" target="_blank" href="{{club.youtube_link}}">
@@ -123,7 +113,18 @@
             <img src="{% static 'link.png'%}" alt="기타로고" class="top_instagram">
         </a>
         {% endif %}
-    </div>
+    </div>        
+    <a class="top_bookmark">
+            {% if club.club_type_id == 1 %}
+            <img src="{% static '문화체육.svg' %}" alt="문화체육로고" class="top_bookmark">
+            {% elif club.club_type_id == 2 %}
+            <img src="{% static '학술분과.svg' %}" alt="학술분과로고" class="top_bookmark">
+            {% elif club.club_type_id == 3 %}
+            <img src="{% static '종교봉사.svg' %}" alt="종교봉사로고" class="top_bookmark">
+            {% else %}
+            <img src="{% static '기타분과.svg' %}" alt="기타로고" class="top_bookmark">
+            {% endif %}
+        </a>
 
         <!-- <article_main_club>
             <img src="{{club.club_logo.url}}" class="static">
