@@ -99,19 +99,21 @@
       .__img {
         position: relative;
         height: 100%;
-        width: 40%;
+        width: 100%;
         display: block;
         margin: 0 auto;
         object-fit:cover;
       }
       .img_change{
+        margin-top:51px;
         width:100%;
         height:40%
       }
       .cover_img_width {
+        position: absolute;
         height: 100%;
         width: 100%;
-        position: absolute;
+        
         cursor: pointer;
         top: 60px;
         left: 0;
