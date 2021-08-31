@@ -15,8 +15,6 @@
     const text_val = obj.value; //입력한 문자
     const text_len = text_val.length; //입력한 문자수
 
-    $('#counter').html("("+text.length+" / 최대 40자)"); 
-
     let totalByte=0;
     for(let i=0; i<text_len; i++){
     	const each_char = text_val.charAt(i);
@@ -41,6 +39,19 @@
             document.getElementById("text").style.color = "black";
         }
     }
+    $(document).on('keyup', '#text', function(e){
+    var text = $(this).val();
+    $('#cntSPAN').text(getBytes(text));    
+});
+ 
+function getBytes(str){
+    var cnt = 0;
+    for(var i =0; i<str.length;i++) {
+        cnt += (str.charCodeAt(i) >40) ? 2 : 1;
+    }
+    return cnt;
+}
+
 
       </script>
      
