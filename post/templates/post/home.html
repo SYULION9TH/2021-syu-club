@@ -128,8 +128,10 @@
             <img src="{{club.club_logo.url}}" class="static">
             <h1 class="main-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">{{club.club_name}}</h1>
             <p class="intro" style="font-family: 'Noto Sans CJK KR-Regular', sans-serif;">{{club.club_desc}}</p>
+            {% if club.form_link %}
             <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'"
                 style="font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
+            {% endif %}
         </article_main_club>
 
     </main_club>
