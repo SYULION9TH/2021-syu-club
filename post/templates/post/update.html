@@ -287,6 +287,7 @@
         background-color: #d1d1d1;
         display: flex;
         justify-content: space-around;
+        align-items: baseline;
         align-items: center;
       }
       #selected{
@@ -308,9 +309,6 @@
             background:#975ebc;
             border: solid 5px white;
             border-radius:40px;
-            position:absolute;
-            left:5px;
-            top:5px;  
             text-align:center;
             line-height:28px;
             color:#fff;
@@ -318,7 +316,6 @@
             font-weight:bold;
             letter-spacing:2px;
             text-shadow:0 0  2px #000;  
-            transition: all 0.3s;     
       }
       input[type="checkbox"]:checked + label:before{  
         content:"NO"; 
