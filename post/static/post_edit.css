@@ -16,6 +16,8 @@
     display: flex;
     z-index: 10;
     width: 100%;
+    background-color: #f4f0ee;
+    padding-bottom: 10px;
 }
 
 .club_nav{
@@ -117,7 +119,7 @@ h1,p{
 .post_background{
     width:100%;
     padding-top:100%;
-    background-color:#61605f;
+    background-color:#61605f05;
     display:inline-block;
     text-align:center;
     position: relative;
@@ -140,6 +142,7 @@ h1,p{
     display:block;
     cursor:pointer;
     position:absolute;
+    object-fit:contain;
 }
 .img_width1{
     display:none;

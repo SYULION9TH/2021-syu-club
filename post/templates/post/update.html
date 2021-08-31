@@ -100,11 +100,11 @@
       .__img {
         position: relative;
         top: 60px;
-        height: 60%;
-        width: 60%;
-        aspect-ratio: 1 / 1;
+        height: 40%;
+        width: 100%;
         display: block;
         margin: 0 auto;
+        object-fit:cover;
       }
 
       .cover_img_width {
@@ -178,15 +178,16 @@
 
       .introduce {
         font-family: "Noto Sans CJK KR Regular";
-        background-color: transparent;
-        color: #817f7e;
-        font-weight: bold;
+        background-color: White;
+        color: black;
+        /* font-weight: bold; */
         font-size: 1;
-        font-size: 13px;
+        font-size: 12px;
         line-height: 20px;
-        border-style: solid;
-        border-color: #b9b9b9;
-        border-width: 2px;
+        /* border-style: solid;
+        border-color: #b9b9b9; */
+        border:none;
+        box-shadow: 0px 0px 2px 1px lightgrey;
         width: 100%;
         resize: none;
         outline: none;
@@ -195,17 +196,17 @@
         padding: 7px;
       }
 
+
       .apply {
         font-family: "Noto Sans CJK KR Regular";
-        background-color: transparent;
-        color: #817f7e;
-        font-weight: bold;
+        background-color: White;
+        color: black;
+        border:none;
+        box-shadow: 0px 0px 2px 1px lightgrey;
+        /* font-weight: bold; */
         font-size: 1;
-        font-size: 13px;
+        font-size: 12px;
         line-height: 20px;
-        border-style: solid;
-        border-color: #b9b9b9;
-        border-width: 2px;
         width: 100%;
         resize: none;
         outline: none;
@@ -215,7 +216,9 @@
       }
 
       /* no2 */
-
+      .no2{
+        margin-bottom:50px;
+      }
       /* box*/
       .box {
         background-color: white;
@@ -258,7 +261,6 @@
 
       /* upload */
       .upload {
-        background-color: #4d4d4d;
         color: #f4f0ee;
         width: 90%;
         height: 40px;
@@ -266,6 +268,15 @@
         margin-bottom: 5%;
         font-weight: bold;
         font-size: 100%;
+      border: none;
+      box-shadow: none;
+      background-color: #975ebc;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      position: fixed;
+      z-index: 99;
+      margin: 0;
         /* border-radius: 5px; */
       }
       .checkbox_container{
@@ -273,6 +284,10 @@
         height: 50px;
         position: relative;
         margin-top: 80px;
+        background-color: #d1d1d1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
       }
       #selected{
         display:none;
@@ -288,12 +303,14 @@
         cursor: pointer;    
       }
       .checkbox:before{
-          content:"OFF"; 
+          content:"YES"; 
           font-family: "Noto Sans CJK KR Regular";
             width:55px;
             height:30px;
             display:block;
-            background:#88A185;
+            background:#975ebc;
+            border:white;
+            border-width:5px;
             border-radius:40px;
             position:absolute;
             left:5px;
@@ -309,10 +326,11 @@
             transition: all 0.3s;     
       }
       input[type="checkbox"]:checked + label:before{  
-        content:"ON"; 
+        content:"NO"; 
         font-family: "Noto Sans CJK KR Regular";
-        left: 38px;
-        background:#506358;   
+        background:#975ebc;
+        border:white;
+        border-width:5px;  
   }  
     </style>
   </head>
@@ -348,7 +366,11 @@
           id="preview-image"
         />
         <div class="checkbox_container">
-          <input id="selected" type ="checkbox" name="selected" value="checked" >
+    <p style="
+    color: #434343;
+    font-weight: bold;
+">이미지를 수정하겠습니까?</p>
+          <input id="selected" type="checkbox" name="selected" value="checked">
           <label for="selected" class="checkbox"></label>
         </div>
         <label for="input-image" class="cover_img_width"></label>
