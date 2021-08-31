@@ -135,7 +135,7 @@ article_main_club {
 
 .main-title {
   position: absolute;
-  bottom: 65px;
+  bottom: 0;
   left: 140px;
   right: 0px;
   font-size: 1.2em;
@@ -364,11 +364,3 @@ button.slick-next::before{
   object-fit: cover;
   position: relative;
 }
-/* .main-top-wrap{
-  text-align: right;
-  width: 100%;
-  /* float: right; */
-  top: 10px;
-  position: absolute;
-  right: 0;
-} */
