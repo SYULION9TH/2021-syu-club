@@ -140,17 +140,20 @@ h1,p{
 
 
 .submit{
-    float:right;
-    color: white;
-    font-size:15px;
-    width: 100px;
-    padding: 1em;
-    background-color: #353535;
-    text-align: center;
-    text-decoration: none;
-    border:none;
-    cursor: pointer;
-    border-radius: 10px;
-    margin:10px;
-
+    color: #f4f0ee;
+    width: 90%;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 5%;
+    font-weight: bold;
+    font-size: 100%;
+  border: none;
+  box-shadow: none;
+  background-color: #975ebc;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  margin: 0;
 }
