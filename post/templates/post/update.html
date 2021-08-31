@@ -39,20 +39,6 @@
             document.getElementById("text").style.color = "black";
         }
     }
-    $(document).on('keyup', '#text', function(e){
-    var text = $(this).val();
-    $('#cntSPAN').text(getBytes(text));    
-});
- 
-function getBytes(str){
-    var cnt = 0;
-    for(var i =0; i<str.length;i++) {
-        cnt += (str.charCodeAt(i) >40) ? 2 : 1;
-    }
-    return cnt;
-}
-
-
       </script>
      
   </head>
