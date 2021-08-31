@@ -34,14 +34,15 @@
       <div class="image-container">
         <!-- <img src="../static/sea.jpg" id="preview-image"> -->
         <!-- <img src="{% static 'sea.jpg' %}" alt="활동사진" id="preview-image"> -->
-        <img
+        <div class="img_change">
+          <img
           src="{{ club.club_img.url }}"
           alt="활동사진"
           name="club_img"
           class="__img"
           id="preview-image"
         />      
-        <div class="img_change">
+        
         <label for="input-image" class="cover_img_width"></label>
         <input type="file" id="input-image" name="club_img" class="cover_img" />
       </div>
