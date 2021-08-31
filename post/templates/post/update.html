@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" href="update.css"> -->
     <script>
 	function fn_checkByte(obj){
-    const maxByte = 40; //최대 100바이트
+    const maxByte = 80; //최대 100바이트
     const text_val = obj.value; //입력한 문자
     const text_len = text_val.length; //입력한 문자수
     
@@ -29,7 +29,7 @@
     }
     
     if(totalByte>maxByte){
-    	alert('최대 40Byte까지만 입력가능합니다.');
+    	alert('최대 80Byte까지만 입력가능합니다.');
         	document.getElementById("text").innerText = totalByte;
             document.getElementById("text").style.color = "red";
         }else{
