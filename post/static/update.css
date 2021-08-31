@@ -35,6 +35,14 @@
       }
 
       /* nav바 (menu, 동아리 홍보전) */
+      .nav_header{
+        position:fixed;
+        display: flex;
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        position:relative;
+      }
       .nav {
         z-index: 5;
         position: fixed;
