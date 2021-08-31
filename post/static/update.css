@@ -1,0 +1,330 @@
+
+      @font-face {
+        font-family: "Cafe24Danjunghae";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Noto Sans CJK KR Regular";
+        src: url("font/NotoSansCJKkr-Regular.otf");
+      }
+
+      @font-face {
+        font-family: "Noto Sans CJK KR Medium";
+        src: url("font/NotoSansCJKkr-Medium.otf");
+      }
+      @font-face {
+  font-family: "twaysky";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+      body {
+        background-color: #f4f0ee;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+      a {
+        margin: 0;
+      }
+
+      /* nav바 (menu, 동아리 홍보전) */
+      .nav {
+        z-index: 5;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        display: inline-block;
+        height: 50px;
+        vertical-align: middle;
+        line-height: 50px;
+        background-color: #f4f0ee;
+      }
+      .href {
+        display: inline-block;
+        z-index: 7;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+      }
+      .update_img {
+        z-index: 5;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -5px;
+      }
+      .club_nav {
+        background-color: transparent;
+        width: 100%;
+        /* padding: 0; */
+        /* padding-top: 5%; */
+        position: fixed;
+        margin: 0;
+      }
+      .club_nav > a {
+        /* color:#494949;
+            font-weight: bold;
+            font-size: 100%; */
+        /* text-align: center; */
+        text-decoration-line: none;
+      }
+      #top {
+        font-family: "twaysky";
+        color: #5523a0;
+        /* font-weight: bold; */
+        font-size: 22px;
+        font-weight:bold;
+      }
+
+      /* 내용 */
+
+      /* 이미지 미리보기 */
+
+      .image-container {
+        width: 100%;
+        display: block;
+      }
+      .__img {
+        position: absolute;
+        top: 60px;
+        height: 40%;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        object-fit:cover;
+      }
+      .img_change{
+          position:relative;
+          width:100%;
+          height:40%;
+      }
+      .cover_img_width {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        cursor: pointer;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+      }
+
+      .cover_img {
+        display: none;
+      }
+
+      /* no1 */
+
+      .no1 {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+      }
+
+      /* circle */
+
+      .circle_pic {
+        /* width: 28%; */
+        width: 30%;
+        position: relative;
+        margin-top: 3%;
+        margin-left: 3%;
+        /* display: inline-block; */
+        display: flex;
+        align-items: center;
+      }
+      .circle_pic > img {
+        width: 100%;
+        /* height: 110px; */
+        line-height: 50px;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        float: left;
+      }
+      /* club */
+      .club {
+        width: 70%;
+        text-align: left;
+        margin-left: 1%;
+        padding-left: 10px;
+        display: inline-block;
+      }
+
+      .formlink {
+        width: 85%;
+        margin-left: 5%;
+      }
+
+      .name {
+        font-family: "Noto Sans CJK KR Regular";
+        color: #4a4a4a;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 0;
+        /* margin-top: 0; */
+        text-align: left;
+      }
+
+      .introduce {
+        font-family: "Noto Sans CJK KR Regular";
+        background-color: White;
+        color: black;
+        /* font-weight: bold; */
+        font-size: 1;
+        font-size: 12px;
+        line-height: 20px;
+        /* border-style: solid;
+        border-color: #b9b9b9; */
+        border:none;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 21%);;
+        width: 100%;
+        resize: none;
+        outline: none;
+        margin-top: 4%;
+        border-radius: 10px;
+        padding: 7px;
+      }
+
+
+      .apply {
+        font-family: "Noto Sans CJK KR Regular";
+        background-color: White;
+        color: black;
+        border:none;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 21%);;
+        /* font-weight: bold; */
+        font-size: 1;
+        font-size: 12px;
+        line-height: 20px;
+        width: 100%;
+        resize: none;
+        outline: none;
+        margin-top: 4%;
+        border-radius: 10px;
+        padding: 7px;
+      }
+
+      /* no2 */
+      .no2{
+        margin-bottom:50px;
+      }
+      /* box*/
+      .box {
+        background-color: white;
+        width: 90%;
+        margin: auto;
+        margin-top: 1.5em;
+        border-radius: 12px;
+        box-shadow: 0px 0px 10px rgb(0 0 0 / 21%);;
+      }
+      .text {
+        font-family: "Noto Sans CJK KR Medium";
+        color: #4a4a4a;
+        font-weight: bold;
+        padding-top: 10px;
+        text-align: left;
+        margin-left: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      .line {
+        /* padding-left: px; */
+        margin-left: 20px;
+        border: none;
+        border-top: 1px solid #817f7e;
+      }
+
+      .recruitment_content {
+        font-family: "Noto Sans CJK KR Regular";
+        color: black;
+        width: 85%;
+        height: 30%;
+        font-size: 14px;
+        /* font-weight: bold; */
+        border-style: hidden;
+        border-radius: 10px;
+        margin-left: -3%;
+        resize: none;
+        outline: none;
+      }
+
+      /* upload */
+      .upload {
+        color: #f4f0ee;
+        width: 90%;
+        height: 40px;
+        margin-top: 20px;
+        margin-bottom: 5%;
+        font-weight: bold;
+        font-size: 100%;
+      border: none;
+      box-shadow: none;
+      background-color: #975ebc;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      position: fixed;
+      z-index: 99;
+      margin: 0;
+        /* border-radius: 5px; */
+      }
+      .checkbox_container{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        margin-top: 60px;
+        background-color: #d1d1d1;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        align-items: center;
+      }
+      #selected{
+        display:none;
+      }
+      .checkbox{        
+        display: contents;
+        cursor: pointer;
+        width: 50px;
+        height: 30px;
+        position: relative;    
+      }
+      .checkbox:before{
+          content:"NO"; 
+          font-family: "Noto Sans CJK KR Regular";
+            width:55px;
+            height:30px;
+            display:block;
+            background:#975ebc;
+            border: solid 5px white;
+            border-radius:40px;
+            text-align:center;
+            line-height:28px;
+            color:#fff;
+            font-size:18px;
+            font-weight:bold;
+            letter-spacing:2px;
+            text-shadow:0 0  2px #000;  
+      }
+      input[type="checkbox"]:checked + label:before{  
+        content:"YES"; 
+        font-family: "Noto Sans CJK KR Regular";
+        background:#975ebc;
+        border: solid 5px white;
+  }  
+
+  
