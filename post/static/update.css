@@ -36,12 +36,14 @@
 
       /* nav바 (menu, 동아리 홍보전) */
       .nav_header{
-        position:fixed;
+        position: fixed;
         display: flex;
         height: 50px;
         width: 100%;
         align-items: center;
-        position:relative;
+        /* position: relative; */
+        background-color: #f4f0ee;
+        z-index: 99;
       }
       .nav {
         z-index: 5;
@@ -111,6 +113,7 @@
         object-fit:cover;
       }
       .img_change{
+        padding-top:50px;
         position:relative;
         width:100%;
         height:40%
