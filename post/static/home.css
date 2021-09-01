@@ -363,7 +363,13 @@ button.slick-next::before{
 .gallery .slick-list {
   position:relative;
   margin:0 10px;
-  aspect-ratio: 1/1;
+  width:100%;
+  height:100%;
+
+}
+.gallery .slick-list::before{
+  display:block;
+  padding-top:100%;
 }
 
 .slick-slide {
