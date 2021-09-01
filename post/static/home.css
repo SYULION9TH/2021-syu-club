@@ -296,6 +296,12 @@ button.slick-next {
   text-align: center;
   box-sizing: border-box;
 }
+.gallery_href{
+  position:relative;
+  width:100%;
+  height:100%;
+  
+}
 .gallery_img{
   /* width:100%; 
   height:100%;
