@@ -297,7 +297,6 @@ button.slick-next {
   box-sizing: border-box;
 }
 .gallery_img{
-  aspect-ratio: 1 / 1;
   width:100%; 
   border-radius: 0 0 5px 5px ;
   object-fit:cover;
