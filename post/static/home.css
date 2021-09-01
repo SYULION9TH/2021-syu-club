@@ -302,10 +302,10 @@ button.slick-next {
   border-radius: 0 0 5px 5px ;
   object-fit:cover; */
   width: 100%;
-    position: absolute;
-    height: 100%;
-    border-radius: 0 0 5px 5px;
-    object-fit: cover;
+  height: 100%;
+  position: absolute;
+  border-radius: 0 0 5px 5px;
+  object-fit: cover;
 }
 
 .gallery{
