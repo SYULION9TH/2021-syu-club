@@ -8,6 +8,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   margin: 0;
   height: 100%;
   background-color: #f4f0ee;
@@ -307,7 +308,7 @@ button.slick-next {
   position:relative;
 }
 .__post_content{
-  width: 100%;
+  width: 97%;
   position: absolute;
   left:0;
   z-index: 5;
