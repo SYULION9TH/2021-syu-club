@@ -298,6 +298,8 @@ button.slick-next {
 }
 .gallery_img{
   width:100%; 
+  height:100%;
+  aspect-ratio: 1/1;
   border-radius: 0 0 5px 5px ;
   object-fit:cover;
 }
@@ -366,4 +368,9 @@ button.slick-next::before{
   width:100%;
   object-fit: cover;
   position: relative;
+}
+.slick-slide img {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
