@@ -372,5 +372,4 @@ button.slick-next::before{
 .slick-slide img {
   display: flex;
   width: 100%;
-  aspect-ratio: 1/1;
 }
