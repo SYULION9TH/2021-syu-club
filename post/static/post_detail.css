@@ -163,3 +163,13 @@ h1,p{
     justify-content: center;
     align-items: center;
 }
+.img_width{
+    z-index: 4;
+    display:none;
+    height: 100%;
+    width: 100%;
+    display:block;
+    cursor:pointer;
+    position:absolute;
+    object-fit:contain;
+}

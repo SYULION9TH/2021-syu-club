@@ -37,7 +37,9 @@ $(this).height($(this).width());
             </div>
         </div>
             <p class="create">{{post.created_at}}</p>
+            <label for="img" class="img_width">
             <img src="{{ post.post_img.url }}" alt="게시물 사진입니다." class= "post_img">
+        </label>
         </div>
         <div class = "post_content">
             <p class="deatilcontent">{{post.post_content | linebreaksbr}}</p>
