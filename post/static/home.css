@@ -373,3 +373,11 @@ button.slick-next::before{
   display: flex;
   width: 100%;
 }
+.slick-initialized .slick-slide {
+  /* z-index: 100; */
+  position: relative;
+  display: block;
+  aspect-ratio: 1/1;
+  background-color: black;
+  width: 100%;
+}
