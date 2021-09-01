@@ -122,8 +122,11 @@ h1,p{
 }
 .post_img{
     width: 100%;
-    height:100%;
-    aspect-ratio: 1 / 1;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
     object-fit: contain;
 }
 .post_content{
@@ -163,22 +166,12 @@ h1,p{
     justify-content: center;
     align-items: center;
 }
-.img_width{
-    z-index: 4;
-    display:none;
-    height: 100%;
-    width: 100%;
-    display:block;
-    cursor:pointer;
-    position:absolute;
-    object-fit:contain;
-}
+
 .img_content{ 
     width: 100%;
     padding-top: 100%;
-    background-color: #61605f05;
+    background-color: #f4f0ee;
     display: inline-block;
     text-align: center;
     position: relative;
-}
 }
