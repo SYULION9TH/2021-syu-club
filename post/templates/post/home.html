@@ -135,21 +135,18 @@
                 style="font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
             {% endif %}
         </article_main_club> -->
-        <article_main_club style="
-    display: flex;
-    gap: 10px;
-    align-items: center;
-">
+        <article_main_club style=" display: flex; gap: 10px; align-items: center; height: auto; bottom: 0; position: absolute; top: auto;">
             <img src="{{club.club_logo.url}}" class="static">
             <div>
-            <h1 class="main-title" style="display: inline-block;font-family: 'Noto Sans CJK KR-Bold', sans-serif; position: relative;">{{club.club_name}}</h1>
-            <p class="intro" id="text" style="display: inline-block;font-family: 'Noto Sans CJK KR-Regular', sans-serif;font-size: 0.9em;margin: 5px 0;">{{club.club_desc}}</p>
+                <h1 class="main-title" style="left: 0;margin: 0;display: inline-block;font-family: 'Noto Sans CJK KR-Bold', sans-serif;position: relative;">{{club.club_name}}</h1>
+                <p class="intro" id="text" style="position: relative;display: inline-block;font-family: 'Noto Sans CJK KR-Regular', sans-serif;font-size: 0.95em;margin: 5px 0;">{{club.club_desc}}</p>
             <!-- <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='None'" style="margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;"> -->
         </div>
             {% if club.form_link %}
             <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'" style="margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
             </div>
             {% endif %}
+        </div>
         </article_main_club>
 
     </main_club>
@@ -192,7 +189,7 @@
             <div class="gallery">
                 
                 {% for post in posts %}
-                <a class="gallery_href" href="{% url 'detail' club_id post.post_id %}" style ="text-decoration: none;">
+                <a href="{% url 'detail' club_id post.post_id %}" style ="text-decoration: none;">
                     <p class="gallery_text">{{post.post_title|truncatechars:10}}</p>
                     <img class="gallery_img"src="{{ post.post_img.url }}">
                 </a>
