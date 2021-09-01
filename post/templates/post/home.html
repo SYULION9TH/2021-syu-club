@@ -68,6 +68,13 @@
             });
             }).resize();
 
+            $(window).resize(function(){
+
+            $('.slick-slide').each(function() {
+            $(this).height($(this).width());
+            });
+            }).resize();
+
     </script>
 
 
