@@ -245,8 +245,8 @@ h1,p{
         width:55px;
         height:30px;
         display:block;
-        background:#975ebc;
-        border: solid 5px white;
+        background:#a4a4a4;
+        border: solid 2px white;
         border-radius:40px;
         text-align:center;
         line-height:28px;
@@ -254,11 +254,12 @@ h1,p{
         font-size:18px;
         font-weight:bold;
         letter-spacing:2px;
-        text-shadow:0 0  2px #000;  
+        text-shadow:none;  
   }
   input[type="checkbox"]:checked + label:before{  
     content:"YES"; 
     font-family: "Noto Sans CJK KR Regular";
     background:#975ebc;
-    border: solid 5px white;
+    border: solid 2px white;
+    text-shadow: none;
 }  
