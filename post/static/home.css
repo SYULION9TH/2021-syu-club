@@ -123,9 +123,6 @@ article_main_club {
 }
 
 .static {
-  position: absolute;
-  left: 30px;
-  bottom: 0;
   float: left;
   width: 90px;
   height: 90px;
