@@ -296,7 +296,7 @@ button.slick-next {
   text-align: center;
   box-sizing: border-box;
 }
-.gallery_href{
+.slick-slide .slick-current .slick-active{
   position:relative;
   width:100%;
   height:100%;
