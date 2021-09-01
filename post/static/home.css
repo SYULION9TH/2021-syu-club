@@ -360,12 +360,13 @@ button.slick-next::before{
   margin:0;
 }
 .slick-track{
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
 
 }
 .gallery .slick-list {
+  position:relative;
   margin:0 10px;
   aspect-ratio: 1/1;
 }
