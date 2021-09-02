@@ -164,9 +164,9 @@ body {
   left: 135px;
   line-height: 140%;
   font-size: 10pt;
-  background-color: #451997;
+  background-color: #451997 !important;
   border: 0px #00ff0000;
-  box-shadow: 1px 1px 10px #451997;
+  box-shadow: 1px 1px 10px #451997 !important;
   font-weight: bold;
   color: white;
 
