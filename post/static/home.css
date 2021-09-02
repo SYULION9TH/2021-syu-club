@@ -231,9 +231,9 @@ button.slick-prev {
   border: 0;
   outline: 0;
   background-color: rgba(255, 255, 255, 0);
-  position: fixed;
+  position: absolute;
+  top: calc( 50% - 22px );
   left: 17px;
-  top: 88%;
   z-index: 1;
 }
 
@@ -241,9 +241,9 @@ button.slick-next {
   border: 0;
   outline: 0;
   background-color: rgba(255, 255, 255, 0);
-  position: fixed;
+  position: absolute;
+  top: calc( 50% - 22px );
   right: 17px;
-  top: 88%;
   z-index: 1;
 }
 .text_content{
