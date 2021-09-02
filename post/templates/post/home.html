@@ -307,8 +307,8 @@
                 <p class="intro" id="text" style="padding-right: 30px;position: relative;display: block;font-family: 'Noto Sans CJK KR-Regular', sans-serif;font-size: 0.95em;margin: 5px 0;">{{club.club_desc}}</p>
             {% if club.form_link %}    
             <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'" style="left: auto;position: relative;margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
+            {% endif %}
         </div>
-        {% endif %}
     </main_club>
 
 <div class="__post_content">
@@ -349,7 +349,7 @@
                 {% for post in posts %}
                 <a href="{% url 'detail' club_id post.post_id %}" style="height: auto;text-decoration: none;width: 125px;">
                     <p class="gallery_text">{{post.post_title|truncatechars:10}}</p>
-                    <img class="gallery_img" src="{{ post.post_img.url }}" style="height:100%;">
+                    <img class="gallery_img" src="{{ post.post_img.url }}">
                 </a>
                 {% endfor %}
 
