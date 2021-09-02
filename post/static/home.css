@@ -308,9 +308,9 @@ button.slick-next {
   position:relative;
 }
 .__post_content{
-  width: 97%;
+  width: 100%;
   position: absolute;
-  left:0;
+  left:-10px;
   z-index: 5;
   margin-top:10px;
 }
