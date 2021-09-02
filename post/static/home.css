@@ -169,12 +169,15 @@ body {
   box-shadow: 1px 1px 10px #451997 !important;
   font-weight: bold;
   color: white;
-
   border-radius: 15px;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 15px;
   padding-right: 15px;
+  left: auto;
+  position: relative;
+  margin-top: 7px;
+  font-family: 'Noto Sans CJK KR-Medium', sans-serif;
 }
 
 .top_youtube {
