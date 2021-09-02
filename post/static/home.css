@@ -70,8 +70,8 @@ section_club {
   list-style-type: none;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 10px rgb(0 0 0 / 44%);
@@ -83,8 +83,8 @@ section_club {
 div_club {
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 2px 2px 10px rgb(0 0 0 / 44%);
@@ -310,7 +310,6 @@ button.slick-next {
 .__post_content{
   width: 100%;
   position: relative;
-  left:-10px;
   z-index: 5;
   margin-top:10px;
 }
