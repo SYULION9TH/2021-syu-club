@@ -77,159 +77,104 @@
 
 <body>
     <div class="body_wrap">   
-    <nav_club>
-        <!-- {% include 'side.html' %} -->
-        <!-- <a href="javascript:history.back();" class="href"><img src="{% static 'update_close.png' %}" class="update_img"></a> -->
-        <a href="{% url 'home1' %}" style="text-decoration: none;"><h1 class="nav-title" style="font-weight: bold; font-family:'twaysky';">동아리 홍보전</h1></a>
-        {% if user.id == club_id|add:1 or user.is_superuser %}
-        <a href="{% url 'detailupdate' club_id %}">
-            <img src="{% static 'nav_edit.png' %}" alt="ne로고"
-                style="margin: 0px; width: 30px; position: absolute; top: 0; right: 20px;">
-        </a>
-        {% endif %}
-    </nav_club>
-    
-    <img src="{{club.club_img.url}}" style="position: absolute; z-index: 0; width:100%; height:40%; top:50px;">
-    <div class="background-img">    
-    </div>
-    <main_club style="
-    height: 33%;
-">
-
-        <div class="bookmark-absolute">
-        {% if club.youtube_link %}
-        <a class="icon" target="_blank" href="{{club.youtube_link}}">
-            <img src="{% static 'kakao-talk.png' %}" alt="yb로고" class="top_facebook">
-        </a>
-        {% endif %}
-        {% if club.facebook_link %}
-        <a class="icon" target="_blank" href="{{club.facebook_link}}">
-            <img src="{% static 'top_facebook.png' %}" alt="fb로고" class="top_facebook">
-        </a>
-        {% endif %}
-        {%if club.instagram_link %}
-        <a class="icon" target="_blank" href="{{club.instagram_link}}">
-            <img src="{% static 'top_instagram.png' %}" alt="ig로고" class="top_instagram">
-        </a>
-        {% endif %}
-        {%if club.sns_link %}
-        <a class="icon" target="_blank" href="{{club.sns_link}}">
-            <img src="{% static 'link.png'%}" alt="기타로고" class="top_instagram">
-        </a>
-        {% endif %}
-    </div>        
-    <a class="top_bookmark">
-            {% if club.club_type_id == 1 %}
-            <img src="{% static '문화체육.svg' %}" alt="문화체육로고" class="top_bookmark">
-            {% elif club.club_type_id == 2 %}
-            <img src="{% static '학술분과.svg' %}" alt="학술분과로고" class="top_bookmark">
-            {% elif club.club_type_id == 3 %}
-            <img src="{% static '종교봉사.svg' %}" alt="종교봉사로고" class="top_bookmark">
-            {% else %}
-            <img src="{% static '기타분과.svg' %}" alt="기타로고" class="top_bookmark">
-            {% endif %}
-        </a>
-
-        <!-- <article_main_club>
-            <img src="{{club.club_logo.url}}" class="static">
-            <h1 class="main-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">{{club.club_name}}</h1>
-            <p class="intro" style="font-family: 'Noto Sans CJK KR-Regular', sans-serif;">{{club.club_desc}}</p>
-            {% if club.form_link %}
-            <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'"
-                style="font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
-            {% endif %}
-        </article_main_club> -->
-        <!-- <article_main_club style=" display: flex; gap: 10px; align-items: center; height: auto; bottom: 0; position: absolute; top: auto;">
-            <img src="{{club.club_logo.url}}" class="static">
-            <div>
-                <h1 class="main-title" style="left: 0;margin: 0;display: inline-block;font-family: 'Noto Sans CJK KR-Bold', sans-serif;position: relative;">{{club.club_name}}</h1>
-                <p class="intro" id="text" style="position: relative;display: inline-block;font-family: 'Noto Sans CJK KR-Regular', sans-serif;font-size: 0.95em;margin: 5px 0;">{{club.club_desc}}</p>
-        </div>
-            {% if club.form_link %}
-            <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'" style="margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
-            </div>
-            {% endif %}
-        </article_main_club> -->
-        <article_main_club style="padding-left: 20px;display: flex;gap: 18px;align-items: center;height: auto;bottom: 0;position: absolute;top: auto;">
-            <img src="{{club.club_logo.url}}" class="static">
-            <div>
-                <h1 class="main-title" style="left: auto;margin: 0;display: block;font-family: 'Noto Sans CJK KR-Bold', sans-serif;position: relative;">{{club.club_name}}</h1>
-                <p class="intro" id="text" style="padding-right: 30px;position: relative;display: block;font-family: 'Noto Sans CJK KR-Regular', sans-serif;font-size: 0.95em;margin: 5px 0;">{{club.club_desc}}</p>
-            <!-- <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='None'" style="margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;"> -->
-            {% if club.form_link %}    
-            <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'" style="left: auto;position: relative;margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
-            {% endif %}
-        </div>
-    </main_club>
-
-<div class="__post_content">
-    <!-- <section_club>
-        <article_section_club>
-            <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">모집요강
-                <hr style="width: 40%;
-                /* background-color: gray; */
-                margin: 5px;
-                border: none;
-                border-top: solid 1px gray;">
-            </p>
-                <p style="overflow:auto; height: 80%; font-size: 1em; margin: 0; font-family: 'Noto Sans CJK KR-Regular', sans-serif; white-space: pre-wrap;">{{club.recruitment_content}}</p>
-        </article_section_club>
-    </section_club> -->
-    <section_club>
-        <article_section_club>
-            <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">모집요강
-                </p><hr style="width: 40%;
-                /* background-color: gray; */
-                margin: 5px;
-                border: none;
-                border-top: solid 1px gray;">
-            <p></p>
-                <p style="padding: 0 5px;padding-bottom: 10px;overflow:auto;height: 80%;font-size: 0.95em;margin: 0;font-family: 'Noto Sans CJK KR-Regular', sans-serif;white-space: pre-wrap;">{{club.recruitment_content}}</p>
-        </article_section_club>
-    </section_club>
-
-    <div_club>
-        <div class="div_wrap">
-            {% if user.id == club_id|add:1 or user.is_superuser %}
-            <div class="plus_img">
-            <a href="{% url 'new' club_id %}">
-                <img src="{% static 'plus.png' %}" style="width: 30px;">
+        <div class="nav_club">
+            <a href="{% url 'home1' %}" style="text-decoration: none;">
+                <h1 class="nav-title" style="font-weight: bold; font-family:'twaysky';">동아리 홍보전</h1>
             </a>
-            </div>
+            {% if user.id == club_id|add:1 or user.is_superuser %}
+            <a href="{% url 'detailupdate' club_id %}">
+                <img src="{% static 'nav_edit.png' %}" alt="ne로고" style="margin: 0px; width: 30px; position: absolute; top: 0; right: 20px;">
+            </a>
             {% endif %}
-        <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">동아리 게시물
-            <hr style="width: 40%;
-            /* background-color: gray; */
-            margin: 5px;
-            border: none;
-            border-top: solid 1px gray;">
-        </p>
-            
-        
-        <!--<img src="{% static 'post_left.png' %}" id='slick-prev' style="width: 10%; position: absolute; bottom: 30%; z-index: 2; transform: translate(-40%);">
-        <img src="{% static 'post_right.png' %}" id='slick-next' style="width: 10%; position: absolute; right:0; bottom: 30%; z-index: 2; transform: translate(40%);">-->
-            {% if posts %}
-            <div class="gallery">
-                
-                {% for post in posts %}
-                <a href="{% url 'detail' club_id post.post_id %}" style="height: auto;text-decoration: none;width: 125px;">
-                    <p class="gallery_text">{{post.post_title|truncatechars:10}}</p>
-                    <img class="gallery_img" src="{{ post.post_img.url }}">
+        </div>
+        <div class="main_club">
+            <div class="bookmark-absolute">
+                {% if club.youtube_link %}
+                <a class="icon" target="_blank" href="{{club.youtube_link}}">
+                    <img src="{% static 'kakao-talk.png' %}" alt="yb로고" class="top_facebook">
                 </a>
-                {% endfor %}
-
-                {% else %}
-                <h1 style="color: #6a6a6a; font-size:1em; text-align:center; font-family: 'Noto Sans CJK KR-Medium', sans-serif; font-weight:lighter;">등록된 동아리 게시물이 없습니다.</h1>
                 {% endif %}
+                {% if club.facebook_link %}
+                <a class="icon" target="_blank" href="{{club.facebook_link}}">
+                    <img src="{% static 'top_facebook.png' %}" alt="fb로고" class="top_facebook">
+                </a>
+                {% endif %}
+                {%if club.instagram_link %}
+                <a class="icon" target="_blank" href="{{club.instagram_link}}">
+                    <img src="{% static 'top_instagram.png' %}" alt="ig로고" class="top_instagram">
+                </a>
+                {% endif %}
+                {%if club.sns_link %}
+                <a class="icon" target="_blank" href="{{club.sns_link}}">
+                    <img src="{% static 'link.png'%}" alt="기타로고" class="top_instagram">
+                </a>
+                {% endif %}
+            </div>        
+            <a class="top_bookmark">
+                {% if club.club_type_id == 1 %}
+                <img src="{% static '문화체육.svg' %}" alt="문화체육로고" class="top_bookmark">
+                {% elif club.club_type_id == 2 %}
+                <img src="{% static '학술분과.svg' %}" alt="학술분과로고" class="top_bookmark">
+                {% elif club.club_type_id == 3 %}
+                <img src="{% static '종교봉사.svg' %}" alt="종교봉사로고" class="top_bookmark">
+                {% else %}
+                <img src="{% static '기타분과.svg' %}" alt="기타로고" class="top_bookmark">
+                {% endif %}
+            </a>
+            <div style="padding-top: 170px;">
+                <div class="article_main_club">
+                    <img src="{{club.club_logo.url}}" class="static">
+                    <div>
+                        <h1 class="main-title">{{club.club_name}}</h1>
+                        <p class="intro" id="text">{{club.club_desc}}</p>
+                        {% if club.form_link %}    
+                        <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'" style="left: auto;position: relative;margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
+                        {% endif %}
+                    </div>
+                </div>
+    
+                <div class="__post_content">
+                    <div class="section_club">
+                        <div class="article_section_club">
+                            <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">모집요강</p>
+                            <hr style="margin: 5px; border: none; border-top: solid 1px gray;">
+                            <p style="margin: 5px 0;">{{club.recruitment_content}}</p>
+                        </div>
+                    </div>
+    
+                    <div class="div_club">
+                        <div class="div_wrap">
+                            {% if user.id == club_id|add:1 or user.is_superuser %}
+                            <div class="plus_img">
+                                <a href="{% url 'new' club_id %}">
+                                    <img src="{% static 'plus.png' %}" style="width: 30px;">
+                                </a>
+                            </div>
+                            {% endif %}
+                            <p class="club-title" style="font-family: 'Noto Sans CJK KR-Bold', sans-serif;">동아리 게시물</p>
+                            <hr style="width: 40%; margin: 5px; border: none; border-top: solid 1px gray;">
+                
+                            {% if posts %}
+                            <div class="gallery">
+                        
+                                {% for post in posts %}
+                                <a href="{% url 'detail' club_id post.post_id %}" style="height: auto;text-decoration: none;width: 125px;">
+                                    <p class="gallery_text">{{post.post_title|truncatechars:10}}</p>
+                                    <img class="gallery_img" src="{{ post.post_img.url }}">
+                                </a>
+                                {% endfor %}
+    
+                                {% else %}
+                                <h1   h1 style="color: #6a6a6a; font-size:1em; text-align:center; font-family: 'Noto Sans CJK KR-Medium', sans-serif; font-weight:lighter;">등록된 동아리 게시물이 없습니다.</h1>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>    
+                </div>
             </div>
+        </div> 
+        <div class="bg_img" style="background-image: url('{{club.club_img.url}}');"></div>  
     </div>
-
-
-        
-
-    </div_club>
-    </div>
-</div>   
 </body>
 
 </html>
