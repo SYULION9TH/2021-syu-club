@@ -16,7 +16,6 @@ body {
 
 .body_wrap{
   position: relative;
-  height: 100%;
 }
 
 .bg_img{
@@ -69,7 +68,6 @@ body {
   margin-right: 15px;
   border-radius: 15px;
   border: 0px solid #00ff0000;
-  height: 100%;
   z-index: 2;
 }
 
