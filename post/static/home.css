@@ -15,6 +15,368 @@ body {
 }
 
 .body_wrap{
+  position: relative;
+  height: 100%;
+}
+
+.bg_img{
+  z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  width: 100%;
+  height: 320px;
+  position: absolute;
+}
+
+.bg_img::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.bookmark-absolute{
+  text-align: right;
+  width: 100%;
+  /* float: right; */
+  top: 10px;
+  position: absolute;
+  right: 0;
+}
+.update_img{
+    width:30px;
+    height:30px;
+}
+.nav_club {
+  z-index:15;
+  position:fixed;
+  width:100%;
+  height: 50px;
+  background-color: #f4f0ee;
+  top: 0;
+}
+
+.main_club {
+  position: relative;
+  background-color: #00ff0000;
+  margin-top: 49px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 15px;
+  border: 0px solid #00ff0000;
+  height: 100%;
+  z-index: 2;
+}
+
+.section_club {
+  list-style-type: none;
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 44%);
+  display:block;
+  padding: 15px;
+}
+
+.div_club {
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 44%);
+  position: relative;
+  display:block;
+  bottom: 0;
+}
+.div_wrap{
+  display:block;
+  padding:15px;
+}
+
+.nav-title {
+  margin: 0;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 22px;
+  color: #5523a0;
+}
+
+.article_main_club {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.club-title {
+  margin-left: 2px;
+  margin-right: 0px;
+  margin-top:0px;
+  margin-bottom: 0px;
+  color: #451997;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.static {
+  float: left;
+  width: 90px;
+  height: 90px;
+  border-radius: 70%;
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 44%);
+  background-color: white;
+}
+
+.main-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  min-height: 26px;
+  margin: 0;
+  display: block;
+  font-family: 'Noto Sans CJK KR-Bold', sans-serif;
+  position: relative;
+  text-shadow: 0 0 10px black;
+}
+
+.intro {
+  flex-wrap: wrap;
+  color: white;
+  min-height: 21px;
+  padding-right: 30px;
+  position: relative;
+  display: block;
+  font-family: 'Noto Sans CJK KR-Regular', sans-serif;
+  font-size: 0.95em;
+  margin: 5px 0;
+  text-shadow: 0 0 10px black;
+}
+
+
+/*지원하기버튼*/
+.button_a {
+  bottom: 0;
+  left: 135px;
+  line-height: 140%;
+  font-size: 10pt;
+  background-color: rgba(69, 25, 151, 1);
+  border: 0px #00ff0000;
+  box-shadow: 1px 1px 10px rgba(69, 25, 151, 1);
+  font-weight: bold;
+  color: white;
+
+  border-radius: 15px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.top_youtube {
+  border: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+.top_facebook {
+  border: none;
+  width: 30px;
+  cursor: pointer;
+  top: 5px;
+}
+
+.top_instagram {
+  border: none;
+  width: 30px;
+  cursor: pointer;
+  top: 5px;
+}
+
+.top_bookmark {
+  top: 0;
+  margin: 0;
+  border: none;
+  width: 90px;
+  cursor: pointer;
+  position: absolute;
+  left: 3%;
+}
+.icon{
+  display: inline-block;
+  height: 30px;
+  border: none;
+  width: 30px;
+  cursor: pointer;
+  margin: 2px;
+  position: relative;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #5523a0;
+  background-color: white;
+  border-radius: 50%;
+  border-width: 10px;
+  border: solid white;
+}
+
+button.slick-prev {
+  border: 0;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0);
+  position: fixed;
+  left: 17px;
+  top: 88%;
+  z-index: 1;
+}
+
+button.slick-next {
+  border: 0;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0);
+  position: fixed;
+  right: 17px;
+  top: 88%;
+  z-index: 1;
+}
+.text_content{
+  width:100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  overflow:hidden;
+}
+.gallery_text{
+  padding: 5px;
+  font-family: 'Noto Sans CJK KR-Regular', sans-serif;
+  z-index: 6;
+  height: 30px;
+  color: white;
+  font-size: 1em;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #160f07;
+  opacity: 0.8;
+  text-align: center;
+  box-sizing: border-box;
+}
+.gallery_img{
+  /* width:100%; 
+  height:100%;
+  border-radius: 0 0 5px 5px ;
+  object-fit:cover; */
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 5px 5px;
+  object-fit: cover;
+}
+
+.gallery{
+  width:100%;
+  position:relative;
+}
+.__post_content{
+  width: 100%;
+  margin-top:10px;
+}
+.plus_img{
+  float:right;
+}
+.gallery_pluse{
+  width: 30px;
+}
+.gallery{
+  overflow:unset;
+
+}
+button.slick-prev{
+  top: 50%;
+  width: 45px;
+  padding:0;
+  left: -15px;
+  display: block;
+  height: 45px;
+}
+button.slick-next{
+  top: 50%;
+  padding:0;
+  width: 45px;
+  right: -10px;
+  display: block;
+  height: 45px;
+
+}
+button.slick-prev::before{
+
+  border-width:1px;
+}
+button.slick-next::before{
+  border-width:1px;
+}
+
+.slick-list{
+  margin:0;
+}
+.slick-track{
+  opacity: 1; 
+  width: 145px; 
+  transform: translate3d(0px, 0px, 0px)
+
+}
+.gallery .slick-list {
+  position:relative;
+  margin:0 10px;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  text-decoration: none;
+  width: 195px;
+  position: relative;
+  /* width: 100%; */
+  height: 100%;
+  margin-right:10px;
+  margin-left:10px;
+}
+.slick-slide::after{
+  width:100%;
+  height:100%;
+  padding-bottom: 100%;
+}
+.slick-slide img {
+  display: flex;
+  width: 100%;
+}
+/* @font-face {
+  font-family: "twaysky";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  height: 100%;
+  background-color: #f4f0ee;
+}
+
+.body_wrap{
   display: flex;
   flex-direction: column;
   height:100%;
@@ -22,7 +384,6 @@ body {
 .bookmark-absolute{
   text-align: right;
   width: 100%;
-  /* float: right; */
   top: 10px;
   position: absolute;
   right: 0;
@@ -158,7 +519,6 @@ article_main_club {
 }
 
 
-/*지원하기버튼*/
 .button_a {
   position: absolute;
   bottom: 0;
@@ -228,14 +588,10 @@ article_main_club {
 }
 .icon{
   display: inline-block;
-  /* display: inline-block; */
   height: 30px;
   border: none;
   width: 30px;
   cursor: pointer;
-  /* position: absolute; */
-  /* top: 5px; */
-  /* right: 34px; */
   margin: 2px;
   position: relative;
 }
@@ -293,10 +649,6 @@ button.slick-next {
   box-sizing: border-box;
 }
 .gallery_img{
-  /* width:100%; 
-  height:100%;
-  border-radius: 0 0 5px 5px ;
-  object-fit:cover; */
   width: 100%;
   height: 100%;
   border-radius: 0 0 5px 5px;
@@ -374,7 +726,6 @@ button.slick-next::before{
   text-decoration: none;
   width: 195px;
   position: relative;
-  /* width: 100%; */
   height: 100%;
   aspect-ratio: 1/1 !important;
   margin-right:10px;
@@ -392,4 +743,4 @@ button.slick-next::before{
 
 .slick-list .draggable{
   aspect-ratio: auto;
-}
+} */
