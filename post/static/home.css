@@ -159,7 +159,7 @@ body {
 
 
 /*지원하기버튼*/
-.button_a {
+#button {
   bottom: 0;
   left: 135px;
   line-height: 140%;

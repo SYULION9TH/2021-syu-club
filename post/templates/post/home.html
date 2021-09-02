@@ -128,7 +128,7 @@
                         <h1 class="main-title">{{club.club_name}}</h1>
                         <p class="intro" id="text">{{club.club_desc}}</p>
                         {% if club.form_link %}    
-                        <input type="button" name="submit" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'" style=" background-color: #451997 !important; box-shadow: 1px 1px 10px #451997 !important; left: auto;position: relative;margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
+                        <input type="button" name="submit" id="button" class="button_a" value="지원하기" onclick="location.href='{{club.form_link}}'" style=" background-color: #451997 !important; box-shadow: 1px 1px 10px #451997 !important; left: auto;position: relative;margin-top: 7px;font-family: 'Noto Sans CJK KR-Medium', sans-serif;">
                         {% endif %}
                     </div>
                 </div>
