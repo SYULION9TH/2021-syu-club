@@ -214,7 +214,7 @@
                 {% for post in posts %}
                 <a href="{% url 'detail' club_id post.post_id %}" style="height: auto;text-decoration: none;width: 125px;">
                     <p class="gallery_text">{{post.post_title|truncatechars:10}}</p>
-                    <img class="gallery_img" src="{{ post.post_img.url }}" style="height:100%;">
+                    <img class="gallery_img" src="{{ post.post_img.url }}">
                 </a>
                 {% endfor %}
 
