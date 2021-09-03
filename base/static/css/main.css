@@ -157,7 +157,9 @@ header {
   font-size: 15px;
   color: white;
 }
-
+.sort_btn:active{
+  background-color: #D4CED5;
+}
 .club_sort_btn form{
   padding-bottom: 30px;
 }
